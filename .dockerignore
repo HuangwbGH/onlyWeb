@@ -1,0 +1,11 @@
+node_modules
+.next
+.git
+.env
+.env.local
+.DS_Store
+coverage
+webMock/node_modules
+webMock/dist
+webMock/.next
+npm-debug.log*

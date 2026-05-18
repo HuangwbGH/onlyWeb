@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    ports:
+      - "18473:18473"
+    environment:
+      DATABASE_PATH: ${DATABASE_PATH:-/app/data/onlyweb.db}
+      APP_URL: ${APP_URL:-http://localhost:18473}
+      SESSION_SECRET: ${SESSION_SECRET:-change-me}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@example.com}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-password}
+    volumes:
+      - sqlite_data:/app/data
+      - uploads_data:/app/public/uploads
+
+volumes:
+  sqlite_data:
+  uploads_data:
