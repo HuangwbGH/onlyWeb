@@ -2,12 +2,15 @@ import { headers } from 'next/headers';
 import { CustomPagesManager } from '@/components/admin/CustomPagesManager';
 import { PageShell } from '@/components/Shared';
 import { requireAdmin } from '@/lib/auth';
+import { getConfiguredAppUrl, getDefaultHost } from '@/lib/siteUrl';
 
 export const dynamic = 'force-dynamic';
 
 async function getOrigin() {
   const headerStore = await headers();
-  const host = headerStore.get('host') ?? 'localhost:18473';
+  const configuredUrl = getConfiguredAppUrl();
+  if (configuredUrl) return configuredUrl;
+  const host = headerStore.get('host') ?? getDefaultHost();
   const proto = headerStore.get('x-forwarded-proto') ?? 'http';
   return `${proto}://${host}`;
 }

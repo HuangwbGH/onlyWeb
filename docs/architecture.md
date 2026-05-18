@@ -364,12 +364,16 @@ MVP 预期：
 ```yaml
 services:
   app:
-    build: .
+    build:
+      context: .
+      args:
+        APP_PORT: ${APP_PORT:-18473}
     ports:
-      - "18473:18473"
+      - "${APP_PORT:-18473}:${APP_PORT:-18473}"
     environment:
-      DATABASE_PATH: /app/data/onlyweb.db
-      APP_URL: http://localhost:18473
+      PORT: ${APP_PORT:-18473}
+      DATABASE_PATH: ${DATABASE_PATH:-/app/data/onlyweb.db}
+      APP_URL: ${APP_URL:-http://localhost:${APP_PORT:-18473}}
     volumes:
       - sqlite_data:/app/data
       - uploads_data:/app/public/uploads
@@ -379,7 +383,7 @@ volumes:
   uploads_data:
 ```
 
-实际文件在实现阶段创建。
+实际配置见 `docker-compose.yml`；端口通过 `APP_PORT` 配置，对外域名通过 `APP_URL` 配置。
 
 ## 10. 认证设计
 

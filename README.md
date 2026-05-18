@@ -152,22 +152,24 @@ minio      对象存储，可选
 - 数据库说明：`docs/DatabaseSchema.md`
 
 
-### 端口约定
+### 端口和域名配置
 
-为避免占用常用端口，项目默认使用非常用端口：
+项目默认使用非常用端口，但所有端口都可以通过环境变量覆盖：
 
-| 服务 | 端口 | 说明 |
-| --- | --- | --- |
-| Web 应用 | `18473` | 本地开发、生产服务和 Docker 映射端口 |
-| webMock 原型 | `18475` | 前端 Mock 原型开发端口 |
-| webMock 预览 | `18476` | 前端 Mock 原型预览端口 |
+| 服务 | 默认端口 | 配置变量 | 说明 |
+| --- | --- | --- | --- |
+| Web 应用 | `18473` | `APP_PORT` / `PORT` | Docker 使用 `APP_PORT`，本地 `npm run dev/start` 可使用 `PORT` |
+| webMock 原型 | `18475` | `WEBMOCK_PORT` | 前端 Mock 原型开发端口 |
+| webMock 预览 | `18476` | `WEBMOCK_PREVIEW_PORT` | 前端 Mock 原型预览端口 |
 
-如需修改端口，请同步调整：
+对外访问域名通过 `APP_URL` 配置。正式部署时建议设置为 HTTPS 域名，例如：
 
-- `package.json` 中的 `dev` / `start` 命令。
-- `Dockerfile` 中的 `EXPOSE` / `PORT`。
-- `docker-compose.yml` 中的端口映射。
-- `.env.example` 中的 `DATABASE_PATH` / `APP_URL`。
+```env
+APP_PORT=18473
+APP_URL=https://onlyweb.example.com
+```
+
+`APP_URL` 用于生成 HR 分享链接，并决定登录 Cookie 是否使用 Secure 策略。
 
 ## 程序部署方式
 
@@ -182,6 +184,7 @@ npm run dev
 
 ```txt
 http://localhost:18473
+# 如果设置 PORT=19000，则访问 http://localhost:19000
 ```
 
 ### Docker 部署
@@ -280,6 +283,7 @@ docker compose down           # 停止 Docker 服务
 - [产品需求文档](./docs/PRD.md)
 - [系统架构文档](./docs/architecture.md)
 - [开发路线图](./docs/roadmap.md)
+- [服务器部署与域名代理指南](./docs/deployment.md)
 
 
 ## 前端原型
@@ -400,8 +404,9 @@ HR 只能通过收到的专属 token 链接访问对应页面，不能看到其�
 `.env.example` 当前包含：
 
 ```env
-DATABASE_PATH=/app/data/onlyweb.db
+APP_PORT=18473
 APP_URL=http://localhost:18473
+DATABASE_PATH=/app/data/onlyweb.db
 SESSION_SECRET=change-me
 ADMIN_EMAIL=admin@example.com
 ADMIN_PASSWORD=password

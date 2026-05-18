@@ -15,6 +15,8 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV DATABASE_PATH=/app/data/onlyweb.db
+ARG APP_PORT=18473
+ENV PORT=${APP_PORT}
 RUN groupadd --system --gid 1001 nodejs \
   && useradd --system --uid 1001 --gid nodejs nextjs \
   && mkdir -p /app/data /app/public/uploads/project-docs /app/public/uploads/profile \
@@ -25,6 +27,5 @@ RUN mkdir -p /app/public/uploads/project-docs /app/public/uploads/profile \
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 USER nextjs
-EXPOSE 18473
-ENV PORT=18473
+EXPOSE ${APP_PORT}
 CMD ["node", "server.js"]
