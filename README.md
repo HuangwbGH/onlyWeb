@@ -209,6 +209,347 @@ docker compose down
 
 SQLite 数据通过 Docker volume `sqlite_data` 持久化。
 
+### Linux 服务器完整部署流程
+
+以下流程适用于 Ubuntu / Debian 等常见 Linux 服务器。其他发行版也可以部署，核心要求是安装 Docker 和 Docker Compose。
+
+#### 1. 准备服务器
+
+建议服务器最低配置：
+
+```txt
+CPU：1 核及以上
+内存：1 GB 及以上
+磁盘：10 GB 及以上
+系统：Ubuntu 22.04+ / Debian 12+
+```
+
+服务器需要开放端口：
+
+```txt
+22    SSH 登录
+80    HTTP，用于域名访问和 HTTPS 证书申请
+443   HTTPS，用于正式访问
+```
+
+如果不使用反向代理，直接通过端口访问，则还需要开放 `APP_PORT`，默认是 `18473`。生产环境更推荐只开放 `80` 和 `443`，由 Caddy 或 Nginx 代理到应用端口。
+
+#### 2. 安装 Docker 和 Docker Compose
+
+Ubuntu / Debian 可以使用下面的方式安装：
+
+```bash
+sudo apt update
+sudo apt install -y ca-certificates curl gnupg git
+
+curl -fsSL https://get.docker.com | sudo sh
+
+sudo systemctl enable docker
+sudo systemctl start docker
+docker --version
+docker compose version
+```
+
+如果希望当前用户直接执行 Docker 命令，可以加入 `docker` 用户组：
+
+```bash
+sudo usermod -aG docker $USER
+```
+
+执行后需要重新登录服务器，或者重新打开 SSH 会话。
+
+#### 3. 上传或拉取项目代码
+
+方式一：从 Git 仓库拉取：
+
+```bash
+cd /opt
+sudo git clone <你的仓库地址> onlyWeb
+sudo chown -R $USER:$USER /opt/onlyWeb
+cd /opt/onlyWeb
+```
+
+方式二：从本机上传项目目录：
+
+```bash
+scp -r /Users/mac/workspace/onlyWeb 用户名@服务器IP:/opt/onlyWeb
+```
+
+进入服务器项目目录：
+
+```bash
+cd /opt/onlyWeb
+```
+
+#### 4. 配置环境变量
+
+复制示例配置：
+
+```bash
+cp .env.example .env
+```
+
+编辑 `.env`：
+
+```bash
+nano .env
+```
+
+生产环境示例：
+
+```env
+APP_PORT=18473
+APP_URL=https://hkkwebonly.xyz
+DATABASE_PATH=/app/data/onlyweb.db
+SESSION_SECRET=请替换为随机长字符串
+ADMIN_EMAIL=你的管理员邮箱
+ADMIN_PASSWORD=你的强密码
+```
+
+其中：
+
+- `APP_PORT`：应用容器监听端口，默认 `18473`。
+- `APP_URL`：最终对外访问地址。使用域名和 HTTPS 时必须配置为 `https://你的域名`。
+- `DATABASE_PATH`：Docker 部署建议保持默认值。
+- `SESSION_SECRET`：生产环境必须替换，不要使用默认值。
+- `ADMIN_EMAIL` / `ADMIN_PASSWORD`：初始化管理员账号。
+
+可以用下面的命令生成随机 `SESSION_SECRET`：
+
+```bash
+openssl rand -base64 32
+```
+
+#### 5. 启动程序
+
+构建并后台启动：
+
+```bash
+docker compose up -d --build
+```
+
+查看容器状态：
+
+```bash
+docker compose ps
+```
+
+查看日志：
+
+```bash
+docker compose logs -f app
+```
+
+本机测试应用是否启动成功：
+
+```bash
+curl -I http://127.0.0.1:18473
+```
+
+如果 `APP_PORT` 改成了其他端口，需要同步替换上面的端口。
+
+#### 6. 配置域名解析
+
+在域名服务商处新增 DNS 解析记录：
+
+```txt
+记录类型：A
+主机记录：@
+记录值：服务器公网 IP
+```
+
+如果也需要支持 `www`：
+
+```txt
+记录类型：A
+主机记录：www
+记录值：服务器公网 IP
+```
+
+等待 DNS 生效后，在服务器上验证：
+
+```bash
+dig hkkwebonly.xyz
+```
+
+确认解析结果是服务器公网 IP。
+
+#### 7. 使用 Caddy 配置 HTTPS 反向代理
+
+推荐使用 Caddy，配置简单，并且可以自动申请和续期 HTTPS 证书。
+
+安装 Caddy：
+
+```bash
+sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
+sudo apt update
+sudo apt install -y caddy
+```
+
+编辑 Caddy 配置：
+
+```bash
+sudo nano /etc/caddy/Caddyfile
+```
+
+写入：
+
+```caddyfile
+hkkwebonly.xyz {
+    reverse_proxy 127.0.0.1:18473
+}
+```
+
+如果同时支持 `www`：
+
+```caddyfile
+hkkwebonly.xyz, www.hkkwebonly.xyz {
+    reverse_proxy 127.0.0.1:18473
+}
+```
+
+检查配置并重启：
+
+```bash
+sudo caddy validate --config /etc/caddy/Caddyfile
+sudo systemctl enable caddy
+sudo systemctl restart caddy
+sudo systemctl status caddy
+```
+
+访问：
+
+```txt
+https://hkkwebonly.xyz
+https://hkkwebonly.xyz/admin
+```
+
+#### 8. 使用 Nginx 配置 HTTPS 反向代理，可选
+
+如果服务器已有 Nginx，也可以使用 Nginx。
+
+安装：
+
+```bash
+sudo apt update
+sudo apt install -y nginx certbot python3-certbot-nginx
+```
+
+创建站点配置：
+
+```bash
+sudo nano /etc/nginx/sites-available/onlyweb
+```
+
+写入：
+
+```nginx
+server {
+    listen 80;
+    server_name hkkwebonly.xyz www.hkkwebonly.xyz;
+
+    client_max_body_size 50m;
+
+    location / {
+        proxy_pass http://127.0.0.1:18473;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+
+启用配置：
+
+```bash
+sudo ln -s /etc/nginx/sites-available/onlyweb /etc/nginx/sites-enabled/onlyweb
+sudo nginx -t
+sudo systemctl reload nginx
+```
+
+申请 HTTPS 证书：
+
+```bash
+sudo certbot --nginx -d hkkwebonly.xyz -d www.hkkwebonly.xyz
+```
+
+#### 9. 数据持久化和备份
+
+当前 Docker Compose 使用两个 volume：
+
+```txt
+sqlite_data   SQLite 数据库
+uploads_data  上传的项目文档、微信二维码等文件
+```
+
+查看 volume：
+
+```bash
+docker volume ls | grep onlyweb
+```
+
+备份数据库和上传文件：
+
+```bash
+mkdir -p ~/onlyweb-backup
+
+docker run --rm \
+  -v onlyweb_sqlite_data:/data \
+  -v ~/onlyweb-backup:/backup \
+  alpine \
+  sh -c "cp -a /data /backup/sqlite_data_$(date +%Y%m%d_%H%M%S)"
+
+docker run --rm \
+  -v onlyweb_uploads_data:/uploads \
+  -v ~/onlyweb-backup:/backup \
+  alpine \
+  sh -c "cp -a /uploads /backup/uploads_data_$(date +%Y%m%d_%H%M%S)"
+```
+
+注意：如果项目目录名不是 `onlyweb`，Docker Compose 生成的 volume 名称可能不同。可以先通过 `docker volume ls` 确认实际名称。
+
+#### 10. 更新程序
+
+如果代码来自 Git 仓库：
+
+```bash
+cd /opt/onlyWeb
+git pull
+docker compose up -d --build
+```
+
+如果代码是手动上传，上传新代码后执行：
+
+```bash
+cd /opt/onlyWeb
+docker compose up -d --build
+```
+
+#### 11. 常见排查命令
+
+```bash
+docker compose ps
+docker compose logs -f app
+curl -I http://127.0.0.1:18473
+curl -I https://hkkwebonly.xyz
+sudo systemctl status caddy
+sudo journalctl -u caddy -f
+sudo lsof -i :80
+sudo lsof -i :443
+sudo lsof -i :18473
+```
+
+常见问题：
+
+- 域名打不开：检查 DNS 是否指向服务器公网 IP。
+- HTTPS 证书申请失败：检查 `80` 和 `443` 是否放行。
+- 后台登录后跳出：检查 `.env` 中的 `APP_URL` 是否与实际访问协议一致，例如 HTTPS 访问时应配置为 `https://hkkwebonly.xyz`。
+- 上传文件丢失：检查 `uploads_data` volume 是否存在，重建容器时不要删除 volume。
+
 ## 操作方式
 
 当前正式程序已接入 SQLite，后台可以维护个人资料、作品、经历、技能和定制简历页。
