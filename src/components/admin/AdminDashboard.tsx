@@ -124,7 +124,7 @@ function ProjectForm({ project }: { project?: Project }) {
       <label className="form-wide">摘要<textarea name="summary" defaultValue={project?.summary} required /></label>
       <label className="form-wide">详情<textarea name="description" defaultValue={project?.description} required /></label>
       <label>技术栈<input name="techStack" defaultValue={project?.techStack.join(', ')} placeholder="React, TypeScript" /></label>
-      <label>职责<input name="role" defaultValue={project?.role} required /></label>
+      <label>职责<input name="role" defaultValue={project?.role} /></label>
       <label>Demo<input name="demoUrl" defaultValue={project?.demoUrl} /></label>
       <label>GitHub<input name="githubUrl" defaultValue={project?.githubUrl} /></label>
       <label>文档链接<input name="docsUrl" defaultValue={project?.docsUrl} /></label>

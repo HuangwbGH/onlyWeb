@@ -30,7 +30,7 @@ export function ProjectsManager({ origin, selectedId }: { origin: string; select
             >
               <span className="status-pill">{project.isPublished ? '已发布' : '草稿'}</span>
               <strong>{project.title}</strong>
-              <span>{project.role}</span>
+              <span>{project.description}</span>
               <small>{project.isFeatured ? '精选作品 · ' : ''}{project.slug}</small>
             </a>
           ))}
@@ -124,7 +124,7 @@ function ProjectForm({ project, documents }: { project?: Project; documents: Ret
         </div>
         <div className="admin-edit-form no-margin">
           <label className="form-wide">项目详情<textarea name="description" defaultValue={project?.description} required /></label>
-          <label className="form-wide">我的职责<textarea name="role" defaultValue={project?.role} required /></label>
+          <label className="form-wide">我的职责<textarea name="role" defaultValue={project?.role} /></label>
           <label className="form-wide">项目亮点<textarea name="highlights" defaultValue={project?.highlights.join('\n')} placeholder="每行一个亮点" /></label>
         </div>
       </div>

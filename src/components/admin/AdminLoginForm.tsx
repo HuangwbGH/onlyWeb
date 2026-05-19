@@ -16,7 +16,7 @@ export function AdminLoginForm() {
       </label>
       <label>
         密码
-        <input name="password" type="password" defaultValue="password" autoComplete="current-password" />
+        <input name="password" type="password" autoComplete="current-password" />
       </label>
       {state.error && <p className="form-error">{state.error}</p>}
       <button className="button primary full" type="submit" disabled={pending}>
