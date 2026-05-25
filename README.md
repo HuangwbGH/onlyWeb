@@ -216,9 +216,98 @@ docker compose down
 
 SQLite 数据通过 Docker volume `sqlite_data` 持久化。
 
-### Linux 服务器完整部署流程
 
-以下流程适用于 Ubuntu / Debian 等常见 Linux 服务器。其他发行版也可以部署，核心要求是安装 Docker 和 Docker Compose。
+### macOS 本机 Docker 部署流程
+
+适用场景：在 macOS 上本机运行 onlyWeb，用于开发、局域网访问或先验证功能。
+
+#### 1. 安装基础工具
+
+需要安装：
+
+- Docker Desktop for Mac
+- Git
+- Node.js 22，可选；如果只用 Docker 部署，本机不必须安装 Node.js
+
+安装后确认 Docker Desktop 已启动：
+
+```bash
+docker --version
+docker compose version
+```
+
+#### 2. 准备项目和环境变量
+
+进入项目目录：
+
+```bash
+cd workspace/onlyWeb
+cp .env.example .env
+```
+
+macOS 本机推荐 `.env`：
+
+```env
+APP_PORT=18473
+APP_URL=http://localhost:18473
+DATABASE_PATH=/app/data/onlyweb.db
+SESSION_SECRET=请替换为随机长字符串
+ADMIN_EMAIL=你的管理员邮箱
+ADMIN_PASSWORD=你的强密码
+WIKI_HOST_VAULT_PATH=../wiki/vault
+WIKI_VAULT_PATH=/app/wiki-vault
+WIKI_PUBLIC=false
+WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
+```
+
+说明：
+
+- 如果只在本机访问，`APP_URL` 使用 `http://localhost:18473`。
+- 如果要让局域网其他电脑访问，`APP_URL` 改成 `http://本机局域网IP:18473`，例如 `http://192.168.88.20:18473`。
+- `WIKI_HOST_VAULT_PATH=../wiki/vault` 表示 onlyWeb 和 wiki 两个目录在同一个 `workspace` 目录下。
+- Wiki 默认 `WIKI_PUBLIC=false`，需要管理员登录后才能访问 `/wiki`。
+
+#### 3. 启动和验证
+
+```bash
+docker compose up -d --build
+docker compose ps
+```
+
+本机访问：
+
+```txt
+http://localhost:18473
+http://localhost:18473/admin/login
+http://localhost:18473/wiki
+```
+
+局域网访问：
+
+```txt
+http://本机局域网IP:18473
+```
+
+如果局域网其他电脑无法访问：
+
+- 确认 Docker Desktop 正在运行。
+- 确认 macOS 防火墙允许 Docker 或终端接收传入连接。
+- 确认访问地址使用的是本机局域网 IP，而不是 `localhost`。
+- 确认 `.env` 中 `APP_URL` 与实际访问地址一致。
+
+#### 4. 停止、重启和更新
+
+```bash
+docker compose down
+docker compose up -d
+docker compose up -d --build
+```
+
+macOS 上 SQLite 数据和上传文件也保存在 Docker volume 中，不会因为普通重启丢失。
+
+### LinuxOS / Linux 服务器完整部署流程
+
+以下流程适用于 LinuxOS、Ubuntu / Debian 等常见 Linux 服务器。其他发行版也可以部署，核心要求是安装 Docker 和 Docker Compose。
 
 #### 1. 准备服务器
 
@@ -311,6 +400,10 @@ DATABASE_PATH=/app/data/onlyweb.db
 SESSION_SECRET=请替换为随机长字符串
 ADMIN_EMAIL=你的管理员邮箱
 ADMIN_PASSWORD=你的强密码
+WIKI_HOST_VAULT_PATH=../wiki/vault
+WIKI_VAULT_PATH=/app/wiki-vault
+WIKI_PUBLIC=false
+WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
 ```
 
 其中：
@@ -320,6 +413,10 @@ ADMIN_PASSWORD=你的强密码
 - `DATABASE_PATH`：Docker 部署建议保持默认值。
 - `SESSION_SECRET`：生产环境必须替换，不要使用默认值。
 - `ADMIN_EMAIL` / `ADMIN_PASSWORD`：初始化管理员账号。
+- `WIKI_HOST_VAULT_PATH`：服务器宿主机上的 Obsidian vault 路径，Docker 会只读挂载。
+- `WIKI_VAULT_PATH`：容器内读取 Wiki 的路径，通常保持默认 `/app/wiki-vault`。
+- `WIKI_PUBLIC`：是否公开 Wiki；默认 `false`，需要管理员登录。
+- `WIKI_EXCLUDE_DIRS`：Wiki 扫描时忽略的目录。
 
 可以用下面的命令生成随机 `SESSION_SECRET`：
 
@@ -570,7 +667,7 @@ sudo lsof -i :18473
 /portfolio/:slug                        独立作品集专用详情页，无全站导航
 /portfolio/:slug/docs                   独立作品集专用文档预览页，无全站导航
 /wiki                                  Wiki 知识库首页，需要登录或开启公开访问
-/wiki/:slug                            Wiki 笔记详情页，支持文件树、双链和局部图谱
+/wiki/:slug                            Wiki 笔记详情页，支持文件树、双链和可拖拽动态局部图谱
 /projects/onlyweb-resume-system        作品详情示例
 /projects/:slug/docs                  Markdown / PDF / Word 项目文档在线预览
 /projects/:slug/docs/preview          PDF 预览与 Word 转 PDF 预览接口
@@ -769,6 +866,10 @@ DATABASE_PATH=/app/data/onlyweb.db
 SESSION_SECRET=change-me
 ADMIN_EMAIL=admin@example.com
 ADMIN_PASSWORD=password
+WIKI_HOST_VAULT_PATH=../wiki/vault
+WIKI_VAULT_PATH=/app/wiki-vault
+WIKI_PUBLIC=false
+WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
 ```
 
 ## 设计原则
