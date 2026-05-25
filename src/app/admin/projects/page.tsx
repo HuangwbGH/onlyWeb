@@ -28,6 +28,7 @@ export default async function ProjectsAdminPage({
     <PageShell eyebrow="Admin" title="作品管理" description="独立维护作品内容、技术栈、公开链接和精选状态。">
       <div className="admin-toolbar">
         <a className="button ghost" href="/admin">返回后台首页</a>
+        <a className="button ghost" href="/portfolio">打开独立作品集</a>
         <a className="button primary" href="/admin/projects">新建作品</a>
       </div>
       <ProjectsManager origin={origin} selectedId={id} />

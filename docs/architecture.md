@@ -336,6 +336,11 @@ onlyWeb/
 /about                          关于我
 /resume                         通用简历
 /projects                       作品列表
+/portfolio                      独立作品集展示页，无导航，可进入作品详情
+/portfolio/:slug                 独立作品集专用详情页，无全站导航
+/portfolio/:slug/docs            独立作品集专用文档预览页，无全站导航
+/wiki                           Wiki 知识库首页
+/wiki/:slug                     Wiki 笔记详情页
 /projects/:slug                 作品详情
 /r/:shareToken                  HR 专属定制简历页
 /projects/:slug/docs            Markdown / PDF / Word 项目文档在线预览
@@ -350,6 +355,7 @@ onlyWeb/
 - `/r/:shareToken` 是发给 HR 的访问地址。
 - 前台不提供定制页列表。
 - HR 只能访问 token 对应的单个定制页。
+- `/portfolio` 使用独立展示模式，不渲染全站 Header/Footer；作品卡片输出到 `/portfolio/:slug` 专用详情链接。`/portfolio/:slug` 复用作品详情内容，`/portfolio/:slug/docs` 复用文档预览能力，但同样不渲染全站 Header/Footer，避免访客通过右上角导航进入其他页面。后台 `/admin/projects` 展示该页面完整地址并支持复制。
 
 ### 8.2 后台路由
 
@@ -531,3 +537,9 @@ HR 定制页 `/r/:shareToken` 展示统一风格的联系方式卡片，包括�
 - `show_links`：相关链接/文档
 
 后台 `/admin/projects` 的“模块展示”区域维护这些开关；已有作品默认全部展示。
+
+## 19. Wiki 知识库架构
+
+Wiki 模块通过 `WIKI_HOST_VAULT_PATH` 将宿主机 Obsidian vault 只读挂载到容器内 `WIKI_VAULT_PATH`。服务端读取 Markdown 文件，生成文件树、双链、标签、反向链接和局部关系图谱数据。
+
+图谱前端使用浏览器端 SVG 力导向模拟实现，不依赖外部图谱服务。节点支持拖拽，节点标签支持点击跳转到对应笔记。默认 `WIKI_PUBLIC=false`，访问 `/wiki` 需要管理员登录；设置为 `true` 后可公开访问。

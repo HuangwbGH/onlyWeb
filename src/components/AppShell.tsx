@@ -6,8 +6,9 @@ import { SiteFooter, SiteHeader } from '@/components/Layout';
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isSharedResume = pathname.startsWith('/r/');
+  const isStandalonePortfolio = pathname === '/portfolio' || pathname.startsWith('/portfolio/');
 
-  if (isSharedResume) return <>{children}</>;
+  if (isSharedResume || isStandalonePortfolio) return <>{children}</>;
 
   return (
     <>

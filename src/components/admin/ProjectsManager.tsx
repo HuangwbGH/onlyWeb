@@ -11,9 +11,26 @@ export function ProjectsManager({ origin, selectedId }: { origin: string; select
   const selectedProject = selectedId ? projects.find((project) => project.id === selectedId) : undefined;
   const selectedProjectDocuments = selectedProject ? listProjectDocuments(selectedProject.id) : [];
   const selectedEffectDemoDocuments = selectedProject ? listEffectDemoDocuments(selectedProject.id) : [];
+  const portfolioUrl = `${origin}/portfolio`;
 
   return (
     <div className="custom-page-manager">
+      <div className="portfolio-entry-card content-card">
+        <div>
+          <p className="eyebrow">Portfolio</p>
+          <h2>独立作品集页面入口</h2>
+          <p>入口就在这里：复制下面的作品集地址，或点击“打开独立作品集”。这个页面只展示已发布作品，适合直接发给需要查看作品集的人。</p>
+          <a className="portfolio-entry-main-link" href="/portfolio">/portfolio</a>
+        </div>
+        <div className="custom-page-link-panel">
+          <label>作品集地址</label>
+          <input readOnly value={portfolioUrl} />
+          <div className="share-actions">
+            <a className="button ghost" href="/portfolio">打开作品集</a>
+            <CopyButton value={portfolioUrl} />
+          </div>
+        </div>
+      </div>
       <aside className="custom-page-list content-card">
         <div className="custom-page-list-head">
           <div>

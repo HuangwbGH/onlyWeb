@@ -45,7 +45,7 @@ export function FeatureCard({ title, text }: { title: string; text: string }) {
   );
 }
 
-export function ProjectGrid({ projects, linkable = true }: { projects: Project[]; linkable?: boolean }) {
+export function ProjectGrid({ projects, linkable = true, hrefPrefix = '/projects' }: { projects: Project[]; linkable?: boolean; hrefPrefix?: string }) {
   return (
     <div className="project-grid">
       {projects.map((project) => {
@@ -62,7 +62,7 @@ export function ProjectGrid({ projects, linkable = true }: { projects: Project[]
         );
 
         return linkable ? (
-          <a className="project-card" key={project.id} href={`/projects/${project.slug}`}>
+          <a className="project-card" key={project.id} href={`${hrefPrefix}/${project.slug}`}>
             {content}
           </a>
         ) : (

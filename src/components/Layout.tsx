@@ -3,6 +3,7 @@ const navItems = [
   { href: '/projects', label: '作品' },
   { href: '/resume', label: '简历' },
   { href: '/contact', label: '联系' },
+  { href: '/wiki', label: '知识库' },
   { href: '/admin', label: '后台' },
 ];
 

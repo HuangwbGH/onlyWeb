@@ -354,6 +354,11 @@ main {
   padding: 56px 0 80px;
 }
 
+.standalone-portfolio-page {
+  min-height: 100vh;
+  padding-top: 1px;
+}
+
 .page-hero {
   margin-bottom: 34px;
 }
@@ -995,6 +1000,10 @@ td button {
   .skill-admin-grid {
     grid-template-columns: 1fr;
   }
+
+  .portfolio-entry-card {
+    flex-direction: column;
+  }
 }
 
 .custom-page-manager {
@@ -1005,8 +1014,43 @@ td button {
 }
 
 .custom-page-list,
-.custom-page-editor {
+.custom-page-editor,
+.portfolio-entry-card {
   padding: 22px;
+}
+
+.portfolio-entry-card {
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  border: 1px solid rgba(66, 99, 255, 0.2);
+  background: linear-gradient(135deg, #ffffff, #f4f6ff);
+}
+
+.portfolio-entry-card h2 {
+  margin: 0;
+  color: #101729;
+  letter-spacing: -0.04em;
+}
+
+.portfolio-entry-card p {
+  margin: 0;
+  color: #7a8499;
+  line-height: 1.6;
+}
+
+.portfolio-entry-main-link {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 14px;
+  padding: 8px 12px;
+  color: #4263ff;
+  background: rgba(66, 99, 255, 0.1);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 900;
 }
 
 .custom-page-list {
@@ -1795,5 +1839,187 @@ td button {
   .skill-row-form,
   .skill-list-row form:not(.skill-row-form) {
     grid-column: 1;
+  }
+}
+
+.wiki-layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr) 460px;
+  gap: 22px;
+  width: min(100% - 40px, 1680px);
+  margin: 0 auto;
+  padding: 42px 0 80px;
+  align-items: start;
+}
+
+.wiki-sidebar,
+.wiki-side-panel {
+  position: sticky;
+  top: 92px;
+  max-height: calc(100vh - 118px);
+  overflow: auto;
+}
+
+.wiki-sidebar-head h2,
+.wiki-side-panel h2 {
+  margin: 0;
+  color: #101729;
+  letter-spacing: -0.04em;
+}
+
+.wiki-sidebar-head small {
+  color: #7a8499;
+  font-weight: 800;
+}
+
+.wiki-tree,
+.wiki-tree-children,
+.wiki-link-list {
+  display: grid;
+  gap: 6px;
+}
+
+.wiki-tree {
+  margin-top: 18px;
+}
+
+.wiki-tree-children {
+  margin: 6px 0 8px 15px;
+  padding-left: 10px;
+  border-left: 1px solid rgba(24, 32, 51, 0.08);
+}
+
+.wiki-tree-folder summary,
+.wiki-tree-item,
+.wiki-link-list a {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 10px;
+  color: #5e677d;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.wiki-tree-folder summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.wiki-tree-folder summary::-webkit-details-marker {
+  display: none;
+}
+
+.wiki-tree-item:hover,
+.wiki-tree-item.active,
+.wiki-link-list a:hover {
+  color: #4263ff;
+  background: rgba(66, 99, 255, 0.08);
+}
+
+.wiki-main {
+  min-width: 0;
+}
+
+.wiki-hero {
+  margin-bottom: 18px;
+  padding: 30px;
+  background: linear-gradient(135deg, #ffffff, #f4f6ff);
+  border: 1px solid rgba(66, 99, 255, 0.12);
+  border-radius: 30px;
+}
+
+.wiki-side-panel {
+  display: grid;
+  gap: 22px;
+}
+
+.wiki-graph-wrap {
+  overflow: hidden;
+  margin-top: 12px;
+  background: radial-gradient(circle at 50% 45%, #ffffff 0, #f8f9fd 62%, #eef2ff 100%);
+  border: 1px solid rgba(66, 99, 255, 0.14);
+  border-radius: 22px;
+}
+
+.wiki-graph-toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 14px 0;
+  color: #7a8499;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.wiki-graph {
+  display: block;
+  width: 100%;
+  min-height: 420px;
+  touch-action: none;
+  user-select: none;
+}
+
+.wiki-graph line {
+  stroke: rgba(66, 99, 255, 0.24);
+  stroke-width: 2;
+}
+
+.wiki-graph circle {
+  fill: #ffffff;
+  stroke: #4263ff;
+  stroke-width: 3;
+  cursor: grab;
+  filter: drop-shadow(0 8px 16px rgba(66, 99, 255, 0.18));
+}
+
+.wiki-graph circle:active {
+  cursor: grabbing;
+}
+
+.wiki-graph circle.current {
+  fill: #4263ff;
+}
+
+.wiki-graph text {
+  fill: #182033;
+  font-size: 14px;
+  font-weight: 900;
+  text-anchor: middle;
+  paint-order: stroke;
+  stroke: rgba(255, 255, 255, 0.92);
+  stroke-width: 4px;
+}
+
+.wiki-graph-node a:hover text {
+  fill: #4263ff;
+}
+
+.wiki-link {
+  color: #4263ff;
+  font-weight: 900;
+}
+
+@media (max-width: 1320px) {
+  .wiki-layout {
+    grid-template-columns: 260px minmax(0, 1fr);
+  }
+
+  .wiki-side-panel {
+    grid-column: 1 / -1;
+    position: static;
+    max-height: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .wiki-layout {
+    grid-template-columns: 1fr;
+    width: min(100% - 28px, 1120px);
+  }
+
+  .wiki-sidebar {
+    position: static;
+    max-height: none;
   }
 }

@@ -4,10 +4,10 @@ import { getProjectBySlug } from '@/lib/data';
 
 export const dynamic = 'force-dynamic';
 
-export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function StandalonePortfolioProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) notFound();
 
-  return <ProjectDetail project={project} />;
+  return <ProjectDetail project={project} basePath="/portfolio" />;
 }

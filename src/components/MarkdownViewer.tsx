@@ -1,21 +1,31 @@
-function parseInline(text: string) {
+type MarkdownViewerOptions = {
+  wikiLinkBasePath?: string;
+  wikiLinkResolver?: (target: string) => string | undefined;
+};
+
+function parseInline(text: string, options: MarkdownViewerOptions = {}) {
   const nodes: React.ReactNode[] = [];
-  const pattern = /(!\[([^\]]*)\]\(([^\s)]+)\))|(\[([^\]]+)\]\(([^\s)]+)\))|(`([^`]+)`)|(\*\*([^*]+)\*\*)|(\*([^*]+)\*)/g;
+  const pattern = /(\[\[([^\]|]+)(?:\|([^\]]+))?\]\])|(!\[([^\]]*)\]\(([^\s)]+)\))|(\[([^\]]+)\]\(([^\s)]+)\))|(`([^`]+)`)|(\*\*([^*]+)\*\*)|(\*([^*]+)\*)/g;
   let lastIndex = 0;
   let match: RegExpExecArray | null;
 
   while ((match = pattern.exec(text)) !== null) {
     if (match.index > lastIndex) nodes.push(text.slice(lastIndex, match.index));
-    if (match[2] !== undefined && match[3]) {
-      nodes.push(<img alt={match[2]} key={match.index} src={match[3]} />);
-    } else if (match[5] && match[6]) {
-      nodes.push(<a href={match[6]} key={match.index}>{match[5]}</a>);
-    } else if (match[8]) {
-      nodes.push(<code key={match.index}>{match[8]}</code>);
-    } else if (match[10]) {
-      nodes.push(<strong key={match.index}>{match[10]}</strong>);
-    } else if (match[12]) {
-      nodes.push(<em key={match.index}>{match[12]}</em>);
+    if (match[2]) {
+      const target = match[2].trim().replace(/\.md$/i, '').split('#')[0];
+      const label = match[3] || match[2];
+      const href = options.wikiLinkResolver?.(target) ?? (options.wikiLinkBasePath ? `${options.wikiLinkBasePath}/${target}` : undefined);
+      nodes.push(href ? <a className="wiki-link" href={href} key={match.index}>{label}</a> : <span className="wiki-link" key={match.index}>{label}</span>);
+    } else if (match[5] !== undefined && match[6]) {
+      nodes.push(<img alt={match[5]} key={match.index} src={match[6]} />);
+    } else if (match[8] && match[9]) {
+      nodes.push(<a href={match[9]} key={match.index}>{match[8]}</a>);
+    } else if (match[11]) {
+      nodes.push(<code key={match.index}>{match[11]}</code>);
+    } else if (match[13]) {
+      nodes.push(<strong key={match.index}>{match[13]}</strong>);
+    } else if (match[15]) {
+      nodes.push(<em key={match.index}>{match[15]}</em>);
     }
     lastIndex = pattern.lastIndex;
   }
@@ -60,7 +70,7 @@ function collectParagraph(lines: string[], start: number) {
   return { text: paragraphLines.join(' '), nextIndex: index };
 }
 
-export function MarkdownViewer({ content }: { content: string }) {
+export function MarkdownViewer({ content, wikiLinkBasePath, wikiLinkResolver }: { content: string; wikiLinkBasePath?: string; wikiLinkResolver?: (target: string) => string | undefined }) {
   const blocks: React.ReactNode[] = [];
   const lines = content.replace(/\r\n/g, '\n').split('\n');
   let index = 0;
@@ -101,7 +111,7 @@ export function MarkdownViewer({ content }: { content: string }) {
     const heading = /^(#{1,6})\s+(.+)$/.exec(trimmed);
     if (heading) {
       const level = heading[1].length;
-      const text = parseInline(heading[2]);
+      const text = parseInline(heading[2], { wikiLinkBasePath, wikiLinkResolver });
       if (level === 1) blocks.push(<h1 key={index}>{text}</h1>);
       if (level === 2) blocks.push(<h2 key={index}>{text}</h2>);
       if (level === 3) blocks.push(<h3 key={index}>{text}</h3>);
@@ -121,11 +131,11 @@ export function MarkdownViewer({ content }: { content: string }) {
       blocks.push(
         <div className="markdown-table-wrap" key={index}>
           <table>
-            <thead><tr>{headers.map((header) => <th key={header}>{parseInline(header)}</th>)}</tr></thead>
+            <thead><tr>{headers.map((header) => <th key={header}>{parseInline(header, { wikiLinkBasePath, wikiLinkResolver })}</th>)}</tr></thead>
             <tbody>
               {rows.map((row, rowIndex) => (
                 <tr key={`${row.join('|')}-${rowIndex}`}>
-                  {headers.map((header, cellIndex) => <td key={`${header}-${cellIndex}`}>{parseInline(row[cellIndex] ?? '')}</td>)}
+                  {headers.map((header, cellIndex) => <td key={`${header}-${cellIndex}`}>{parseInline(row[cellIndex] ?? '', { wikiLinkBasePath, wikiLinkResolver })}</td>)}
                 </tr>
               ))}
             </tbody>
@@ -141,7 +151,7 @@ export function MarkdownViewer({ content }: { content: string }) {
         items.push(lines[index].trim().replace(/^[-*]\s+/, ''));
         index += 1;
       }
-      blocks.push(<ul key={index}>{items.map((item, itemIndex) => <li key={`${item}-${itemIndex}`}>{parseInline(item)}</li>)}</ul>);
+      blocks.push(<ul key={index}>{items.map((item, itemIndex) => <li key={`${item}-${itemIndex}`}>{parseInline(item, { wikiLinkBasePath, wikiLinkResolver })}</li>)}</ul>);
       continue;
     }
 
@@ -151,7 +161,7 @@ export function MarkdownViewer({ content }: { content: string }) {
         items.push(lines[index].trim().replace(/^\d+\.\s+/, ''));
         index += 1;
       }
-      blocks.push(<ol key={index}>{items.map((item, itemIndex) => <li key={`${item}-${itemIndex}`}>{parseInline(item)}</li>)}</ol>);
+      blocks.push(<ol key={index}>{items.map((item, itemIndex) => <li key={`${item}-${itemIndex}`}>{parseInline(item, { wikiLinkBasePath, wikiLinkResolver })}</li>)}</ol>);
       continue;
     }
 
@@ -161,12 +171,12 @@ export function MarkdownViewer({ content }: { content: string }) {
         quotes.push(lines[index].trim().replace(/^>\s?/, ''));
         index += 1;
       }
-      blocks.push(<blockquote key={index}>{parseInline(quotes.join(' '))}</blockquote>);
+      blocks.push(<blockquote key={index}>{parseInline(quotes.join(' '), { wikiLinkBasePath, wikiLinkResolver })}</blockquote>);
       continue;
     }
 
     const paragraph = collectParagraph(lines, index);
-    blocks.push(<p key={index}>{parseInline(paragraph.text)}</p>);
+    blocks.push(<p key={index}>{parseInline(paragraph.text, { wikiLinkBasePath, wikiLinkResolver })}</p>);
     index = paragraph.nextIndex;
   }
 
