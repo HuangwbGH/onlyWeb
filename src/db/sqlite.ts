@@ -46,24 +46,71 @@ function ensureColumn(tableName: string, columnName: string, definition: string)
   db.exec(`ALTER TABLE ${tableName} ADD COLUMN ${columnName} ${definition}`);
 }
 
+function ensureProjectDocumentsUniqueByKind() {
+  const table = db.prepare("SELECT sql FROM sqlite_master WHERE type = 'table' AND name = 'project_documents'").get() as { sql: string } | undefined;
+  const normalizedSql = table?.sql.replace(/\s+/g, '').toLowerCase() ?? '';
+  if (normalizedSql.includes('unique(project_id,file_name,document_kind)')) return;
+
+  db.exec(`
+    ALTER TABLE project_documents RENAME TO project_documents_old;
+
+    CREATE TABLE project_documents (
+      id TEXT PRIMARY KEY,
+      project_id TEXT NOT NULL,
+      file_name TEXT NOT NULL,
+      file_url TEXT NOT NULL,
+      document_kind TEXT NOT NULL DEFAULT 'project',
+      mime_type TEXT,
+      size INTEGER NOT NULL DEFAULT 0,
+      deleted_at TEXT,
+      created_at TEXT NOT NULL,
+      updated_at TEXT NOT NULL,
+      UNIQUE(project_id, file_name, document_kind),
+      FOREIGN KEY(project_id) REFERENCES projects(id)
+    );
+
+    INSERT OR IGNORE INTO project_documents (
+      id, project_id, file_name, file_url, document_kind, mime_type, size, deleted_at, created_at, updated_at
+    )
+    SELECT
+      id, project_id, file_name, file_url, COALESCE(document_kind, 'project'), mime_type, size, deleted_at, created_at, updated_at
+    FROM project_documents_old;
+
+    DROP TABLE project_documents_old;
+  `);
+}
+
 function runMigrations() {
   ensureColumn('profiles', 'wechat_id', 'TEXT');
   ensureColumn('profiles', 'wechat_qr_url', 'TEXT');
   ensureColumn('projects', 'deleted_at', 'TEXT');
+  ensureColumn('projects', 'effect_demo_type', 'TEXT');
+  ensureColumn('projects', 'effect_demo_title', 'TEXT');
+  ensureColumn('projects', 'effect_demo_description', 'TEXT');
+  ensureColumn('projects', 'effect_demo_url', 'TEXT');
+  ensureColumn('projects', 'show_description', 'INTEGER NOT NULL DEFAULT 1');
+  ensureColumn('projects', 'show_role', 'INTEGER NOT NULL DEFAULT 1');
+  ensureColumn('projects', 'show_effect_demo', 'INTEGER NOT NULL DEFAULT 1');
+  ensureColumn('projects', 'show_highlights', 'INTEGER NOT NULL DEFAULT 1');
+  ensureColumn('projects', 'show_tech_stack', 'INTEGER NOT NULL DEFAULT 1');
+  ensureColumn('projects', 'show_links', 'INTEGER NOT NULL DEFAULT 1');
   ensureColumn('experiences', 'deleted_at', 'TEXT');
   ensureColumn('resume_pages', 'deleted_at', 'TEXT');
+  ensureColumn('project_documents', 'document_kind', "TEXT NOT NULL DEFAULT 'project'");
+  ensureProjectDocumentsUniqueByKind();
   db.exec(`
     CREATE TABLE IF NOT EXISTS project_documents (
       id TEXT PRIMARY KEY,
       project_id TEXT NOT NULL,
       file_name TEXT NOT NULL,
       file_url TEXT NOT NULL,
+      document_kind TEXT NOT NULL DEFAULT 'project',
       mime_type TEXT,
       size INTEGER NOT NULL DEFAULT 0,
       deleted_at TEXT,
       created_at TEXT NOT NULL,
       updated_at TEXT NOT NULL,
-      UNIQUE(project_id, file_name),
+      UNIQUE(project_id, file_name, document_kind),
       FOREIGN KEY(project_id) REFERENCES projects(id)
     );
   `);

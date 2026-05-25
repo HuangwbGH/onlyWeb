@@ -1,22 +1,12 @@
 import fs from 'node:fs/promises';
-import path from 'node:path';
 import { getProjectBySlug, getProjectDocument } from '@/lib/data';
+import { resolveUploadedPath } from '@/lib/projectDocs';
 
 export const dynamic = 'force-dynamic';
 
 function contentDisposition(fileName: string) {
   const fallback = fileName.replace(/[^\x20-\x7E]+/g, '_').replace(/["\\]/g, '_') || 'document';
   return `attachment; filename="${fallback}"; filename*=UTF-8''${encodeURIComponent(fileName)}`;
-}
-
-function resolveUploadedPath(fileUrl: string) {
-  const relativePath = fileUrl.replace(/^\/+/g, '');
-  const fullPath = path.join(process.cwd(), 'public', relativePath.replace(/^public\//, ''));
-  const uploadDir = path.join(process.cwd(), 'public', 'uploads', 'project-docs');
-  const resolvedFullPath = path.resolve(fullPath);
-  const resolvedUploadDir = path.resolve(uploadDir);
-  if (!resolvedFullPath.startsWith(resolvedUploadDir)) return undefined;
-  return resolvedFullPath;
 }
 
 export async function GET(

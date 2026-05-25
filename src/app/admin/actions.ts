@@ -43,13 +43,30 @@ function selected(formData: FormData, name: string) {
   return formData.getAll(name).map(String);
 }
 
+function effectDemoType(formData: FormData) {
+  const value = text(formData, 'effectDemoType');
+  return value === 'video' || value === 'document' ? value : undefined;
+}
+
 function originalFileName(value: string) {
   return path.basename(value).trim();
 }
 
-async function saveProjectDocuments(formData: FormData, projectId: string) {
-  const files = formData.getAll('documentFiles');
-  const uploadDir = path.join(process.cwd(), 'public', 'uploads', 'project-docs', projectId);
+async function saveProjectDocuments(
+  formData: FormData,
+  projectId: string,
+  fieldName = 'documentFiles',
+  documentKind: 'project' | 'effect_demo' = 'project',
+) {
+  const files = formData.getAll(fieldName);
+  const uploadDir = path.join(
+    process.cwd(),
+    'public',
+    'uploads',
+    'project-docs',
+    projectId,
+    documentKind === 'effect_demo' ? 'effect-demo' : '',
+  );
   await fs.mkdir(uploadDir, { recursive: true });
 
   for (const item of files) {
@@ -69,7 +86,8 @@ async function saveProjectDocuments(formData: FormData, projectId: string) {
     saveProjectDocument({
       projectId,
       fileName,
-      fileUrl: `/uploads/project-docs/${projectId}/${fileName}`,
+      fileUrl: documentKind === 'effect_demo' ? `/uploads/project-docs/${projectId}/effect-demo/${fileName}` : `/uploads/project-docs/${projectId}/${fileName}`,
+      documentKind,
       mimeType: item.type || undefined,
       size: item.size,
     });
@@ -142,13 +160,24 @@ export async function saveProjectAction(formData: FormData) {
     role: text(formData, 'role'),
     highlights: normalizeList(text(formData, 'highlights')),
     demoUrl: optionalText(formData, 'demoUrl'),
+    effectDemoType: effectDemoType(formData),
+    effectDemoTitle: optionalText(formData, 'effectDemoTitle'),
+    effectDemoDescription: optionalText(formData, 'effectDemoDescription'),
+    effectDemoUrl: optionalText(formData, 'effectDemoUrl'),
     githubUrl: optionalText(formData, 'githubUrl'),
     docsUrl: optionalText(formData, 'docsUrl'),
+    showDescription: checkbox(formData, 'showDescription'),
+    showRole: checkbox(formData, 'showRole'),
+    showEffectDemo: checkbox(formData, 'showEffectDemo'),
+    showHighlights: checkbox(formData, 'showHighlights'),
+    showTechStack: checkbox(formData, 'showTechStack'),
+    showLinks: checkbox(formData, 'showLinks'),
     isFeatured: checkbox(formData, 'isFeatured'),
     isPublished: checkbox(formData, 'isPublished'),
   };
   saveProject(project);
   await saveProjectDocuments(formData, projectId);
+  await saveProjectDocuments(formData, projectId, 'effectDemoFiles', 'effect_demo');
   refreshAdmin();
 }
 

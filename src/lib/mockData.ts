@@ -8,8 +8,18 @@ export type Project = {
   role: string;
   highlights: string[];
   demoUrl?: string;
+  effectDemoType?: 'video' | 'document';
+  effectDemoTitle?: string;
+  effectDemoDescription?: string;
+  effectDemoUrl?: string;
   githubUrl?: string;
   docsUrl?: string;
+  showDescription: boolean;
+  showRole: boolean;
+  showEffectDemo: boolean;
+  showHighlights: boolean;
+  showTechStack: boolean;
+  showLinks: boolean;
   isFeatured: boolean;
   isPublished: boolean;
 };
@@ -74,6 +84,12 @@ export const projects: Project[] = [
     highlights: ['动态路由生成投递页面', '项目和经历可被多个简历页复用', '面向个人长期维护的轻量架构'],
     demoUrl: 'https://onlyweb.example.com',
     githubUrl: 'https://github.com/example/onlyweb',
+    showDescription: true,
+    showRole: true,
+    showEffectDemo: true,
+    showHighlights: true,
+    showTechStack: true,
+    showLinks: true,
     isFeatured: true,
     isPublished: true,
   },
@@ -88,6 +104,12 @@ export const projects: Project[] = [
     role: '全栈开发、Prompt 设计、交互设计',
     highlights: ['长文档分块处理', '支持基于来源的问答', '降低项目交接成本'],
     docsUrl: 'https://docs.example.com',
+    showDescription: true,
+    showRole: true,
+    showEffectDemo: true,
+    showHighlights: true,
+    showTechStack: true,
+    showLinks: true,
     isFeatured: true,
     isPublished: true,
   },
@@ -102,6 +124,12 @@ export const projects: Project[] = [
     role: '组件设计、测试、文档建设',
     highlights: ['提升后台页面交付效率', '统一交互和视觉规范', '补充单元测试和示例文档'],
     githubUrl: 'https://github.com/example/component-lab',
+    showDescription: true,
+    showRole: true,
+    showEffectDemo: true,
+    showHighlights: true,
+    showTechStack: true,
+    showLinks: true,
     isFeatured: false,
     isPublished: true,
   },

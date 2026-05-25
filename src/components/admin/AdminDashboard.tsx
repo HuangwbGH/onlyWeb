@@ -126,10 +126,28 @@ function ProjectForm({ project }: { project?: Project }) {
       <label>技术栈<input name="techStack" defaultValue={project?.techStack.join(', ')} placeholder="React, TypeScript" /></label>
       <label>职责<input name="role" defaultValue={project?.role} /></label>
       <label>Demo<input name="demoUrl" defaultValue={project?.demoUrl} /></label>
+      <label>
+        效果演示类型
+        <select name="effectDemoType" defaultValue={project?.effectDemoType ?? 'document'}>
+          <option value="">暂不配置</option>
+          <option value="video">视频</option>
+          <option value="document">文档</option>
+        </select>
+      </label>
+      <label>效果演示标题<input name="effectDemoTitle" defaultValue={project?.effectDemoTitle} /></label>
+      <label className="form-wide">效果演示链接<input name="effectDemoUrl" defaultValue={project?.effectDemoUrl} placeholder="视频地址或文档地址" /></label>
+      <label className="form-wide">效果演示说明<textarea name="effectDemoDescription" defaultValue={project?.effectDemoDescription} /></label>
+      <label className="form-wide">上传效果演示文档<input name="effectDemoFiles" type="file" accept=".md,.markdown,.txt,.pdf,.doc,.docx,.mp4,.webm,.ogg" multiple /></label>
       <label>GitHub<input name="githubUrl" defaultValue={project?.githubUrl} /></label>
       <label>文档链接<input name="docsUrl" defaultValue={project?.docsUrl} /></label>
       <label className="form-wide">上传文档<input name="documentFiles" type="file" accept=".md,.markdown,.txt,.pdf,.doc,.docx" multiple /></label>
       <label className="form-wide">亮点<textarea name="highlights" defaultValue={project?.highlights.join('\n')} /></label>
+      <label className="check-line"><input name="showDescription" type="checkbox" defaultChecked={project?.showDescription ?? true} />展示项目介绍</label>
+      <label className="check-line"><input name="showRole" type="checkbox" defaultChecked={project?.showRole ?? true} />展示我的职责</label>
+      <label className="check-line"><input name="showEffectDemo" type="checkbox" defaultChecked={project?.showEffectDemo ?? true} />展示效果演示</label>
+      <label className="check-line"><input name="showHighlights" type="checkbox" defaultChecked={project?.showHighlights ?? true} />展示项目亮点</label>
+      <label className="check-line"><input name="showTechStack" type="checkbox" defaultChecked={project?.showTechStack ?? true} />展示技术栈</label>
+      <label className="check-line"><input name="showLinks" type="checkbox" defaultChecked={project?.showLinks ?? true} />展示相关链接/文档</label>
       <label className="check-line"><input name="isFeatured" type="checkbox" defaultChecked={project?.isFeatured} />精选</label>
       <label className="check-line"><input name="isPublished" type="checkbox" defaultChecked={project?.isPublished ?? true} />发布</label>
       <button className="button primary" type="submit">保存作品</button>

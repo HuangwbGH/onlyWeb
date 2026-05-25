@@ -399,6 +399,63 @@ main {
   font-weight: 800;
 }
 
+.project-demo-section {
+  margin-top: 30px;
+  padding: 22px;
+  border: 1px solid rgba(66, 99, 255, 0.14);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(66, 99, 255, 0.08), rgba(255, 255, 255, 0.94));
+}
+
+.project-demo-head span {
+  display: inline-flex;
+  margin-bottom: 8px;
+  color: #4263ff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-demo-head h2 {
+  margin-top: 0;
+}
+
+.project-demo-video {
+  width: 100%;
+  margin-top: 16px;
+  border-radius: 18px;
+  background: #101729;
+}
+
+.project-demo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.project-demo-empty {
+  margin: 0;
+  color: #7a8499;
+  font-weight: 700;
+}
+
+.document-preview-frame {
+  overflow: hidden;
+  min-height: 72vh;
+  border: 1px solid rgba(24, 32, 51, 0.1);
+  border-radius: 24px;
+  background: #f6f8ff;
+}
+
+.document-preview-frame iframe {
+  width: 100%;
+  min-height: 72vh;
+  border: 0;
+  background: #ffffff;
+}
+
 .resume-stack {
   display: grid;
   gap: 24px;
@@ -1168,6 +1225,57 @@ td button {
   grid-template-columns: minmax(0, 1fr) auto;
 }
 
+.project-visibility-panel {
+  background: linear-gradient(135deg, rgba(66, 99, 255, 0.08), #ffffff);
+  border-color: rgba(66, 99, 255, 0.16);
+}
+
+.module-toggle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.module-toggle-card {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(24, 32, 51, 0.08);
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.module-toggle-card:has(input:checked) {
+  background: #ffffff;
+  border-color: rgba(66, 99, 255, 0.34);
+  box-shadow: 0 12px 28px rgba(66, 99, 255, 0.1);
+}
+
+.module-toggle-card input {
+  width: auto;
+  margin-top: 3px;
+}
+
+.module-toggle-card span {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.module-toggle-card strong {
+  color: #101729;
+  font-size: 14px;
+}
+
+.module-toggle-card small {
+  color: #7a8499;
+  line-height: 1.45;
+}
+
 .custom-page-danger-zone {
   margin-top: 18px;
   background: #fff8f7;
@@ -1178,6 +1286,7 @@ td button {
   .custom-page-manager,
   .custom-page-editor-head,
   .relation-panel-grid,
+  .module-toggle-grid,
   .footer-panel {
     grid-template-columns: 1fr;
   }

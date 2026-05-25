@@ -23,6 +23,7 @@ export type ProjectDocument = {
   projectId: string;
   fileName: string;
   fileUrl: string;
+  documentKind: 'project' | 'effect_demo';
   mimeType?: string;
   size: number;
   createdAt: string;
@@ -106,8 +107,18 @@ function mapProject(row: Row): Project {
     role: String(row.role),
     highlights: parseJsonArray(row.highlights),
     demoUrl: nullable(row.demo_url),
+    effectDemoType: nullable(row.effect_demo_type) as Project['effectDemoType'],
+    effectDemoTitle: nullable(row.effect_demo_title),
+    effectDemoDescription: nullable(row.effect_demo_description),
+    effectDemoUrl: nullable(row.effect_demo_url),
     githubUrl: nullable(row.github_url),
     docsUrl: nullable(row.docs_url),
+    showDescription: row.show_description == null ? true : bool(row.show_description),
+    showRole: row.show_role == null ? true : bool(row.show_role),
+    showEffectDemo: row.show_effect_demo == null ? true : bool(row.show_effect_demo),
+    showHighlights: row.show_highlights == null ? true : bool(row.show_highlights),
+    showTechStack: row.show_tech_stack == null ? true : bool(row.show_tech_stack),
+    showLinks: row.show_links == null ? true : bool(row.show_links),
     isFeatured: bool(row.is_featured),
     isPublished: bool(row.is_published),
   };
@@ -119,6 +130,7 @@ function mapProjectDocument(row: Row): ProjectDocument {
     projectId: String(row.project_id),
     fileName: String(row.file_name),
     fileUrl: String(row.file_url),
+    documentKind: row.document_kind === 'effect_demo' ? 'effect_demo' : 'project',
     mimeType: nullable(row.mime_type),
     size: Number(row.size ?? 0),
     createdAt: String(row.created_at),
@@ -228,8 +240,18 @@ export function saveProject(input: Project) {
     techStack: JSON.stringify(input.techStack),
     highlights: JSON.stringify(input.highlights),
     demoUrl: input.demoUrl ?? null,
+    effectDemoType: input.effectDemoType ?? null,
+    effectDemoTitle: input.effectDemoTitle ?? null,
+    effectDemoDescription: input.effectDemoDescription ?? null,
+    effectDemoUrl: input.effectDemoUrl ?? null,
     githubUrl: input.githubUrl ?? null,
     docsUrl: input.docsUrl ?? null,
+    showDescription: input.showDescription ? 1 : 0,
+    showRole: input.showRole ? 1 : 0,
+    showEffectDemo: input.showEffectDemo ? 1 : 0,
+    showHighlights: input.showHighlights ? 1 : 0,
+    showTechStack: input.showTechStack ? 1 : 0,
+    showLinks: input.showLinks ? 1 : 0,
     isFeatured: input.isFeatured ? 1 : 0,
     isPublished: input.isPublished ? 1 : 0,
     updatedAt: now(),
@@ -237,14 +259,18 @@ export function saveProject(input: Project) {
   if (exists) {
     db.prepare(`
       UPDATE projects SET title=@title, slug=@slug, summary=@summary, description=@description, tech_stack=@techStack,
-      role=@role, highlights=@highlights, demo_url=@demoUrl, github_url=@githubUrl, docs_url=@docsUrl,
+      role=@role, highlights=@highlights, demo_url=@demoUrl, effect_demo_type=@effectDemoType,
+      effect_demo_title=@effectDemoTitle, effect_demo_description=@effectDemoDescription, effect_demo_url=@effectDemoUrl,
+      github_url=@githubUrl, docs_url=@docsUrl,
+      show_description=@showDescription, show_role=@showRole, show_effect_demo=@showEffectDemo,
+      show_highlights=@showHighlights, show_tech_stack=@showTechStack, show_links=@showLinks,
       is_featured=@isFeatured, is_published=@isPublished, deleted_at=NULL, updated_at=@updatedAt WHERE id=@id
     `).run(payload);
     return;
   }
   db.prepare(`
-    INSERT INTO projects (id,title,slug,summary,description,cover_image_url,tech_stack,role,highlights,demo_url,github_url,docs_url,is_featured,is_published,deleted_at,created_at,updated_at)
-    VALUES (@id,@title,@slug,@summary,@description,NULL,@techStack,@role,@highlights,@demoUrl,@githubUrl,@docsUrl,@isFeatured,@isPublished,NULL,@createdAt,@updatedAt)
+    INSERT INTO projects (id,title,slug,summary,description,cover_image_url,tech_stack,role,highlights,demo_url,effect_demo_type,effect_demo_title,effect_demo_description,effect_demo_url,github_url,docs_url,show_description,show_role,show_effect_demo,show_highlights,show_tech_stack,show_links,is_featured,is_published,deleted_at,created_at,updated_at)
+    VALUES (@id,@title,@slug,@summary,@description,NULL,@techStack,@role,@highlights,@demoUrl,@effectDemoType,@effectDemoTitle,@effectDemoDescription,@effectDemoUrl,@githubUrl,@docsUrl,@showDescription,@showRole,@showEffectDemo,@showHighlights,@showTechStack,@showLinks,@isFeatured,@isPublished,NULL,@createdAt,@updatedAt)
   `).run({ ...payload, createdAt: now() });
 }
 
@@ -260,7 +286,16 @@ export function restoreProject(id: string) {
 export function listProjectDocuments(projectId: string) {
   const rows = db.prepare(`
     SELECT * FROM project_documents
-    WHERE project_id = ? AND deleted_at IS NULL
+    WHERE project_id = ? AND document_kind = 'project' AND deleted_at IS NULL
+    ORDER BY created_at DESC
+  `).all(projectId) as Row[];
+  return rows.map(mapProjectDocument);
+}
+
+export function listEffectDemoDocuments(projectId: string) {
+  const rows = db.prepare(`
+    SELECT * FROM project_documents
+    WHERE project_id = ? AND document_kind = 'effect_demo' AND deleted_at IS NULL
     ORDER BY created_at DESC
   `).all(projectId) as Row[];
   return rows.map(mapProjectDocument);
@@ -272,13 +307,13 @@ export function getProjectDocument(id: string) {
 }
 
 export function saveProjectDocument(input: Omit<ProjectDocument, 'id' | 'createdAt'>) {
-  const current = db.prepare('SELECT * FROM project_documents WHERE project_id = ? AND file_name = ?').get(input.projectId, input.fileName) as Row | undefined;
+  const current = db.prepare('SELECT * FROM project_documents WHERE project_id = ? AND file_name = ? AND document_kind = ?').get(input.projectId, input.fileName, input.documentKind) as Row | undefined;
   const updatedAt = now();
 
   if (current) {
     db.prepare(`
       UPDATE project_documents
-      SET file_url=@fileUrl, mime_type=@mimeType, size=@size, deleted_at=NULL, updated_at=@updatedAt
+      SET file_url=@fileUrl, document_kind=@documentKind, mime_type=@mimeType, size=@size, deleted_at=NULL, updated_at=@updatedAt
       WHERE id=@id
     `).run({ ...input, id: current.id, mimeType: input.mimeType ?? null, updatedAt });
     return String(current.id);
@@ -286,8 +321,8 @@ export function saveProjectDocument(input: Omit<ProjectDocument, 'id' | 'created
 
   const id = newId();
   db.prepare(`
-    INSERT INTO project_documents (id, project_id, file_name, file_url, mime_type, size, deleted_at, created_at, updated_at)
-    VALUES (@id, @projectId, @fileName, @fileUrl, @mimeType, @size, NULL, @createdAt, @updatedAt)
+    INSERT INTO project_documents (id, project_id, file_name, file_url, document_kind, mime_type, size, deleted_at, created_at, updated_at)
+    VALUES (@id, @projectId, @fileName, @fileUrl, @documentKind, @mimeType, @size, NULL, @createdAt, @updatedAt)
   `).run({ ...input, id, mimeType: input.mimeType ?? null, createdAt: updatedAt, updatedAt });
   return id;
 }
