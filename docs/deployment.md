@@ -2,6 +2,16 @@
 
 本文档用于在任意 Linux 服务器上快速部署 onlyWeb，并通过域名访问。
 
+## 目录
+
+- [1. 前置条件](#1-前置条件)
+- [2. 环境变量](#2-环境变量)
+- [3. 启动应用](#3-启动应用)
+- [4. 推荐代理方案：Caddy](#4-推荐代理方案caddy)
+- [5. Nginx 代理方案](#5-nginx-代理方案)
+- [6. 备份](#6-备份)
+- [7. 常见问题](#7-常见问题)
+
 ## 1. 前置条件
 
 服务器需要安装：
@@ -10,6 +20,8 @@
 - Docker
 - Docker Compose v2
 - 一个已经解析到服务器公网 IP 的域名，例如 `onlyweb.example.com`
+
+应用 Docker 镜像会安装 LibreOffice Writer 和中文字体，用于 Word `.doc/.docx` 转 PDF 在线预览。因此首次构建镜像会比普通 Node.js 应用更慢，镜像体积也更大。
 
 开放端口：
 
@@ -209,7 +221,7 @@ docker compose up -d
 SQLite 数据和上传文件都在 Docker volume 中：
 
 - `sqlite_data`：数据库
-- `uploads_data`：上传文件，包括作品文档和微信二维码
+- `uploads_data`：上传文件，包括普通项目文档、效果演示文档、Word 预览缓存和微信二维码
 
 示例备份：
 
@@ -257,3 +269,22 @@ docker compose up -d
 ```nginx
 client_max_body_size 50m;
 ```
+
+
+### 7.4 Word 文档无法在线预览
+
+Word `.doc/.docx` 在线预览依赖 Docker 镜像内置的 LibreOffice Writer。
+
+如果预览失败，先确认当前容器中可以执行：
+
+```bash
+docker compose exec app soffice --version
+```
+
+如果命令不存在，说明镜像没有用最新 Dockerfile 重新构建，需要执行：
+
+```bash
+docker compose up -d --build
+```
+
+原始文档下载不依赖 LibreOffice，仍可通过下载按钮获取。

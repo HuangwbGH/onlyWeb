@@ -16,6 +16,10 @@
 - [12. 部署设计](#12-部署设计)
 - [13. 架构原则](#13-架构原则)
 - [14. 当前正式程序结构](#14-当前正式程序结构)
+- [15. 软删除字段](#15-软删除字段)
+- [16. 项目文档上传与在线预览](#16-项目文档上传与在线预览)
+- [17. HR 联系方式与个人资料图片](#17-hr-联系方式与个人资料图片)
+- [18. 作品模块展示配置](#18-作品模块展示配置)
 
 
 ## 1. 架构目标
@@ -34,16 +38,17 @@ onlyWeb 的架构目标是：
 推荐组合：
 
 ```txt
-Web 框架：TanStack Start
+Web 框架：Next.js
 语言：TypeScript
 数据库：SQLite
 数据访问：better-sqlite3
-样式：Tailwind CSS
+样式：全局 CSS
 认证：自定义管理员登录
+文档转换：LibreOffice Writer，用于 Word 转 PDF 预览
 部署：Docker Compose
 ```
 
-如后续发现 TanStack Start 在部署或生态上不满足需求，可以切换为 Next.js，但数据库模型和产品结构保持不变。
+当前正式实现使用 Next.js App Router；数据库模型和产品结构保持轻量，避免引入复杂 CMS。
 
 
 ## 3. 当前前端 Mock 原型
@@ -333,7 +338,8 @@ onlyWeb/
 /projects                       作品列表
 /projects/:slug                 作品详情
 /r/:shareToken                  HR 专属定制简历页
-/projects/:slug/docs            Markdown 项目文档在线查看
+/projects/:slug/docs            Markdown / PDF / Word 项目文档在线预览
+/projects/:slug/docs/preview    PDF 预览与 Word 转 PDF 预览接口
 /projects/:slug/docs/download   原始项目文档下载接口
 /uploads/profile/:fileName      个人资料图片访问接口
 /contact                        联系方式
@@ -350,7 +356,7 @@ onlyWeb/
 ```txt
 /admin/login                    登录
 /admin                          后台首页、个人资料、技能列表行编辑
-/admin/projects                 新版作品管理，支持新建、编辑、软删除、上传多个文档
+/admin/projects                 新版作品管理，支持新建、编辑、软删除、普通文档/效果演示文档上传、模块展示配置
 /admin/experiences              新版经历管理，支持新建、编辑、软删除
 /admin/custom-pages             新版定制页管理，支持新建、编辑、软删除
 /admin/recycle-bin              回收站，查看和恢复已删除作品、经历、定制页
@@ -383,7 +389,7 @@ volumes:
   uploads_data:
 ```
 
-实际配置见 `docker-compose.yml`；端口通过 `APP_PORT` 配置，对外域名通过 `APP_URL` 配置。
+实际配置见 `docker-compose.yml`；端口通过 `APP_PORT` 配置，对外域名通过 `APP_URL` 配置。运行镜像内置 LibreOffice Writer 和中文字体，用于 `.doc/.docx` 转 PDF 在线预览。
 
 ## 10. 认证设计
 
@@ -400,11 +406,18 @@ MVP 使用单管理员账号。
 
 ## 11. 文件上传设计
 
-MVP 可以先使用本地 volume。
+当前使用本地 Docker volume。
 
 ```txt
-uploads volume -> /app/public/uploads 或 /app/uploads
+uploads_data -> /app/public/uploads
 ```
+
+上传文件分为：
+
+- 普通项目文档：`public/uploads/project-docs/<projectId>/`
+- 效果演示文档：`public/uploads/project-docs/<projectId>/effect-demo/`
+- Word 预览缓存：`public/uploads/project-doc-previews/<documentId>/preview.pdf`
+- 个人资料图片：`public/uploads/profile/`
 
 后续可迁移到：
 
@@ -478,7 +491,7 @@ src/
 - `/for/:companySlug/:positionSlug` 当前使用服务端 session 做管理员预览保护。
 
 
-## 11. 软删除字段
+## 15. 软删除字段
 
 `projects`、`experiences`、`resume_pages` 增加 `deleted_at` 字段。
 
@@ -488,17 +501,33 @@ src/
 - 回收站读取 `deleted_at IS NOT NULL` 的内容，并通过恢复操作把 `deleted_at` 置回 `NULL`。
 
 
-## 12. 项目文档上传
+## 16. 项目文档上传与在线预览
 
-作品外部文档链接继续复用 `projects.docs_url` 字段；上传的多个作品文档保存到 `project_documents` 表。上传文件保存到 `public/uploads/project-docs/<projectId>/`，Docker 中该目录由 `uploads_data` volume 持久化。
+作品外部文档链接继续复用 `projects.docs_url` 字段；上传的多个作品文档保存到 `project_documents` 表，并通过 `document_kind` 区分普通项目文档和效果演示文档。上传文件由 `uploads_data` volume 持久化。
 
-上传文件保存时保留原始文件名；同一作品下再次上传同名文件会覆盖该文件并更新对应文档记录。Markdown 文档通过 `/projects/:slug/docs?doc=<documentId>` 在线渲染；原始文档下载通过 `/projects/:slug/docs/download?doc=<documentId>` 返回 `Content-Disposition: attachment` 强制下载；非 Markdown 文档继续作为普通文档链接打开或下载。已上传文档删除时设置 `deleted_at`，不物理删除文件。
+上传文件保存时保留原始文件名；同一作品下 `project_id + file_name + document_kind` 唯一，普通文档和效果演示文档互不覆盖。Markdown 文档通过 `/projects/:slug/docs?doc=<documentId>` 在线渲染；PDF 直接通过 `/projects/:slug/docs/preview?doc=<documentId>` 嵌入预览；Word `.doc/.docx` 由 LibreOffice 转换为 PDF 后预览。原始文档下载通过 `/projects/:slug/docs/download?doc=<documentId>` 返回 `Content-Disposition: attachment` 强制下载。已上传文档删除时设置 `deleted_at`，不物理删除文件。
 
 
-## 13. HR 联系方式与个人资料图片
+## 17. HR 联系方式与个人资料图片
 
 `profiles` 表通过 `wechat_id` 和 `wechat_qr_url` 保存微信联系方式。后台个人资料页支持填写微信号、填写二维码链接或上传二维码图片。
 
 微信二维码图片保存到 `public/uploads/profile/`，Docker 中通过 `uploads_data` volume 持久化。为了兼容中文文件名和运行时上传文件，图片访问走 `/uploads/profile/:fileName` 动态路由读取文件并返回正确图片类型。
 
 HR 定制页 `/r/:shareToken` 展示统一风格的联系方式卡片，包括邮箱、手机号、微信号、所在地和微信二维码；底部旧联系方式模块在 HR 定制页中隐藏，避免重复。
+
+
+## 18. 作品模块展示配置
+
+作品详情页由数据库字段控制模块是否展示，避免为不同作品硬编码页面。
+
+`projects` 表中的模块开关包括：
+
+- `show_description`：项目介绍
+- `show_role`：我的职责
+- `show_effect_demo`：效果演示
+- `show_highlights`：项目亮点
+- `show_tech_stack`：技术栈
+- `show_links`：相关链接/文档
+
+后台 `/admin/projects` 的“模块展示”区域维护这些开关；已有作品默认全部展示。

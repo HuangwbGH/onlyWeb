@@ -9,6 +9,9 @@
 - [experiences](#experiences)
 - [skills](#skills)
 - [resume_pages](#resume_pages)
+- [软删除字段](#软删除字段)
+- [project_documents](#project_documents)
+- [profiles 联系方式扩展字段](#profiles-联系方式扩展字段)
 
 ## 概述
 
@@ -84,8 +87,18 @@ src/db/sqlite.ts
 | role | 个人职责 | 作品详情页 |
 | highlights | JSON 数组字符串 | 作品详情页、简历页 |
 | demo_url | 演示链接 | 作品详情页 |
+| effect_demo_type | 效果演示类型，`video` 或 `document` | 作品详情页效果演示模块 |
+| effect_demo_title | 效果演示标题 | 作品详情页效果演示模块 |
+| effect_demo_description | 效果演示说明 | 作品详情页效果演示模块 |
+| effect_demo_url | 效果演示链接 | 作品详情页效果演示模块 |
 | github_url | 代码链接 | 作品详情页 |
 | docs_url | 外部文档链接 | 作品详情页 |
+| show_description | 是否展示项目介绍，0/1 | 作品详情页模块展示配置 |
+| show_role | 是否展示个人职责，0/1 | 作品详情页模块展示配置 |
+| show_effect_demo | 是否展示效果演示，0/1 | 作品详情页模块展示配置 |
+| show_highlights | 是否展示项目亮点，0/1 | 作品详情页模块展示配置 |
+| show_tech_stack | 是否展示技术栈，0/1 | 作品详情页右侧模块 |
+| show_links | 是否展示相关链接/文档，0/1 | 作品详情页右侧模块 |
 | is_featured | 是否精选，0/1 | 首页精选作品 |
 | is_published | 是否发布，0/1 | 前台可见性 |
 | deleted_at | 软删除时间 | 回收站过滤 |
@@ -169,13 +182,14 @@ src/db/sqlite.ts
 | project_id | 关联作品 ID |
 | file_name | 原始文件名，保存时不改名 |
 | file_url | 文件访问路径 |
+| document_kind | 文档类型，`project` 表示普通项目文档，`effect_demo` 表示效果演示文档 |
 | mime_type | 文件 MIME 类型 |
 | size | 文件大小 |
 | deleted_at | 软删除字段，删除后不在列表展示 |
 | created_at | 创建时间 |
 | updated_at | 更新时间 |
 
-同一作品下 `project_id + file_name` 唯一；再次上传同名文件会覆盖并更新记录。Markdown 文档通过 `/projects/:slug/docs?doc=<documentId>` 在线查看，原始文档通过 `/projects/:slug/docs/download?doc=<documentId>` 强制下载。
+同一作品下 `project_id + file_name + document_kind` 唯一；普通项目文档和效果演示文档即使同名也不会互相覆盖。再次上传同类型同名文件会覆盖并更新记录。Markdown、PDF、Word `.doc/.docx` 文档通过 `/projects/:slug/docs?doc=<documentId>` 在线预览；PDF 和 Word 预览走 `/projects/:slug/docs/preview?doc=<documentId>`，Word 会转换为 PDF；原始文档通过 `/projects/:slug/docs/download?doc=<documentId>` 强制下载。
 
 
 ## profiles 联系方式扩展字段

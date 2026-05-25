@@ -10,6 +10,7 @@
 - [程序部署方式](#程序部署方式)
 - [操作方式](#操作方式)
 - [常用命令](#常用命令)
+- [文档](#文档)
 - [前端原型](#前端原型)
 - [开发阶段](#开发阶段)
 - [环境变量](#环境变量)
@@ -46,6 +47,8 @@ onlyWeb 不是一个简单的静态个人主页，而是一个小型内容管理
 - 通用简历页
 - 作品集列表
 - 作品详情页
+- 作品详情页模块展示开关：项目介绍、职责、效果演示、亮点、技术栈、链接/文档
+- 作品文档在线预览：Markdown、PDF、Word `.doc/.docx`
 - 针对公司和岗位的定制简历页
 - 联系方式展示
 
@@ -54,6 +57,7 @@ onlyWeb 不是一个简单的静态个人主页，而是一个小型内容管理
 - 管理员登录
 - 个人资料管理
 - 作品管理
+- 作品效果演示管理：支持视频链接、单独上传演示文档
 - 工作经历管理
 - 技能管理
 - 定制简历页管理
@@ -143,6 +147,7 @@ minio      对象存储，可选
 - TypeScript
 - SQLite 文件数据库，默认 `data/onlyweb.db`
 - Docker / Docker Compose，生产部署需要
+- LibreOffice Writer，Docker 运行镜像内置，用于 `.doc/.docx` 转 PDF 在线预览
 
 当前实现状态：
 
@@ -263,22 +268,22 @@ sudo usermod -aG docker $USER
 方式一：从 Git 仓库拉取：
 
 ```bash
-cd /opt
-sudo git clone <你的仓库地址> onlyWeb
-sudo chown -R $USER:$USER /opt/onlyWeb
-cd /opt/onlyWeb
+mkdir -p workspace
+cd workspace
+git clone <你的仓库地址> onlyWeb
+cd onlyWeb
 ```
 
 方式二：从本机上传项目目录：
 
 ```bash
-scp -r /Users/mac/workspace/onlyWeb 用户名@服务器IP:/opt/onlyWeb
+scp -r onlyWeb 用户名@服务器IP:~/workspace/onlyWeb
 ```
 
 进入服务器项目目录：
 
 ```bash
-cd /opt/onlyWeb
+cd workspace/onlyWeb
 ```
 
 #### 4. 配置环境变量
@@ -517,7 +522,7 @@ docker run --rm \
 如果代码来自 Git 仓库：
 
 ```bash
-cd /opt/onlyWeb
+cd workspace/onlyWeb
 git pull
 docker compose up -d --build
 ```
@@ -525,7 +530,7 @@ docker compose up -d --build
 如果代码是手动上传，上传新代码后执行：
 
 ```bash
-cd /opt/onlyWeb
+cd workspace/onlyWeb
 docker compose up -d --build
 ```
 
@@ -560,7 +565,8 @@ sudo lsof -i :18473
 /                                      首页
 /projects                              作品列表
 /projects/onlyweb-resume-system        作品详情示例
-/projects/:slug/docs                  Markdown 项目文档在线查看
+/projects/:slug/docs                  Markdown / PDF / Word 项目文档在线预览
+/projects/:slug/docs/preview          PDF 预览与 Word 转 PDF 预览接口
 /projects/:slug/docs/download         原始项目文档强制下载接口
 /uploads/profile/:fileName            个人微信二维码等资料图片访问接口
 /resume                                通用简历
@@ -595,9 +601,12 @@ password
 - 编辑个人资料
 - 个人资料支持维护手机号、微信号和微信二维码；HR 定制页会展示统一风格的完整联系方式，微信二维码完整显示不裁剪
 - 通过独立页面新增 / 编辑 / 软删除作品
-- 每个作品支持上传多个项目文档，保留上传时的原始文件名，Markdown 文档可在线查看，已上传文档可以在作品管理页删除
+- 每个作品支持上传多个项目文档，保留上传时的原始文件名，已上传文档可以在作品管理页删除
+- 效果演示文档与普通项目文档分开上传、分开管理、分开展示
+- 文档在线预览支持 Markdown、PDF、Word `.doc/.docx`；Word 文档会在服务端通过 LibreOffice 转为 PDF 后预览
 - Markdown 在线查看支持标题、列表、代码块、表格、引用、图片和链接
-- Markdown 在线查看页的“下载原始文档”会通过下载接口强制触发浏览器下载
+- 文档在线查看页的“下载原始文档”会通过下载接口强制触发浏览器下载
+- 每个作品详情页支持配置模块是否展示：项目介绍、我的职责、效果演示、项目亮点、技术栈、相关链接/文档
 - 通过独立页面新增 / 编辑 / 软删除经历
 - 新增 / 编辑 / 删除技能，技能管理采用列表行编辑模式，便于快速维护
 - 通过独立页面新增 / 编辑 / 软删除定制简历页
