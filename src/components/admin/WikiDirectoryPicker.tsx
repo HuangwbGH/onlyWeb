@@ -7,17 +7,28 @@ type DirectoryEntry = {
   path: string;
 };
 
+type DirectoryShortcut = {
+  label: string;
+  path: string;
+};
+
 type DirectoryResponse = {
   currentPath: string;
+  containerPath: string;
+  valuePath: string;
   parentPath: string;
   directories: DirectoryEntry[];
+  shortcuts: DirectoryShortcut[];
   error?: string;
 };
 
 export function WikiDirectoryPicker({ initialPath }: { initialPath: string }) {
   const [selectedPath, setSelectedPath] = useState(initialPath);
+  const [selectedDisplayPath, setSelectedDisplayPath] = useState(initialPath);
   const [browsePath, setBrowsePath] = useState(initialPath);
+  const [browseContainerPath, setBrowseContainerPath] = useState(initialPath);
   const [directories, setDirectories] = useState<DirectoryEntry[]>([]);
+  const [shortcuts, setShortcuts] = useState<DirectoryShortcut[]>([]);
   const [parentPath, setParentPath] = useState('');
   const [error, setError] = useState('');
   const [isOpen, setIsOpen] = useState(false);
@@ -31,12 +42,15 @@ export function WikiDirectoryPicker({ initialPath }: { initialPath: string }) {
       const payload = await response.json() as DirectoryResponse;
       if (!response.ok) throw new Error(payload.error || '目录读取失败');
       setBrowsePath(payload.currentPath);
+      setBrowseContainerPath(payload.valuePath || payload.containerPath);
       setParentPath(payload.parentPath);
       setDirectories(payload.directories);
+      setShortcuts(payload.shortcuts || []);
       setError(payload.error || '');
     } catch (fetchError) {
       setError(fetchError instanceof Error ? fetchError.message : '目录读取失败');
       setDirectories([]);
+      setShortcuts([]);
       setParentPath('');
     } finally {
       setIsLoading(false);
@@ -48,7 +62,8 @@ export function WikiDirectoryPicker({ initialPath }: { initialPath: string }) {
   }
 
   function useCurrentDirectory() {
-    setSelectedPath(browsePath);
+    setSelectedPath(browseContainerPath);
+    setSelectedDisplayPath(browsePath);
     setIsOpen(false);
   }
 
@@ -59,9 +74,10 @@ export function WikiDirectoryPicker({ initialPath }: { initialPath: string }) {
   return (
     <div className="wiki-path-picker">
       <input name="wikiVaultPath" value={selectedPath} readOnly required type="hidden" />
+      <input name="wikiHostVaultPath" value={selectedDisplayPath} readOnly type="hidden" />
       <button className="wiki-path-trigger" type="button" onClick={openPicker}>
         <span>知识库根目录路径</span>
-        <strong>{selectedPath}</strong>
+        <strong>{selectedDisplayPath}</strong>
         <em>点击选择服务器目录</em>
       </button>
 
@@ -88,6 +104,17 @@ export function WikiDirectoryPicker({ initialPath }: { initialPath: string }) {
               <button className="button ghost" type="button" onClick={() => loadDirectory(initialPath)}>回到当前知识库目录</button>
               <button className="button primary" type="button" onClick={useCurrentDirectory}>使用当前目录</button>
             </div>
+
+            {shortcuts.length > 0 && (
+              <div className="wiki-directory-shortcuts">
+                {shortcuts.map((shortcut) => (
+                  <button type="button" onClick={() => loadDirectory(shortcut.path)} key={`${shortcut.label}-${shortcut.path}`}>
+                    <span>{shortcut.label}</span>
+                    <strong>{shortcut.path}</strong>
+                  </button>
+                ))}
+              </div>
+            )}
 
             <div className="wiki-directory-list">
               {isLoading && <p className="admin-hint">正在读取目录...</p>}

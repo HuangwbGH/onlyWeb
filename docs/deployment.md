@@ -45,6 +45,8 @@ SESSION_SECRET=replace-with-a-long-random-secret
 ADMIN_EMAIL=admin@example.com
 ADMIN_PASSWORD=replace-with-a-strong-password
 WIKI_HOST_VAULT_PATH=../wiki/vault
+WIKI_HOST_BROWSE_ROOT=../wiki
+WIKI_CONTAINER_BROWSE_ROOT=/host-browse
 WIKI_VAULT_PATH=/app/wiki-vault
 WIKI_PUBLIC=false
 WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
@@ -116,6 +118,8 @@ SESSION_SECRET=replace-with-a-long-random-secret
 ADMIN_EMAIL=admin@example.com
 ADMIN_PASSWORD=replace-with-a-strong-password
 WIKI_HOST_VAULT_PATH=../wiki/vault
+WIKI_HOST_BROWSE_ROOT=../wiki
+WIKI_CONTAINER_BROWSE_ROOT=/host-browse
 WIKI_VAULT_PATH=/app/wiki-vault
 WIKI_PUBLIC=false
 WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
@@ -248,6 +252,8 @@ SESSION_SECRET=replace-with-a-long-random-secret
 ADMIN_EMAIL=admin@example.com
 ADMIN_PASSWORD=replace-with-a-strong-password
 WIKI_HOST_VAULT_PATH=../wiki/vault
+WIKI_HOST_BROWSE_ROOT=../wiki
+WIKI_CONTAINER_BROWSE_ROOT=/host-browse
 WIKI_VAULT_PATH=/app/wiki-vault
 WIKI_PUBLIC=false
 WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
@@ -441,6 +447,8 @@ workspace/
 
 ```env
 WIKI_HOST_VAULT_PATH=../wiki/vault
+WIKI_HOST_BROWSE_ROOT=../wiki
+WIKI_CONTAINER_BROWSE_ROOT=/host-browse
 WIKI_VAULT_PATH=/app/wiki-vault
 ```
 
@@ -459,17 +467,20 @@ workspace/
 
 ```env
 WIKI_HOST_VAULT_PATH=../wiki/vault
+WIKI_HOST_BROWSE_ROOT=../wiki
+WIKI_CONTAINER_BROWSE_ROOT=/host-browse
 WIKI_VAULT_PATH=/app/wiki-vault
 ```
 
-如果 vault 放在其他位置，使用服务器实际路径即可。后台知识库管理入口为 `/admin/wiki`，可点击“知识库根目录路径”后用弹窗浏览服务器目录并选择容器内 vault 路径，通过选项维护公开状态、忽略目录，并上传 Markdown 文档；上传目录从当前知识库已有目录中选择。忽略目录选择“不忽略任何目录”时会覆盖 `.env` 默认值。
+如果 vault 放在其他位置，使用服务器实际路径即可。LinuxOS 项目位于 `/root/onlyweb` 时，推荐 `WIKI_HOST_VAULT_PATH=/root/onlyweb/wiki/vault`、`WIKI_HOST_BROWSE_ROOT=/root/onlyweb`、`WIKI_CONTAINER_BROWSE_ROOT=/host-browse`。后台知识库管理入口为 `/admin/wiki`，可点击“知识库根目录路径”后用弹窗浏览服务器目录并选择容器内 vault 路径，通过选项维护公开状态、忽略目录，并上传 Markdown 文档；上传目录从当前知识库已有目录中选择。忽略目录选择“不忽略任何目录”时会覆盖 `.env` 默认值。
 
 ### 6.3 权限设置
 
-Wiki 使用读写挂载，后台上传 Markdown 文档会写入 vault。需要确保 Docker 运行用户可以读写 vault：
+Wiki 使用读写挂载，后台上传 Markdown 文档会写入 vault。后台保存知识库配置时也会在 `/app-config/.env` 存在且可写时同步更新 `.env`。需要确保 Docker 运行用户可以读写 vault，并且如需同步 `.env`，需要让容器内 UID 1001 可写 `.env`：
 
 ```bash
 # 推荐：让容器内 nextjs 用户 UID 1001 拥有写入权限
+sudo chown 1001:1001 .env
 sudo chown -R 1001:1001 ../wiki/vault
 chmod -R u+rwX ../wiki/vault
 

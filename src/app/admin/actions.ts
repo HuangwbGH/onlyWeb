@@ -4,6 +4,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { revalidatePath } from 'next/cache';
 import { requireAdmin } from '@/lib/auth';
+import { updateEnvFileIfExists } from '@/lib/envFile';
 import { getWikiConfig } from '@/lib/wiki';
 import {
   deleteExperience,
@@ -156,11 +157,28 @@ function refreshWiki() {
 export async function saveWikiSettingsAction(formData: FormData) {
   await requireAdmin();
   const vaultPath = text(formData, 'wikiVaultPath');
+  const hostVaultPath = optionalText(formData, 'wikiHostVaultPath');
   const excludeDirs = formData.has('wikiExcludeDirs') ? text(formData, 'wikiExcludeDirs') : '.obsidian,_raw,.git';
+  const wikiPublic = wikiPublicValue(formData);
 
   saveAppSetting('WIKI_VAULT_PATH', vaultPath, '知识库根目录路径，优先级高于环境变量 WIKI_VAULT_PATH。');
   saveAppSetting('WIKI_EXCLUDE_DIRS', excludeDirs, '知识库扫描时忽略的目录，多个目录使用英文逗号分隔。');
-  saveAppSetting('WIKI_PUBLIC', wikiPublicValue(formData), '是否允许未登录访客访问 /wiki。');
+  saveAppSetting('WIKI_PUBLIC', wikiPublic, '是否允许未登录访客访问 /wiki。');
+  const containerBrowseRoot = process.env.WIKI_CONTAINER_BROWSE_ROOT?.trim() || '/host-browse';
+  const envVaultPath = hostVaultPath && isInsidePath(containerBrowseRoot, vaultPath)
+    ? (process.env.WIKI_VAULT_PATH?.trim() || '/app/wiki-vault')
+    : vaultPath;
+
+  try {
+    await updateEnvFileIfExists({
+      WIKI_VAULT_PATH: envVaultPath,
+      WIKI_HOST_VAULT_PATH: hostVaultPath,
+      WIKI_EXCLUDE_DIRS: excludeDirs,
+      WIKI_PUBLIC: wikiPublic,
+    });
+  } catch (error) {
+    console.warn('Runtime .env file could not be updated from settings page.', error);
+  }
 
   if (vaultPath) {
     try {

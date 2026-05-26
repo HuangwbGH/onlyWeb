@@ -256,6 +256,8 @@ SESSION_SECRET=请替换为随机长字符串
 ADMIN_EMAIL=你的管理员邮箱
 ADMIN_PASSWORD=你的强密码
 WIKI_HOST_VAULT_PATH=../wiki/vault
+WIKI_HOST_BROWSE_ROOT=../wiki
+WIKI_CONTAINER_BROWSE_ROOT=/host-browse
 WIKI_VAULT_PATH=/app/wiki-vault
 WIKI_PUBLIC=false
 WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
@@ -402,6 +404,8 @@ SESSION_SECRET=请替换为随机长字符串
 ADMIN_EMAIL=你的管理员邮箱
 ADMIN_PASSWORD=你的强密码
 WIKI_HOST_VAULT_PATH=../wiki/vault
+WIKI_HOST_BROWSE_ROOT=../wiki
+WIKI_CONTAINER_BROWSE_ROOT=/host-browse
 WIKI_VAULT_PATH=/app/wiki-vault
 WIKI_PUBLIC=false
 WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
@@ -415,6 +419,8 @@ WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
 - `SESSION_SECRET`：生产环境必须替换，不要使用默认值。
 - `ADMIN_EMAIL` / `ADMIN_PASSWORD`：初始化管理员账号。
 - `WIKI_HOST_VAULT_PATH`：服务器宿主机上的 Obsidian vault 路径，Docker 会挂载。
+- `WIKI_HOST_BROWSE_ROOT`：后台目录选择器允许浏览的宿主机根目录；LinuxOS 项目在 `/root/onlyweb` 时建议设置为 `/root/onlyweb`。
+- `WIKI_CONTAINER_BROWSE_ROOT`：宿主机浏览根目录在容器内的挂载点，通常保持 `/host-browse`。
 - `WIKI_VAULT_PATH`：容器内读取 Wiki 的路径，通常保持默认 `/app/wiki-vault`。
 - `WIKI_PUBLIC`：是否公开 Wiki；默认 `false`，需要管理员登录。
 - `WIKI_EXCLUDE_DIRS`：Wiki 扫描时忽略的目录。
@@ -886,6 +892,8 @@ SESSION_SECRET=change-me
 ADMIN_EMAIL=admin@example.com
 ADMIN_PASSWORD=password
 WIKI_HOST_VAULT_PATH=../wiki/vault
+WIKI_HOST_BROWSE_ROOT=../wiki
+WIKI_CONTAINER_BROWSE_ROOT=/host-browse
 WIKI_VAULT_PATH=/app/wiki-vault
 WIKI_PUBLIC=false
 WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
@@ -907,9 +915,29 @@ Docker 部署时会把 vault 挂载到容器内，后台可直接上传 Markdown
 
 ```env
 WIKI_HOST_VAULT_PATH=../wiki/vault
+WIKI_HOST_BROWSE_ROOT=../wiki
+WIKI_CONTAINER_BROWSE_ROOT=/host-browse
 WIKI_VAULT_PATH=/app/wiki-vault
 WIKI_PUBLIC=false
 WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
+```
+
+
+LinuxOS 如果项目目录为 `/root/onlyweb`，建议 `.env` 中这样配置：
+
+```env
+WIKI_HOST_VAULT_PATH=/root/onlyweb/wiki/vault
+WIKI_HOST_BROWSE_ROOT=/root/onlyweb
+WIKI_CONTAINER_BROWSE_ROOT=/host-browse
+WIKI_VAULT_PATH=/app/wiki-vault
+```
+
+这样后台弹窗可以从 `/root/onlyweb` 浏览并选择 `/root/onlyweb/wiki/vault`，程序实际读取容器内 `/host-browse` 映射路径，保存后可立即生效。
+
+如果希望后台保存知识库配置时同步写回 `.env`，需要确保 `.env` 对容器内运行用户可写：
+
+```bash
+sudo chown 1001:1001 .env
 ```
 
 页面能力：
