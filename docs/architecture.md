@@ -362,7 +362,7 @@ onlyWeb/
 ```txt
 /admin/login                    登录
 /admin                          后台首页、个人资料、技能列表行编辑
-/admin/projects                 新版作品管理，支持新建、编辑、软删除、普通文档/效果演示文档上传、模块展示配置
+/admin/projects                 新版作品管理，支持新建、编辑、软删除、普通文档/效果演示文档上传、模块展示配置；桌面端使用独立滚动双栏布局
 /admin/experiences              新版经历管理，支持新建、编辑、软删除
 /admin/custom-pages             新版定制页管理，支持新建、编辑、软删除
 /admin/recycle-bin              回收站，查看和恢复已删除作品、经历、定制页

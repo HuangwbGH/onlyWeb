@@ -1,6 +1,8 @@
+import Link from 'next/link';
 import { deleteProjectAction, deleteProjectDocumentAction, saveProjectAction } from '@/app/admin/actions';
 import { AdminActionForm } from '@/components/admin/AdminActionForm';
 import { CopyButton } from '@/components/admin/CopyButton';
+import { ScrollMemoryPanel } from '@/components/admin/ScrollMemoryPanel';
 import { TagList } from '@/components/Shared';
 import { listEffectDemoDocuments, listProjectDocuments, listProjects } from '@/lib/data';
 import { getProjectDocHref, isMarkdownPath, isUploadedMarkdownDoc } from '@/lib/projectDocs';
@@ -14,7 +16,7 @@ export function ProjectsManager({ origin, selectedId }: { origin: string; select
   const portfolioUrl = `${origin}/portfolio`;
 
   return (
-    <div className="custom-page-manager">
+    <div className="custom-page-manager projects-manager">
       <div className="portfolio-entry-card content-card">
         <div>
           <p className="eyebrow">Portfolio</p>
@@ -31,7 +33,7 @@ export function ProjectsManager({ origin, selectedId }: { origin: string; select
           </div>
         </div>
       </div>
-      <aside className="custom-page-list content-card">
+      <ScrollMemoryPanel className="custom-page-list content-card" storageKey="admin-projects-list-scroll">
         <div className="custom-page-list-head">
           <div>
             <p className="eyebrow">Projects</p>
@@ -41,20 +43,21 @@ export function ProjectsManager({ origin, selectedId }: { origin: string; select
         </div>
         <div className="custom-page-list-items">
           {projects.map((project) => (
-            <a
+            <Link
               className={`custom-page-list-item${project.id === selectedProject?.id ? ' active' : ''}`}
               href={`/admin/projects?id=${project.id}`}
               key={project.id}
+              scroll={false}
             >
               <span className="status-pill">{project.isPublished ? '已发布' : '草稿'}</span>
               <strong>{project.title}</strong>
               <span>{project.description}</span>
               <small>{project.isFeatured ? '精选作品 · ' : ''}{project.slug}</small>
-            </a>
+            </Link>
           ))}
           {projects.length === 0 && <p className="admin-hint">还没有作品，点击“新建”开始创建。</p>}
         </div>
-      </aside>
+      </ScrollMemoryPanel>
 
       <section className="custom-page-editor content-card">
         <ProjectEditorHeader origin={origin} project={selectedProject} documents={selectedProjectDocuments} />

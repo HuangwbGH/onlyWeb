@@ -1058,6 +1058,55 @@ td button {
   top: 96px;
 }
 
+.projects-manager {
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.projects-manager .custom-page-list,
+.projects-manager .custom-page-editor {
+  max-height: calc(100vh - 112px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
+.projects-manager .custom-page-list {
+  padding-right: 16px;
+}
+
+.projects-manager .custom-page-editor {
+  position: sticky;
+  top: 96px;
+  padding-right: 18px;
+}
+
+.projects-manager .custom-page-list::-webkit-scrollbar,
+.projects-manager .custom-page-editor::-webkit-scrollbar {
+  width: 10px;
+}
+
+.projects-manager .custom-page-list::-webkit-scrollbar-track,
+.projects-manager .custom-page-editor::-webkit-scrollbar-track {
+  background: rgba(24, 32, 51, 0.04);
+  border-radius: 999px;
+}
+
+.projects-manager .custom-page-list::-webkit-scrollbar-thumb,
+.projects-manager .custom-page-editor::-webkit-scrollbar-thumb {
+  background: rgba(66, 99, 255, 0.26);
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background-clip: content-box;
+}
+
+.projects-manager .custom-page-list:hover::-webkit-scrollbar-thumb,
+.projects-manager .custom-page-editor:hover::-webkit-scrollbar-thumb {
+  background: rgba(66, 99, 255, 0.42);
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
 .custom-page-list-head,
 .custom-page-editor-head {
   display: flex;
@@ -1337,6 +1386,14 @@ td button {
 
   .custom-page-list {
     position: static;
+  }
+
+  .projects-manager .custom-page-list,
+  .projects-manager .custom-page-editor {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    padding-right: 22px;
   }
 }
 
