@@ -1,0 +1,4606 @@
+{
+  "version": 1,
+  "initialized_at": "2026-05-25 16:16:49 CST",
+  "vault_path": "/Users/mac/workspace/wiki/vault",
+  "entries": [
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/workspace/MEMORY.md",
+      "source_type": "openclaw_memory",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-22T19:00:02Z",
+      "size_bytes": 14842,
+      "content_hash": "01363751ae886ac6a7a88acdf18f42c793115d7348b4ba973fd1bdb0c0ad4fc9",
+      "pages_created": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-04-25.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-04-25T00:01:55Z",
+      "size_bytes": 220,
+      "content_hash": "893f184a63f361610e29fabaf6d4734f1b3ca27b8ed3c226ff63319cb2e4e9a1",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-04-26.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-04-26T12:01:16Z",
+      "size_bytes": 992,
+      "content_hash": "a9074185673947276996467a8a983e51175b3797b198afdb45f05ccf63ac87fd",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-04-27-heartbeat-check.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-04-27T07:54:26Z",
+      "size_bytes": 4701,
+      "content_hash": "373821f0703d056948e442ef90bd42e1e73e645a12c7a9ad9487ba9ed7b5eb59",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-04-27.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-04-27T00:02:36Z",
+      "size_bytes": 259,
+      "content_hash": "9235fd8fbd7af56c93fad29cfc93954aeb82328fd4853ca6a5a01ecc11a9ed71",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-04-28-cron-key.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-04-28T02:35:56Z",
+      "size_bytes": 11901,
+      "content_hash": "aaaa12ee8c787b6b7058998cf50ee29757dbe67f7637fce6189f57f2888047fd",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-04-28-cron-push.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-04-28T02:35:27Z",
+      "size_bytes": 4679,
+      "content_hash": "64b83a8d268959e93b73e633da704e5b7a1aaf02a8c84b7455001478411362d0",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-04-28.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-04-28T15:00:23Z",
+      "size_bytes": 3487,
+      "content_hash": "6db8e3f3e0dab21e4fb530f303f3047e727e5e627c1cc07a58a92125741e4c3e",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-04-29-heartbeat-poll.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-04-29T04:05:33Z",
+      "size_bytes": 588,
+      "content_hash": "c1e9b09908f49b0e974c5d3570baf2c03abd0c0a87065d36746fd9a894878f1b",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-04-29.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-04-29T15:00:27Z",
+      "size_bytes": 5484,
+      "content_hash": "08f179ec7cf73deeb78030c2f67efd48de8cf5a4118b0eab06060648e64832af",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-04-30.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-04-30T15:00:47Z",
+      "size_bytes": 5862,
+      "content_hash": "e3d36e9c36eac80b7d21f903ef6b9b6aa997fc1c52078c9b3adc3f4189d48c63",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-01.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-01T15:00:42Z",
+      "size_bytes": 5105,
+      "content_hash": "f36f02d341f1a7f95ac164d2af373b052964aa0c251381c7b5652d19054e25a9",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-02.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-02T15:00:54Z",
+      "size_bytes": 4830,
+      "content_hash": "4395703deba338ce27f374a9002bd3f0209d01fcbc6d44acbbc6bba65413e8c6",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-03.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-03T02:00:45Z",
+      "size_bytes": 2139,
+      "content_hash": "41926bd154ee172b6bd39f331267646aa8bf5a8a26a24e4a6935040bd519fff2",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-04.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-04T00:03:20Z",
+      "size_bytes": 535,
+      "content_hash": "6e644ea1dfd755c6c66a36fb9965266ae5abdfc6cc74897d6e0380efd94d55c4",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-06-request-timed-out-before-a-res.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-06T02:00:05Z",
+      "size_bytes": 1527,
+      "content_hash": "07f31aff3f03bef1923defc10afbd64c734126b91bad6df7b1fe91a8309f398c",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-06.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-06T02:35:11Z",
+      "size_bytes": 72,
+      "content_hash": "b45cb2ac1de1bb5c65504bdd8b543939b774dd3ee0e17cc80fc0673606ec22fd",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-11-dingtalk-mcp.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-11T03:06:40Z",
+      "size_bytes": 8713,
+      "content_hash": "e912a218ec09c8d3d616fcde05eb5703f2fd89d3d1c022e958796c8d305de9f1",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-13-0839.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-13T00:39:10Z",
+      "size_bytes": 2231,
+      "content_hash": "9ba8e34cc19566b400968d4ad70c30ba1981d77c3b79d74ea60941ec46635dc6",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-13-0906.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-13T01:06:40Z",
+      "size_bytes": 600,
+      "content_hash": "0407c08f370a57b6453e92a95858de413d4a79afcacd987f4e5f5923ecfbd42b",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-13-1035.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-13T02:35:27Z",
+      "size_bytes": 7953,
+      "content_hash": "55a9d3af0bc77e38c1dd8a31a6d36eb9e500e7c3c9fa7ba9ede9f2e4304479b4",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-13-1419.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-13T06:19:16Z",
+      "size_bytes": 1618,
+      "content_hash": "5e6fcf7d886de37b1d12f3898cedcdd5630d1781968ae1ba1db312d840ab0608",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-13.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-13T06:35:01Z",
+      "size_bytes": 72,
+      "content_hash": "fb8d7ae47ab0366b8dfb775c9ff3720a2184d4cfe76cee9bbb63ee4cbf93dc48",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-14-0900.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-14T01:00:55Z",
+      "size_bytes": 14978,
+      "content_hash": "c146d11823880da9189e324e0b26f79dc63a75cdc263289aa7e5212225228dd9",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-14-1117.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-14T03:17:00Z",
+      "size_bytes": 22301,
+      "content_hash": "f8fe1e653371bd0c4fc0670906cd1f95ff39111a7687258dfa221963e6969732",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-14-1537.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-14T07:37:18Z",
+      "size_bytes": 9150,
+      "content_hash": "0217b341252084a3d29f0e0fa4df4cb31713b558829e906b9e36ad1d240a1617",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-14.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-14T08:35:08Z",
+      "size_bytes": 72,
+      "content_hash": "535c74be96ddc1b6d94d60af93988b18598d64ce650f1e04b40643f1f0380823",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-15-0918.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-15T01:18:02Z",
+      "size_bytes": 5011,
+      "content_hash": "373b3e3d5f30272b31171b7b3a193567846493684f31373ce50c6e1d8021602c",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-15-1051.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-15T02:51:34Z",
+      "size_bytes": 17813,
+      "content_hash": "79181c996205725b225ca4f8f57cc1fc7305ac179c56068c7b62031d69a9a3f7",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-15-1316.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-15T05:16:46Z",
+      "size_bytes": 9419,
+      "content_hash": "360e6cbf568f39a9fe64a802894a95028812b5487d2f0d308df0142666c720d7",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-15.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-15T01:05:02Z",
+      "size_bytes": 72,
+      "content_hash": "72e281b7f45ae29e82a2f23278c958839fce9bb55c392c54088ec91c04016cfa",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-18-1456.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-18T06:56:07Z",
+      "size_bytes": 4368,
+      "content_hash": "830e26d1ac212ffd15231aefebf0dce87acd246e46f4334d6fad69519650386d",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-18.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-18T00:36:24Z",
+      "size_bytes": 293,
+      "content_hash": "90f0bbdae456298c96ee68228774687c65331382f38818b0f1ea4d49a1b703af",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-20-0931.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-20T01:31:28Z",
+      "size_bytes": 6174,
+      "content_hash": "4a4e101e8918d602ec998ba1754c37757fc943ba9439741022eb3bc66dbb3e6d",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-20-1054.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-20T02:54:19Z",
+      "size_bytes": 21722,
+      "content_hash": "f836a7f98d6d41154e119e00ead9b0902b867842ef61ea107a23bdf5d5798497",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-21-0858.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-21T00:58:37Z",
+      "size_bytes": 13743,
+      "content_hash": "d004933141a3f4b7e022f4370bf544f9f900d9ae889401dbdb7a2f6150b3dad5",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-21-1947.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-21T11:47:27Z",
+      "size_bytes": 3536,
+      "content_hash": "2474a81ec44d1cf4cdf5ed88dcf1bdeff2f3b4e3c0f750a54d97582a39ca3b82",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-25-0845.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-25T00:45:27Z",
+      "size_bytes": 6686,
+      "content_hash": "823f8ba7deb7a7de2ab08dea096b59144840bb5607cc44c92dd6e825a73689b5",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-25-0848.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-25T00:48:53Z",
+      "size_bytes": 6888,
+      "content_hash": "cd173aac4fdafe8615ddf8465a6306f0fb87f07d19f85650ad7233b3c89a48a7",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-25-1537.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-25T07:37:28Z",
+      "size_bytes": 920,
+      "content_hash": "05b1f97ab5a6a39b3867905347555e1b689db3ec9111ab220c6e39d045b897a6",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-25-1539.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-25T07:39:07Z",
+      "size_bytes": 373,
+      "content_hash": "90a92009869c69e55bb3d2b924b4bfcabc1146324a3aa96eb5f3c76295005a7f",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-25-1615.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-25T08:15:43Z",
+      "size_bytes": 7312,
+      "content_hash": "6b1a512bebeaabbca636ee7dad661bf425699e81de02465a3c1d4084d93722b5",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p1-memory-2026-05-25/memory/2026-05-25.md",
+      "source_type": "openclaw_daily_note",
+      "ingested_at": "2026-05-25T08:40:00Z",
+      "modified_at": "2026-05-25T08:17:51Z",
+      "size_bytes": 469,
+      "content_hash": "f4a4ad152071a65de083db01e011c77cd015d8150335696d60979d1d8a3aabed",
+      "pages_created": [],
+      "pages_updated": [
+        "references/openclaw-p1-memory-corpus-2026-04-25-to-2026-05-25.md",
+        "entities/openclaw.md",
+        "entities/dingtalk-connector.md",
+        "skills/openclaw-memory-governance.md",
+        "skills/openclaw-dingtalk-push-operations.md",
+        "projects/openclaw/openclaw.md",
+        "synthesis/openclaw-operating-patterns-spring-2026.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/OpenClaw 排障速查表.md",
+      "source_type": "openclaw_doc",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-14T11:35:54Z",
+      "size_bytes": 121,
+      "content_hash": "aa017609d6b8e63c749054035fbf6afa256c00836caf0a07d498ec2f3aad45ad",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/OpenClaw 网络代理说明.md",
+      "source_type": "openclaw_doc",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-15T05:55:00Z",
+      "size_bytes": 127,
+      "content_hash": "72ef6fc6e5a5b7fc5b20d7fc42566e52c4a857221943e0b32718b7d8e466deb1",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/archive/u8-docs/U8+加密锁产品注册操作手册-整理笔记.md",
+      "source_type": "openclaw_archive",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-09T06:36:31Z",
+      "size_bytes": 4246,
+      "content_hash": "9382bcb89cbb1b6bdaf6ed11a1271edbe3d8d2f49001cbbc3bfc068f98f07c32",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/archive/u8-docs/U8+加密锁产品注册操作手册-自动转换.md",
+      "source_type": "openclaw_archive",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-04-13T04:02:30Z",
+      "size_bytes": 3598,
+      "content_hash": "3856a8c16ec58737638927c5b2b6d420028fa77cf5d46d4c8fe7bf7ef222c927",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/archive/u8-docs/U8+加密锁产品注册操作手册.pdf",
+      "source_type": "openclaw_archive",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-09T06:35:34Z",
+      "size_bytes": 668409,
+      "content_hash": "5abea002b4c10d77aa8d55e3ab87024d45f311f214e59db8ab8252a740ed3977",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/archive/u8-docs/U8+加密锁产品注册操作手册.txt",
+      "source_type": "openclaw_archive",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-09T06:35:47Z",
+      "size_bytes": 3579,
+      "content_hash": "af0f047d95d4ba09ff9f1011c66a8e8957f636e21fab87831fc5834ec923e54b",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/archive/吉信德/2026-04-10-U8-104账套-采购订单与销售订单审批字段及审核影响分析.md",
+      "source_type": "openclaw_archive",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-04-10T10:25:26Z",
+      "size_bytes": 8901,
+      "content_hash": "cb1d5aeff3333cc834dd3749586ff008ff7b949883f9446eba22cbba0d5b7592",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/archive/吉信德/2026-04-13-U8-104账套-销售订单审批与工作流字段变化分析.md",
+      "source_type": "openclaw_archive",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-04-13T02:09:05Z",
+      "size_bytes": 9821,
+      "content_hash": "350d9e9c71e3349954d51b10dbb847b60b9c0c10f6cc9abfa94e7941d0552952",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/archive/吉信德/U8-104-采购订单-WF-SPP260408-1-审核前后差异.md",
+      "source_type": "openclaw_archive",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-04-10T08:25:12Z",
+      "size_bytes": 3524,
+      "content_hash": "c6f841e1e5308485a88bda1986ecf79f549c43f130d419356fbb197759473934",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/archive/吉信德/U8-104-采购订单-WF-SPP260408-1-审核前字段快照.md",
+      "source_type": "openclaw_archive",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-04-10T08:23:24Z",
+      "size_bytes": 13091,
+      "content_hash": "e40317130d2d5c2672f5f1af06c6df02c9dd4a84debea491f5e94973dbcce127",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/archive/吉信德/U8-104-销售订单-DF-SPP260104-4-提交前字段快照.md",
+      "source_type": "openclaw_archive",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-04-13T01:41:25Z",
+      "size_bytes": 13591,
+      "content_hash": "bbab203534816de4be64dd805ebff77c58bcd952fa39b37cd8987a5023a7c702",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/archive/吉信德/U8数据库连接信息.md",
+      "source_type": "openclaw_archive",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-24T01:23:30Z",
+      "size_bytes": 507,
+      "content_hash": "ca84320aa418a27646ecfaf4f01f170a67ee0b31db971e46e59ca2985705153e",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/archive/吉信德/sql/采购执行进度表_v1.sql",
+      "source_type": "openclaw_archive",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-24T01:56:03Z",
+      "size_bytes": 10678,
+      "content_hash": "9880f6de6fd0177b35df95474a0b4e28f0e343d4a4bf379300cd3eb42c4d1cc5",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/archive/吉信德/sql/采购执行进度表_调试说明_v1.md",
+      "source_type": "openclaw_archive",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-24T01:58:20Z",
+      "size_bytes": 3988,
+      "content_hash": "fe21fb29370affdd3c38f4b272e6a1449c217ede315611d165a53dcfc18154c3",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/archive/吉信德/东孚厂（东缝）/销售交期回复/2026-03-19-吉信德东孚厂（东缝）回复销售交期表.xlsx",
+      "source_type": "openclaw_archive",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-19T09:25:38Z",
+      "size_bytes": 75045,
+      "content_hash": "9a8716095fd79dfd3c6c378e7db7288068350cbfda9efa94a2115c4f4df4c714",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/archive/吉信德/采购材料执行进度与生产计划执行跟踪-OpenClaw结合分析.md",
+      "source_type": "openclaw_archive",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-24T03:19:01Z",
+      "size_bytes": 133785,
+      "content_hash": "2f72ee92a813b10aa19284af0e71281bc7fbdac5561a0c586f15ba20f509b6fc",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/archive/技术沉淀/2026-04-13-OpenXML-SDK-vs-pandas-适用场景对比.md",
+      "source_type": "openclaw_archive",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-04-13T06:11:36Z",
+      "size_bytes": 3041,
+      "content_hash": "b825c26075e1da6d4aba5ff95d76adda7cbc7da203d4093b9b709f4ea81a5fde",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/docs/openclaw/OpenClaw 排障速查表.md",
+      "source_type": "openclaw_doc",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-14T11:35:54Z",
+      "size_bytes": 8655,
+      "content_hash": "5688246647f02aac0ed4660fbbc72a1cbd3f4977288a9aa89e88b536ad0cd1f2",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/docs/openclaw/OpenClaw 网络代理说明(4.5版本之前）.md",
+      "source_type": "openclaw_doc",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-14T11:35:54Z",
+      "size_bytes": 7141,
+      "content_hash": "d25fbee8bf91967ca48ceb8c9a15210d0e6981006a6e6e144602a78e70a8ed71",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/docs/openclaw/OpenClaw-权限与能力配置知识库总表.md",
+      "source_type": "openclaw_doc",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-26T03:33:16Z",
+      "size_bytes": 26250,
+      "content_hash": "64d329ffbf22d630ac1c0ff8808615507cf7c1f641836477a0ffca140e13b10f",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/docs/openclaw/QMD-索引策略.md",
+      "source_type": "openclaw_doc",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-14T11:36:19Z",
+      "size_bytes": 762,
+      "content_hash": "4eb8175a98835ed4d4315261371664cb6d87cf47290b38dc788ae63c1ade96c9",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/docs/openclaw/browser-cdp-9222-修复计划.md",
+      "source_type": "openclaw_doc",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-15T04:07:54Z",
+      "size_bytes": 1439,
+      "content_hash": "5d6e4e06446606b72b8d0a05bb147d30422f16363f7be365ec7a94d2ea630634",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/docs/openclaw/openclaw-4.5-proxy-config.md",
+      "source_type": "openclaw_doc",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-04-07T06:11:59Z",
+      "size_bytes": 2871,
+      "content_hash": "56417dcd6005d3f438beb44628e93eec4356104492189c33b97820f8db363fc6",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/docs/openclaw/openclaw-control-ui-lan-https-guide.md",
+      "source_type": "openclaw_doc",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-28T07:14:06Z",
+      "size_bytes": 20210,
+      "content_hash": "8711d43521ecc15b4dab6338b8855e183a32f530ad603dc684b8f0b08f370281",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/docs/openclaw/openclawJson参数指引.md",
+      "source_type": "openclaw_doc",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-04-02T04:14:28Z",
+      "size_bytes": 47331,
+      "content_hash": "4edd586b2c08af2669699e544112a236a180e808fe828e6f219e21205f772710",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/docs/openclaw/openclaw的权限设置笔记.md",
+      "source_type": "openclaw_doc",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-27T02:02:30Z",
+      "size_bytes": 7083,
+      "content_hash": "7887471acdb53c174377b28896f19be647cfc63225f024482b0c694e951c96b6",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/docs/openclaw/手动修改-openclaw-json-添加大模型配置说明.md",
+      "source_type": "openclaw_doc",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-25T10:07:45Z",
+      "size_bytes": 13396,
+      "content_hash": "83728d3ebbf7dbe5ad2b2b3938962f0ae9772cb9fb807297737a3ffd9951572c",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/infra/qmd.md",
+      "source_type": "openclaw_infra",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-13T04:03:41Z",
+      "size_bytes": 807,
+      "content_hash": "26c4f7d25182bcf9666536105b04659c80827cc5c84da34632dfe6247675a074",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/infra/rustdesk.md",
+      "source_type": "openclaw_infra",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-03-13T04:03:41Z",
+      "size_bytes": 764,
+      "content_hash": "b046c31451ee74907caae45b1c04ffe1bd57efab4a19ceaa36fa732ec6e53a67",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p234-docs-infra-archive-2026-05-25/infra/u8.md",
+      "source_type": "openclaw_infra",
+      "ingested_at": "2026-05-25T09:02:00Z",
+      "modified_at": "2026-04-27T09:03:56Z",
+      "size_bytes": 693,
+      "content_hash": "7c6b4466815e97fb1e576f23c483a9e7c2a321c3071465ee81453af260fa13c8",
+      "pages_created": [
+        "references/openclaw-docs-infra-archive-corpus-2026-05-25.md",
+        "skills/openclaw-configuration-and-permissions.md",
+        "skills/openclaw-proxy-and-network-access.md",
+        "skills/openclaw-troubleshooting-playbook.md",
+        "entities/qmd.md",
+        "entities/rustdesk.md",
+        "projects/jixinde/jixinde.md",
+        "skills/jixinde-u8-execution-analysis.md",
+        "skills/u8-license-registration-constraints.md",
+        "synthesis/openclaw-jixinde-u8-integration-patterns.md"
+      ],
+      "pages_updated": [
+        "projects/openclaw/openclaw.md",
+        "entities/openclaw.md",
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "~/.codex/session_index.jsonl",
+      "source_type": "codex_index",
+      "ingested_at": "2026-05-25T09:18:00Z",
+      "modified_at": "2026-05-25T02:30:22.290263Z",
+      "size_bytes": 2328,
+      "content_hash": "64792413135a02d23a81d1369cce94cf64b904f2b915f88e7796d1da6e4e63bc",
+      "project": null,
+      "pages_created": [
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "entities/codex.md",
+        "projects/itemmark/itemmark.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/mailscope/mailscope.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/git-independent-project-management.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ],
+      "pages_updated": [
+        "entities/codex.md",
+        "hot.md",
+        "index.md",
+        "log.md",
+        "projects/itemmark/itemmark.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/mailscope/mailscope.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/git-independent-project-management.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ]
+    },
+    {
+      "source_path": "~/.codex/sessions/2026/04/20/rollout-2026-04-20T08-45-47-019da859-bf8e-7771-9903-46b4ff89a663.jsonl",
+      "source_type": "codex_rollout",
+      "ingested_at": "2026-05-25T09:18:00Z",
+      "modified_at": "2026-04-20T00:55:56.489449Z",
+      "size_bytes": 355601,
+      "content_hash": "eb94d3499ddf5f39a368c680b5667b28bba5558a8f83bb75806bfbc8ee913635",
+      "project": null,
+      "pages_created": [],
+      "pages_updated": [
+        "entities/codex.md",
+        "hot.md",
+        "index.md",
+        "log.md",
+        "projects/itemmark/itemmark.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/mailscope/mailscope.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/git-independent-project-management.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ]
+    },
+    {
+      "source_path": "~/.codex/sessions/2026/04/20/rollout-2026-04-20T10-29-21-019da8b8-939f-7fe0-854a-39507cd27bb8.jsonl",
+      "source_type": "codex_rollout",
+      "ingested_at": "2026-05-25T09:18:00Z",
+      "modified_at": "2026-04-20T02:34:43.751886Z",
+      "size_bytes": 91561,
+      "content_hash": "da0cb7756bdcbb10e9de7c93b9f6bd9ae176cc2cb47bfa563e421f8845e59e33",
+      "project": null,
+      "pages_created": [],
+      "pages_updated": [
+        "entities/codex.md",
+        "hot.md",
+        "index.md",
+        "log.md",
+        "projects/itemmark/itemmark.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/mailscope/mailscope.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/git-independent-project-management.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ]
+    },
+    {
+      "source_path": "~/.codex/sessions/2026/04/22/rollout-2026-04-22T17-50-44-019db499-63f1-7c63-9ca8-d2a25a9ad7c6.jsonl",
+      "source_type": "codex_rollout",
+      "ingested_at": "2026-05-25T09:18:00Z",
+      "modified_at": "2026-04-23T06:52:28.539350Z",
+      "size_bytes": 3984862,
+      "content_hash": "87b0c431ce2ecb854c6c50a2b74017a404cc925a661116140f8fc3558a320555",
+      "project": null,
+      "pages_created": [],
+      "pages_updated": [
+        "entities/codex.md",
+        "hot.md",
+        "index.md",
+        "log.md",
+        "projects/itemmark/itemmark.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/mailscope/mailscope.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/git-independent-project-management.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ]
+    },
+    {
+      "source_path": "~/.codex/sessions/2026/05/08/rollout-2026-05-08T10-10-22-019e0559-a8e8-7db2-ad15-3357a504208b.jsonl",
+      "source_type": "codex_rollout",
+      "ingested_at": "2026-05-25T09:18:00Z",
+      "modified_at": "2026-05-08T03:47:41.671520Z",
+      "size_bytes": 797433,
+      "content_hash": "bd5d67a7c4742420db98388bf90e09abe33a8186931c54209676b0cd05661624",
+      "project": null,
+      "pages_created": [],
+      "pages_updated": [
+        "entities/codex.md",
+        "hot.md",
+        "index.md",
+        "log.md",
+        "projects/itemmark/itemmark.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/mailscope/mailscope.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/git-independent-project-management.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ]
+    },
+    {
+      "source_path": "~/.codex/sessions/2026/05/09/rollout-2026-05-09T08-43-39-019e0a30-9e85-78e1-8047-24d7a8e69cfa.jsonl",
+      "source_type": "codex_rollout",
+      "ingested_at": "2026-05-25T09:18:00Z",
+      "modified_at": "2026-05-09T09:42:13.159412Z",
+      "size_bytes": 1419306,
+      "content_hash": "193fde965fbe394f5103d8c9d1f0e40ee9fc2736fdc33e7328c02b7f29ea693c",
+      "project": null,
+      "pages_created": [],
+      "pages_updated": [
+        "entities/codex.md",
+        "hot.md",
+        "index.md",
+        "log.md",
+        "projects/itemmark/itemmark.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/mailscope/mailscope.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/git-independent-project-management.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ]
+    },
+    {
+      "source_path": "~/.codex/sessions/2026/05/12/rollout-2026-05-12T14-07-17-019e1acc-002c-7fb1-915a-212357ce28e9.jsonl",
+      "source_type": "codex_rollout",
+      "ingested_at": "2026-05-25T09:18:00Z",
+      "modified_at": "2026-05-12T07:27:41.864922Z",
+      "size_bytes": 425279,
+      "content_hash": "dc07ef2b67c8ed9f0a401910ddd50b9e6702795373dda23e42b1b70cde72f734",
+      "project": null,
+      "pages_created": [],
+      "pages_updated": [
+        "entities/codex.md",
+        "hot.md",
+        "index.md",
+        "log.md",
+        "projects/itemmark/itemmark.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/mailscope/mailscope.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/git-independent-project-management.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ]
+    },
+    {
+      "source_path": "~/.codex/sessions/2026/05/12/rollout-2026-05-12T15-29-20-019e1b17-1fc0-7202-ac27-88d03ae11624.jsonl",
+      "source_type": "codex_rollout",
+      "ingested_at": "2026-05-25T09:18:00Z",
+      "modified_at": "2026-05-12T07:32:13.790045Z",
+      "size_bytes": 155159,
+      "content_hash": "31c6eb8f50238157047c0e57056c8ea07fdcbae49d74ab72c8e7a35d94ed679e",
+      "project": null,
+      "pages_created": [],
+      "pages_updated": [
+        "entities/codex.md",
+        "hot.md",
+        "index.md",
+        "log.md",
+        "projects/itemmark/itemmark.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/mailscope/mailscope.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/git-independent-project-management.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ]
+    },
+    {
+      "source_path": "~/.codex/sessions/2026/05/12/rollout-2026-05-12T16-24-02-019e1b49-3352-7c50-be3e-6f059038b8e5.jsonl",
+      "source_type": "codex_rollout",
+      "ingested_at": "2026-05-25T09:18:00Z",
+      "modified_at": "2026-05-13T00:57:46.138994Z",
+      "size_bytes": 369341,
+      "content_hash": "efd10eef8e184a4b151f373da5625bee7a4d102d6c40eca17c2908c0fcc518eb",
+      "project": null,
+      "pages_created": [],
+      "pages_updated": [
+        "entities/codex.md",
+        "hot.md",
+        "index.md",
+        "log.md",
+        "projects/itemmark/itemmark.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/mailscope/mailscope.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/git-independent-project-management.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ]
+    },
+    {
+      "source_path": "~/.codex/sessions/2026/05/13/rollout-2026-05-13T17-56-50-019e20c4-8302-75d0-bf88-9a6d7e650188.jsonl",
+      "source_type": "codex_rollout",
+      "ingested_at": "2026-05-25T09:18:00Z",
+      "modified_at": "2026-05-14T00:53:17.413654Z",
+      "size_bytes": 1746927,
+      "content_hash": "ce062faabb12e896be5853fcdbc324c74412aac2abd7da3760b034548e472916",
+      "project": null,
+      "pages_created": [],
+      "pages_updated": [
+        "entities/codex.md",
+        "hot.md",
+        "index.md",
+        "log.md",
+        "projects/itemmark/itemmark.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/mailscope/mailscope.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/git-independent-project-management.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ]
+    },
+    {
+      "source_path": "~/.codex/sessions/2026/05/18/rollout-2026-05-18T08-40-06-019e3886-9bad-7250-ba31-433468e453a5.jsonl",
+      "source_type": "codex_rollout",
+      "ingested_at": "2026-05-25T09:18:00Z",
+      "modified_at": "2026-05-25T07:19:21.102544Z",
+      "size_bytes": 5360837,
+      "content_hash": "79fccd450f292dd8826b1aee6ae894f838c6d6d17f0898aaf3929545a6e91c97",
+      "project": null,
+      "pages_created": [],
+      "pages_updated": [
+        "entities/codex.md",
+        "hot.md",
+        "index.md",
+        "log.md",
+        "projects/itemmark/itemmark.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/mailscope/mailscope.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/git-independent-project-management.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ]
+    },
+    {
+      "source_path": "~/.codex/sessions/2026/05/19/rollout-2026-05-19T11-39-49-019e3e51-8266-7e80-96b1-4a55d01cc1db.jsonl",
+      "source_type": "codex_rollout",
+      "ingested_at": "2026-05-25T09:18:00Z",
+      "modified_at": "2026-05-25T02:13:37.605448Z",
+      "size_bytes": 2248994,
+      "content_hash": "4630f962bf240ed2495fc94f324b9a09dfba5f68d3b5f4894dad8d1388c7ae13",
+      "project": null,
+      "pages_created": [],
+      "pages_updated": [
+        "entities/codex.md",
+        "hot.md",
+        "index.md",
+        "log.md",
+        "projects/itemmark/itemmark.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/mailscope/mailscope.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/git-independent-project-management.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ]
+    },
+    {
+      "source_path": "~/.codex/sessions/2026/05/20/rollout-2026-05-20T10-00-55-019e431d-5390-7290-ae98-bee119bd57e4.jsonl",
+      "source_type": "codex_rollout",
+      "ingested_at": "2026-05-25T09:18:00Z",
+      "modified_at": "2026-05-20T02:02:00.838522Z",
+      "size_bytes": 56116,
+      "content_hash": "ae7fd11495c8db6519939f1a7f24233d04917354c226736b713541d75c13c17a",
+      "project": null,
+      "pages_created": [],
+      "pages_updated": [
+        "entities/codex.md",
+        "hot.md",
+        "index.md",
+        "log.md",
+        "projects/itemmark/itemmark.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/mailscope/mailscope.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/git-independent-project-management.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ]
+    },
+    {
+      "source_path": "~/.codex/sessions/2026/05/20/rollout-2026-05-20T10-57-18-019e4350-f098-7272-967b-d252662eddea.jsonl",
+      "source_type": "codex_rollout",
+      "ingested_at": "2026-05-25T09:18:00Z",
+      "modified_at": "2026-05-21T11:12:59.907333Z",
+      "size_bytes": 1892321,
+      "content_hash": "fb444d25bad81dde7a94acb37d7d144362be0a87e6d8ccf4dd0a5b22c4c9b774",
+      "project": null,
+      "pages_created": [],
+      "pages_updated": [
+        "entities/codex.md",
+        "hot.md",
+        "index.md",
+        "log.md",
+        "projects/itemmark/itemmark.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/mailscope/mailscope.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/git-independent-project-management.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ]
+    },
+    {
+      "source_path": "~/.codex/sessions/2026/05/22/rollout-2026-05-22T08-53-30-019e4d2c-5095-7091-a0ab-d12fb469830f.jsonl",
+      "source_type": "codex_rollout",
+      "ingested_at": "2026-05-25T09:18:00Z",
+      "modified_at": "2026-05-22T03:01:33.067652Z",
+      "size_bytes": 1057587,
+      "content_hash": "249cddc316dde373a81d61f9d1e7913acac64a729c5f2c67247643d22b2f3cff",
+      "project": null,
+      "pages_created": [],
+      "pages_updated": [
+        "entities/codex.md",
+        "hot.md",
+        "index.md",
+        "log.md",
+        "projects/itemmark/itemmark.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/mailscope/mailscope.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/git-independent-project-management.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ]
+    },
+    {
+      "source_path": "~/.codex/sessions/2026/05/25/rollout-2026-05-25T10-29-49-019e5cf7-9522-7bb2-aeeb-66f3edd2b124.jsonl",
+      "source_type": "codex_rollout",
+      "ingested_at": "2026-05-25T09:18:00Z",
+      "modified_at": "2026-05-25T06:31:10.039234Z",
+      "size_bytes": 1190052,
+      "content_hash": "76a0b16e075ce339c2805f1efb4841977ab060a693e546738f8ff8eb46aa123a",
+      "project": null,
+      "pages_created": [],
+      "pages_updated": [
+        "entities/codex.md",
+        "hot.md",
+        "index.md",
+        "log.md",
+        "projects/itemmark/itemmark.md",
+        "projects/jxd-image-generation/jxd-image-generation.md",
+        "projects/mailscope/mailscope.md",
+        "projects/onlyweb/onlyweb.md",
+        "projects/po-file-search/po-file-search.md",
+        "projects/wupingpmc/wupingpmc.md",
+        "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+        "skills/document-automation-and-word-integration.md",
+        "skills/git-independent-project-management.md",
+        "skills/local-business-app-deployment-patterns.md",
+        "skills/openclaw-skill-validation-pattern.md",
+        "skills/u8-erp-ai-assistant-pattern.md",
+        "synthesis/codex-business-application-patterns-spring-2026.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/sessions.json",
+      "source_type": "openclaw_session_index",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-25T09:09:31Z",
+      "size_bytes": 1820035,
+      "content_hash": "cce17d41fa2674400e50930367a3c70840d69c824039945c4ecb3e0ae59dc343",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/4e50134a-3db9-49c9-b001-bfc2297cc9fc.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-25T09:05:11Z",
+      "size_bytes": 777637,
+      "content_hash": "4a6bea9cd923fc1fc7cb38a4f413171f71cb18b2a20d12b067ab9a5b3c8d08d5",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/f51886ba-2d0b-46ce-b201-e9ea82c6df13.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-04T13:04:00Z",
+      "size_bytes": 4993,
+      "content_hash": "42f7b527ad1fe2bb009c10e7e4cff7cf618e691cfdd215d1c2fd242acee5f775",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/78cd3a77-1a74-4516-a7c6-d850ba1316fd.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-04T00:03:33Z",
+      "size_bytes": 115625,
+      "content_hash": "5437ddefc6e9dbb650fe6f84516049113d468f4353f1622f4d177361980f8d8b",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/20754f7d-9d03-4ca7-a2fe-a80be277efb5.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-04T00:00:44Z",
+      "size_bytes": 29337,
+      "content_hash": "168e2cbb62883f6a2c97306a0fe8afd9a96e377bd7e15df2a4cee5d44a7f9339",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/a6282b81-563b-4b1f-84e7-8fb47c82d72a.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-04T06:00:42Z",
+      "size_bytes": 29200,
+      "content_hash": "f51fb9afd7c675dc10ff98740d041014368321f3b09a5d928c446bdbb97116d3",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/a079e9fa-9986-4634-8ead-e27ab4ddbcbf.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-04T12:00:49Z",
+      "size_bytes": 30545,
+      "content_hash": "6e12009d1ee39d9b10413054f9d2b252daa302c38d609991077a433c3c48e170",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/20b46346-f3a6-492f-a0b7-f208c1e7de87.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-28T06:35:40Z",
+      "size_bytes": 67121,
+      "content_hash": "ca10929a2351af282fcd872ac63d00356abffc8f5736166befd15d5ad2f5d1b1",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/65b9bc85-68ae-4164-a972-fadd1502314a.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-24T17:00:23Z",
+      "size_bytes": 8318,
+      "content_hash": "9520d4009a9bd86bd4412bb1b9d3a224fae36875508ec42c44b141127b0abd64",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/76299452-8ef0-494a-8cd4-3b4076d6d7ad.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-25T19:00:18Z",
+      "size_bytes": 4660,
+      "content_hash": "7a90819b79f910b49bebae937b1d5e8a9ad6b71a3cb214f0c873ec2ea1e0238c",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/45f7de98-cf7d-42c8-969c-68b47a15ce7c.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-25T19:00:36Z",
+      "size_bytes": 4433,
+      "content_hash": "ca5199094e00b991303b5cd2948a6b843777492fd90c3ab434db02b4c861a632",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/bfea0bc5-6036-4efe-bace-552194825472.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-25T19:01:00Z",
+      "size_bytes": 5176,
+      "content_hash": "1ca33d7a9364c2915bbe846279f2cb4131eaa30439e16ce60519615a93e8bbaf",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/6df8da17-a8d7-40af-a9bc-6870cc9b76ea.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-26T19:00:20Z",
+      "size_bytes": 4795,
+      "content_hash": "b70844e212cc34c223588a112317cb6ae38b2f493d553d9f65bc1a67fa56c37b",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/ee50175b-f439-4abf-a9e1-c1e06694ad7b.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-26T19:00:45Z",
+      "size_bytes": 10569,
+      "content_hash": "0a77bde91705ae2123393235b9890411fb3acaef86dfe3a3b57b9ab07137a3a6",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/9a08e0d9-d811-4c9c-bd09-e675d0e73690.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-26T19:01:06Z",
+      "size_bytes": 5923,
+      "content_hash": "cfd78504bae8fd9f24a0552d56c3e330d5c047b47f69556a28e7cdbf288a2363",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/9c6c81af-ffe4-413d-a894-c5f8ae080fd4.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-04T12:00:44Z",
+      "size_bytes": 26001,
+      "content_hash": "85b683473ac9a4c558797b40ced162dcf73c87369a684325f37532489fcc7a07",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/19d2106a-a87b-48f5-b938-54c10a938b0a.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-27T19:00:22Z",
+      "size_bytes": 5713,
+      "content_hash": "cb7de58fa59f42efb75dd2ae10e6202dcd57889628ca9cded607dcaf84f00b9a",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/c5917012-a4a0-4e1a-8994-508ccd63df52.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-27T19:00:34Z",
+      "size_bytes": 5617,
+      "content_hash": "7a36bed5cddd5ebfc76a0298cdaf9176c42a8eecf343aeec80156fb4d671500d",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/17109117-eafc-437d-bb1e-61cb51aec0ea.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-27T19:00:41Z",
+      "size_bytes": 19214,
+      "content_hash": "73932f02041fa2c548aa453b44484352a3856583f3f1baef257036d60d491aca",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/8d527630-5eb0-4ce6-8536-75fa960d7056.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-28T02:29:13Z",
+      "size_bytes": 46833,
+      "content_hash": "9d17bc40ddc411f79ca56809bc49844552a0fb7887da17f1511ce096d5fe36bd",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/f29f0f8c-3f00-4168-9706-11d726752dc8.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-28T02:24:54Z",
+      "size_bytes": 1022,
+      "content_hash": "d4c214f1f4948009e0b60699e305f48b4d85ab6f695604792c9f22fd2018e461",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/1c5e9f5a-80dd-4baa-9cd6-9a4955c3c6df.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-04T13:47:41Z",
+      "size_bytes": 268223,
+      "content_hash": "ac58c56c3b2926bb25a5d082cff46c19a4d98040f5bcd5ed92d65effae926579",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/dd26dcd0-968f-4d32-86dd-079a4ec16f6c.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-28T19:00:41Z",
+      "size_bytes": 5557,
+      "content_hash": "d5cd4769d362e800424eeb9832f66aa99c4d0fe279177bac138bd34a71d916cf",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/df7fd0d3-8efe-43ea-b540-d10de684a840.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-29T19:00:43Z",
+      "size_bytes": 5476,
+      "content_hash": "93cb5f49e5b7ce602e453804408fb4fc8502c090fc7059da9d902a226adf9ecb",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/64980552-5efb-427b-8d6e-c84fc0cc51ed.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-30T19:00:44Z",
+      "size_bytes": 4015,
+      "content_hash": "43b77a4fa813a0faf46c7aa6e65c10e8b2dced75e4305449087f936cd647f79f",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/83cc57bc-aca7-4257-8fc6-35f87d875a00.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-30T19:00:52Z",
+      "size_bytes": 5848,
+      "content_hash": "8507457c972bc65aae7ccf17e681a974fde4d8cd73ea120d252c306294ef0792",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/c721e149-6edc-4162-9261-8681e77eae0d.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-01T19:00:40Z",
+      "size_bytes": 5571,
+      "content_hash": "944d020496d8390ee47ffa0cd3c7510078859006cc8bf4c949b15e3d3be2e2eb",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/e96290f7-58a5-431a-87c5-b4c759950d14.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-02T19:00:38Z",
+      "size_bytes": 3410,
+      "content_hash": "6600f5507190c84d5c5c0e25ab9bb423f6548fece2e1d380d9d68ce48330eb70",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/7c0b4449-a9cb-4323-98ce-0b1a823b93eb.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-02T19:00:42Z",
+      "size_bytes": 5779,
+      "content_hash": "4c46aa88eed223b228626a1d189ede50cad55473be7bbd88667e968d8fde6b2f",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/1d8525ab-c0eb-437f-8287-5be4d82711d7.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-03T19:00:40Z",
+      "size_bytes": 3532,
+      "content_hash": "f2a1bf27e72cd5eb321d095551ec5a24f20f60613eacd2ee31b6febef00a2d7a",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/769aee32-d37a-4c05-99f1-eeac4487327e.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-03T19:00:44Z",
+      "size_bytes": 6168,
+      "content_hash": "5b7b699fb8f4b8b183a7c1fc1d831ea919f340ccc4710b252de24377bac443e1",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/77a62961-32da-4adc-9c95-d034c2028ba9.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-25T01:44:02Z",
+      "size_bytes": 7664,
+      "content_hash": "7563669daf41f5eac4d116b355836b6fd15c305fd5fce0d58ba856014d97c959",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/07e41886-0201-42a5-b3f1-b9d4b9d487d4.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-06T08:58:52Z",
+      "size_bytes": 143,
+      "content_hash": "445f053a6c301549c5cb0e5b5da700c6d10cf8447a24e21f78b7fd974080a26a",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/15727244-a859-4d08-89c1-83d822953f22.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-06T08:59:06Z",
+      "size_bytes": 143,
+      "content_hash": "9d19fa500578c77a9f1027c8859b7c075501faca4a7c50f3dd6eed9d048cfbd6",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/b72f4c38-f6b5-4f90-b973-63de19bc387a.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-06T19:00:17Z",
+      "size_bytes": 6010,
+      "content_hash": "5dba4bde41538d3fa62244a1d80d5d6e62b9b4b13b870faa9fd8d047ae4890b4",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/a725c052-60da-4e98-91d2-1aefe34c82aa.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-07T02:46:36Z",
+      "size_bytes": 135817,
+      "content_hash": "a6335b4a5145a3465af6abd0760e956600077d00e53c6ab6729f3c3c529b4366",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/d4dca203-73ee-4772-a0d1-c7a8b8d1ccdc.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-07T03:00:16Z",
+      "size_bytes": 245263,
+      "content_hash": "70b06cd330d756dfed965250c49a87690a47369b2d76d99e5fb55b3fd2b0d456",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/d7a0606f-45eb-4248-b325-56416d47a451.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-07T19:00:20Z",
+      "size_bytes": 3376,
+      "content_hash": "78aee3a357f1622e2878678c1d3ec0888c5fe156bb6c86df2b9fc6bc62fd95ea",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/8c1804d6-603f-4e80-beb7-03d5ea9c4847.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-08T19:00:19Z",
+      "size_bytes": 5528,
+      "content_hash": "5e43d7b0f68027cfa4b927dc6dfd3f24e329912c07c23b419c72ce519975afaa",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/15ca40b4-43b2-4893-9ec9-ce5f13474502.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-10T19:00:15Z",
+      "size_bytes": 6642,
+      "content_hash": "42fd91561aa00c6c66d53fbe3f01202c5052e1d4e803af418cc4372d374e1450",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/c654e849-f24e-4fe3-b9a4-f63bd1f1bd7d.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-10T19:00:16Z",
+      "size_bytes": 6011,
+      "content_hash": "6119ea80c75a479442fed3d258e9412c9d97d53f2c1bea85978c8b2e5a86d05f",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/8fa268b4-7103-46a6-b641-1f6040048033.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-11T19:00:17Z",
+      "size_bytes": 3422,
+      "content_hash": "1081b0642621785b2e69e6dadfa8802d639612ad5479115667c5d3a54954ecba",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/3fc4c71a-1b9c-4879-8b51-179c421c3422.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-11T19:00:18Z",
+      "size_bytes": 8276,
+      "content_hash": "478ea2ef6f68ff4f816b32d2b405785241432b4adf088399181dfbe5155e72a5",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/502281ad-0b33-4c92-80bf-91a12963ee14.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-12T19:00:17Z",
+      "size_bytes": 6073,
+      "content_hash": "27f1143003827ddc34167f037d2ad9c3ad3a0803efb55bada645057c76e0147a",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/5df112b8-d2f4-41fe-b205-d0fcf7f8ed93.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-12T19:00:24Z",
+      "size_bytes": 3544,
+      "content_hash": "b66fec910a6b1eeddd35bb800fae5731f9d7d11d2cf3f86feaae319c3b9f0d40",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/e6e95db9-6f1e-43b9-b2df-f90eb5b00b11.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-13T01:06:40Z",
+      "size_bytes": 143,
+      "content_hash": "62d81f883711c8554f158e87db50f2826f4352bec1d2c9a3b139985b9e9dfb41",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/885bd50b-4efe-4c8c-8c0a-e895b39b8795.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-13T06:19:16Z",
+      "size_bytes": 143,
+      "content_hash": "d480ca5e0d60d26d2bad7883adb73bd9f5bfd0b829ff0d686a4a253ab8b79543",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/6368d475-028d-4077-bff9-be86c9abca35.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-14T19:00:14Z",
+      "size_bytes": 5744,
+      "content_hash": "5119c38cacf16e3b0b9cbaaf76fa079d99a0da085035170daf254ff8f56fbd10",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/e55fe60b-fdbd-4ddf-b22e-b5c92a898272.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-14T19:00:15Z",
+      "size_bytes": 6100,
+      "content_hash": "bdad38326c5cd3575017551c907c812058b7f225411b02e13bc9287319ec01cd",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/b32e9c37-a968-4c5e-96c9-f20d7b9b62ff.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-15T01:18:02Z",
+      "size_bytes": 143,
+      "content_hash": "dbf66c796b84512a144d2f984d8aa2b04155d9ee6626ee6a8b79d3d28cbc7689",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/a64942fe-0a6a-4d5b-95cc-11b6be617381.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-15T19:00:14Z",
+      "size_bytes": 5960,
+      "content_hash": "30e5b58ed945d1ad132df712565abddc1156ae797e99205811bf9d4db5ed7d98",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/4bec7e51-286a-422f-9230-09a801270236.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-15T19:00:14Z",
+      "size_bytes": 6481,
+      "content_hash": "a9a6d059fd0fa8d2abe87fa079029eecf935160d3838a1977ddba992ca463950",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/f37cab24-1230-4406-ae2f-3b2ba88ada09.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-16T19:00:17Z",
+      "size_bytes": 5992,
+      "content_hash": "172839e7dafb06d30eb3e0eccc8c4d6f6fece60422fb4aabb260eabd523773c5",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/4373f482-654e-44d4-9088-9290f60c969e.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-16T19:00:19Z",
+      "size_bytes": 3482,
+      "content_hash": "05ab541653a983cbcfdafe14e99098ac09d2867c8ecf841201f8a2f9fa1ccdfe",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/bc6e4845-f131-46fd-a463-7033df513cc1.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-17T19:00:14Z",
+      "size_bytes": 3492,
+      "content_hash": "be7ce14f781423c50ae6721addc9412c156eb404f2854da112d18bb6fabeaaeb",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/d3e34249-f08e-489b-838f-45c4d606d2c1.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-17T19:00:14Z",
+      "size_bytes": 6030,
+      "content_hash": "d5c476b6a07f1658a7205342e8c44338d7b8ca7c7c87e3b5ded54bde21c4c2e6",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/b00b1456-caee-4d77-9467-f4caae0e4d30.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-18T19:00:13Z",
+      "size_bytes": 6004,
+      "content_hash": "d668ece679136b11e6497c57d9faaa27935ac4870487f094ca8d2ec082dba597",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/cfbbc7e1-ad56-496c-8987-876cb0bce340.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-18T19:00:16Z",
+      "size_bytes": 4984,
+      "content_hash": "d98bbc54cc34cc0d9a5b56aa6dc0163e35028f392cf524bae72241ff87b33dab",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/c75b0175-b471-432a-9f85-a5cec01eb38d.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-19T19:00:15Z",
+      "size_bytes": 5644,
+      "content_hash": "e8d4e92fe20898b32b1bd8045e5590a2d6231c8f66f27462c0a8d8589292310d",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/2d71d7a0-e8bd-4328-b088-1f2b0fd39908.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-19T19:00:15Z",
+      "size_bytes": 5020,
+      "content_hash": "217c9096f96c699273c5804fe7ac9c1d66c6e9c716163b4efc384958f49da86a",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/fcf1cd60-722d-4ae0-9cf5-84cbf426ceb3.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-20T19:00:13Z",
+      "size_bytes": 4030,
+      "content_hash": "fd7ef2f403e1cd736e2f245d72bb114f9602bd189586c7975d008d009ae32c9c",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/9b78b394-9f99-4217-942a-d163b15d0149.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-20T19:00:13Z",
+      "size_bytes": 5864,
+      "content_hash": "f9620ea92d9811622e82511ede6478263cbd1964a8e5e048f16c664b1f91fd32",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/08e903a2-e4e8-4571-8262-c87ae76ddf07.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-21T19:00:15Z",
+      "size_bytes": 6015,
+      "content_hash": "ab2d926de2343a50826465cd2395095ad6beceb75cf3f3480f4bf7b47a2befa1",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/42ffadb7-0429-47da-aaac-b1b4b14a395c.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-22T19:00:13Z",
+      "size_bytes": 6358,
+      "content_hash": "7c873c8a10bdd4de084d36d149f85e5b4c4d826917d90fa6bf2710d2dc44308f",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/8da9d55d-80f8-426c-b1ff-ab445208d142.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-24T19:00:14Z",
+      "size_bytes": 3755,
+      "content_hash": "75bbe2ec518818bd1dba1727614d123e4be8b7f8659605ab01808ca1eb815f65",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/2848d3fa-a072-4adf-ab72-09dac6a6ba2d.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-25T00:46:06Z",
+      "size_bytes": 83214,
+      "content_hash": "0df26f58da62ff4df06cb276e45d9773d8b9eed82ef7ae4a7c83c2c74562fca0",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/sessions/d5232e8f-a0ac-48f0-8fdb-dfaf0f36a055.jsonl",
+      "source_type": "openclaw_session",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-25T07:39:53Z",
+      "size_bytes": 18353,
+      "content_hash": "c3953ea54422d282f57fe29cffa34ad13c58e26da1d723d1044718d59fd50032",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/boss-job-collector/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-10T02:29:13Z",
+      "size_bytes": 3870,
+      "content_hash": "b6a4adcd3f5bdcdc4db0cea553e3145794cf9a588f0a830563596fc4e2d5da18",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/daily-report/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-02-16T18:23:08Z",
+      "size_bytes": 1760,
+      "content_hash": "6176de66928d3954ed1c649ad24098647a98b3c68d4d691ebb9d350f6934e199",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/email-fetcher/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-15T03:07:16Z",
+      "size_bytes": 2180,
+      "content_hash": "473510d95a6e11e22f31ea0ee3545ed5a80872aa9ed34098aa70429bec1791f4",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/find/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-02-18T07:55:13Z",
+      "size_bytes": 1968,
+      "content_hash": "f13cfb69f0316c73d817af4d9c0f6a22a7c34ad5fefddaed68c974d7e62ce442",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/github/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-02-24T12:47:27Z",
+      "size_bytes": 1113,
+      "content_hash": "51b28818a6f0359287d5c8244a6fdc59a4ac5504596deb193b28b81832221c86",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/github-project-download-analysis/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-03-27T07:17:46Z",
+      "size_bytes": 8413,
+      "content_hash": "c0d5ecb654de71f3aefed2214d5b19b17d1f74066299d607efc0709c06f4ac5b",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/image-generation-orchestrator/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-23T09:21:23Z",
+      "size_bytes": 4472,
+      "content_hash": "f264d2afe58653f7ceabd8f2ce544c5c8c4e8e3748debe97b7ca98ec9259a54f",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/infer-router/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-07T03:31:42Z",
+      "size_bytes": 3787,
+      "content_hash": "cfafee1f23eed89708a408c4d9608bc77c42267a4dba786e3a366eed8151df95",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/notion/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-02-24T12:48:35Z",
+      "size_bytes": 5039,
+      "content_hash": "1002bcb8230ff496b65c2cb030737ed561c8c85fa1f823bed9192550e282a6fa",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/ontology/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-02-24T12:37:45Z",
+      "size_bytes": 6703,
+      "content_hash": "669830c58a0caa4b977229a79e3723c09e5c2fdd74da84007f125891aa0c7488",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/openclaw-slides/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-03-04T08:07:48Z",
+      "size_bytes": 12766,
+      "content_hash": "eabcf34b6ee2cb55b37c1ff8e0b2bcbf003ea315a1dbe521bf519c7c9387d056",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/openclaw-usage-ui/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-28T01:46:31Z",
+      "size_bytes": 1964,
+      "content_hash": "045e0bc7becbd198acca21060c71b5f3e0e09b0eb24f02a03d7f2c81c46df509",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/openclaw-version-check/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-02-26T09:00:04Z",
+      "size_bytes": 698,
+      "content_hash": "a59e117191f3bb915a4fe7bbccc15490f6523c484a3d39007047f1730d414ab3",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/patent-information-retrieval/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-03-31T09:02:33Z",
+      "size_bytes": 11112,
+      "content_hash": "71d00f97c3edaf79c026ccde715eacca9175b89e0dbef76c086559777db58eef",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/patent-search/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-01T06:22:23Z",
+      "size_bytes": 5066,
+      "content_hash": "551a3a7868c9c2440d9498ff782da638328dc75647fc996301084581a469a084",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/pdf-enhancer/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-03-09T06:51:24Z",
+      "size_bytes": 1793,
+      "content_hash": "005706e80154103d860d08ad871d85faf45d8ce2a14f33901bcbf5922ae052e7",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/personal-wiki/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-21T03:27:28Z",
+      "size_bytes": 4210,
+      "content_hash": "6635b3c32398d313a0a4afce6cce74a059451e3299438f8b199a121ee0503654",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/playwright/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-03-04T09:33:56Z",
+      "size_bytes": 1824,
+      "content_hash": "6bc0b6f43e0b960b4a0c14ff136487249e25daaf713bb0580a9da742b5e61e21",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/po-pdf-spec-compare/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-13T11:59:19Z",
+      "size_bytes": 16732,
+      "content_hash": "928f2403eae35f49ef0828d53c71a0a014c68283f9e2ce068d70c5dde2538d24",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/price-scraping/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-03-31T02:47:52Z",
+      "size_bytes": 6962,
+      "content_hash": "b36454d6ffe981d69bd8206f5fd8181625986d143a8371be104a78c9305e9c96",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/project-manager-ai/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-03-12T10:39:30Z",
+      "size_bytes": 4026,
+      "content_hash": "967d5c2a688aa4dcafd6207f17703f7ac63025800594ad7f37fb131fd82ccbd4",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/self-improving-agent/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-02-24T12:29:47Z",
+      "size_bytes": 19704,
+      "content_hash": "cec6d90543ea51c1ae2dfe09b7c0ac640b0a295101d34ba14c9deedc6607ce0c",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/sheet-cog/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-02-25T16:31:15Z",
+      "size_bytes": 8405,
+      "content_hash": "93694bba29277a279dbbda7b588a395ed7cbf9c161698b20049c1206cb5bec82",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/skill-creator/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-02-18T07:57:35Z",
+      "size_bytes": 17837,
+      "content_hash": "b2e3d83f60425c2d0b9d4162efb8f9aa322b45843497340f2289f42be422801c",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/summarize/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-02-24T12:38:49Z",
+      "size_bytes": 1425,
+      "content_hash": "e7cdf499cee3e4ffefdbdca842b4716796cdd983b1f11e1314f295895eeb8161",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/taobao-native/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-08T08:55:46Z",
+      "size_bytes": 29299,
+      "content_hash": "edffd61234444fe73fac0d80c9d77fb2b5efce3365ef0e4f455a7ed2e4b48162",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/tavily-search/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-02-24T12:33:24Z",
+      "size_bytes": 1195,
+      "content_hash": "c1c4f168eb62dc1b3b3da18186963419b5fac7f9e62c098c0ce3ace482060c7d",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/u8-db/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-03-06T03:33:49Z",
+      "size_bytes": 2669,
+      "content_hash": "f9c06046e9b6cae5a959d777b39ce4730675bb61b92173d1fe7784e544b3dc99",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/vgm-declaration/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-02T08:46:00Z",
+      "size_bytes": 3555,
+      "content_hash": "54c5218030493d11a77453adb158a5939a181aca42d06388582afea7f49977eb",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/video-analyzer-openclaw/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-23T06:46:29Z",
+      "size_bytes": 1831,
+      "content_hash": "61c5bc0b5b620d669637329f7495101873b3a3df80ec690c6f750e652da1cb88",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/weather/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-02-24T12:48:06Z",
+      "size_bytes": 1169,
+      "content_hash": "1ca0c8d768ad603ea8d5d47f56a9b435fe575f7f34e719eda85c82003d740e93",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/worklog-skill/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-20T01:26:07Z",
+      "size_bytes": 4488,
+      "content_hash": "e924f7a5f789e48e95c761fe91aef6d1a97ce3d4007a1bd4e9f634549be6ece3",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/skills/yi-chang-bao-gao-fen-xi-skill/SKILL.md",
+      "source_type": "openclaw_skill_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-03-28T08:03:25Z",
+      "size_bytes": 4173,
+      "content_hash": "0bf72efae3554ebd2b36752b3673c4f8c17e2f52352c81f7e6f973075c8b726d",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/docs/learning_knowledge_base.md",
+      "source_type": "openclaw_workspace_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-02-18T19:11:30Z",
+      "size_bytes": 5427,
+      "content_hash": "629f70646a07c8835fc24ae944b8284caad284fa3d205bb8485b8f7933e8afaa",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/docs/memory_system_fix.md",
+      "source_type": "openclaw_workspace_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-03-06T02:58:01Z",
+      "size_bytes": 2220,
+      "content_hash": "699103dc391cfe4bbc9788fa3c5b72bc8f7266711483ac8d793e0719c25c0747",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/docs/openclaw-knowledge-base.md",
+      "source_type": "openclaw_workspace_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-03-18T09:18:49Z",
+      "size_bytes": 7701,
+      "content_hash": "e2abe89eff82239c78262c3a4c2671871a921025186c08e912eb75155d0b460a",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/docs/openclaw_desktop_skills_security_report.md",
+      "source_type": "openclaw_workspace_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-02-26T10:05:44Z",
+      "size_bytes": 6254,
+      "content_hash": "450661e8c33772d7a543e7acbee8b7d32aaca1f5a74c32fee3e8fd8e6352ae39",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/docs/tools-download-links.md",
+      "source_type": "openclaw_workspace_doc",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-03-02T16:36:07Z",
+      "size_bytes": 660,
+      "content_hash": "d6635a456574c71b396fb28c5c90f14d4e285f44d6f8bffba9c97baa709c3fa8",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/logs/playwright-install-check.log",
+      "source_type": "openclaw_operations_log",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-02-28T18:03:12Z",
+      "size_bytes": 241,
+      "content_hash": "7a2964570491bf7740f0d5069ab645739aa78bb6d23c63190cb74f654dd7a250",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/logs/qmd-update.log",
+      "source_type": "openclaw_operations_log",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-13T19:00:00Z",
+      "size_bytes": 960,
+      "content_hash": "45c63d64f29383c2dd32ae76f230c976da3da3bc48c5211a61c06064f85533e9",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/logs/session-memory-rollup.out.log",
+      "source_type": "openclaw_operations_log",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-03-10T06:28:11Z",
+      "size_bytes": 1401,
+      "content_hash": "22d2cceb3efaa1ad2e4d5615faf4d8ba275924575f90ef39a02efe17e2f134e5",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/logs/session-memory-rollup.err.log",
+      "source_type": "openclaw_operations_log",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-03-10T06:28:11Z",
+      "size_bytes": 23372,
+      "content_hash": "9f91e94f5be5baed93a685a950f1951bb7eceff9a38d55a9437a93f9c293d274",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/logs/session-memory-rollup.lastfail.out",
+      "source_type": "openclaw_operations_log",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-24T20:08:01Z",
+      "size_bytes": 101,
+      "content_hash": "43c8e103b7a12be92a02e3d120c67f144e489d0a9c5e1dfbd4fac5a87e328e1a",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/logs/session-memory-rollup.lastfail.err",
+      "source_type": "openclaw_operations_log",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-05-24T20:08:01Z",
+      "size_bytes": 65,
+      "content_hash": "3cb9cabe926589a45f075473c1e47f6664b407463738c6759256c1cdf34bb9f1",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    },
+    {
+      "source_path": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25/logs/auto-optimize-20260414.log",
+      "source_type": "openclaw_operations_log",
+      "ingested_at": "2026-05-25T09:15:45Z",
+      "modified_at": "2026-04-13T18:00:10Z",
+      "size_bytes": 5851,
+      "content_hash": "70248da99f9d354566e60b33f0dc031c3b08fcb074f9eef3e6c8a8db3559e2da",
+      "pages_created": [
+        "references/openclaw-p5-p8-operations-corpus-2026-05-25.md",
+        "skills/openclaw-cron-and-delivery-automation.md",
+        "skills/openclaw-session-rollup-and-dream-pipeline.md",
+        "skills/openclaw-local-skill-portfolio.md",
+        "skills/openclaw-knowledge-maintenance-and-safety.md",
+        "synthesis/openclaw-autonomy-patterns-may-2026.md"
+      ],
+      "pages_updated": [
+        "index.md",
+        "log.md",
+        "hot.md"
+      ]
+    }
+  ],
+  "openclaw": {
+    "source_path": "~/.openclaw/",
+    "last_ingested": "2026-05-25T09:15:45Z",
+    "memory_updated_at": "2026-05-22T19:00:02Z",
+    "daily_notes_ingested": 42,
+    "sessions_ingested": 66,
+    "pages_created": 23,
+    "pages_updated": 11,
+    "raw_batch": "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25",
+    "docs_ingested": 17,
+    "infra_ingested": 3,
+    "archive_files_ingested": 15,
+    "raw_batches": [
+      "_raw/openclaw/p1-memory-2026-05-25",
+      "_raw/openclaw/p234-docs-infra-archive-2026-05-25",
+      "_raw/openclaw/p5678-sessions-skills-docs-logs-2026-05-25"
+    ],
+    "session_indexes_ingested": 1,
+    "skill_docs_ingested": 33,
+    "log_files_ingested": 7,
+    "skipped_active_sessions": 1
+  },
+  "codex_history_summary": {
+    "source_path": "~/.codex",
+    "last_ingested": "2026-05-25T09:18:00Z",
+    "sessions_ingested": 15,
+    "sessions_total": 16,
+    "sources_ingested": 16,
+    "sources_total": 17,
+    "skipped_active_sessions": 1,
+    "index_updated_at": "2026-05-25T02:30:22.290263Z",
+    "pages_created": [
+      "references/codex-history-corpus-2026-04-20-to-2026-05-25.md",
+      "entities/codex.md",
+      "projects/itemmark/itemmark.md",
+      "projects/onlyweb/onlyweb.md",
+      "projects/po-file-search/po-file-search.md",
+      "projects/mailscope/mailscope.md",
+      "projects/jxd-image-generation/jxd-image-generation.md",
+      "projects/wupingpmc/wupingpmc.md",
+      "skills/local-business-app-deployment-patterns.md",
+      "skills/git-independent-project-management.md",
+      "skills/document-automation-and-word-integration.md",
+      "skills/u8-erp-ai-assistant-pattern.md",
+      "skills/openclaw-skill-validation-pattern.md",
+      "synthesis/codex-business-application-patterns-spring-2026.md"
+    ],
+    "pages_updated": [
+      "hot.md",
+      "index.md",
+      "log.md"
+    ]
+  },
+  "last_updated": "2026-05-25T09:15:45Z"
+}

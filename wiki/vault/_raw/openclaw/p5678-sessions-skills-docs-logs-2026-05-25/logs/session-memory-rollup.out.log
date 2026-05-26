@@ -1,0 +1,44 @@
+/Users/mac/.openclaw/workspace/session_memory/rollups/2026-03-10_daily-rollup.md
+/Users/mac/.openclaw/workspace/session_memory/rollups/2026-03-10_daily-rollup.md
+/Users/mac/.openclaw/workspace/session_memory/rollups/2026-03-10_daily-rollup.md
+Updating 7 collection(s)...
+
+[1/7] clawhub-docs (**/*.md)
+Collection: /Users/mac/workspace/docs (**/*.md)
+
+Indexed: 0 new, 0 updated, 19 unchanged, 0 removed
+
+[2/7] clawmate-proj (**/*.md)
+Collection: /Users/mac/workspace/clawmate (**/*.md)
+
+Indexed: 0 new, 0 updated, 11 unchanged, 0 removed
+
+[3/7] workspace-meta (**/*.md)
+Collection: /Users/mac/.qmd-workspace-meta-temp (**/*.md)
+
+Indexed: 0 new, 0 updated, 5 unchanged, 0 removed
+
+[4/7] openclaw-memories (**/*.md)
+Collection: /Users/mac/.openclaw/workspace/memory (**/*.md)
+
+Indexed: 0 new, 0 updated, 121 unchanged, 0 removed
+
+[5/7] u8-sql-docs (**/*.md)
+Collection: /Users/mac/.openclaw/workspace/memory/u8-docs (**/*.md)
+
+Indexed: 0 new, 0 updated, 66 unchanged, 0 removed
+
+[6/7] openclaw-all (**/*.md)
+Collection: /Users/mac/.openclaw/workspace (**/*.md)
+
+Indexed: 0 new, 1 updated, 220 unchanged, 0 removed
+
+[7/7] session_memory (**/*.md)
+Collection: /Users/mac/.openclaw/workspace/session_memory (**/*.md)
+
+Indexed: 0 new, 1 updated, 2 unchanged, 0 removed
+Cleaned up 1 orphaned content hash(es)
+
+✓ All collections updated.
+
+Run 'qmd embed' to update embeddings (136 unique hashes need vectors)
