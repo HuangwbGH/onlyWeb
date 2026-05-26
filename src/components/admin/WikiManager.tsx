@@ -1,6 +1,6 @@
-import path from 'node:path';
 import { saveWikiSettingsAction, uploadWikiDocumentsAction } from '@/app/admin/actions';
 import { AdminActionForm } from '@/components/admin/AdminActionForm';
+import { WikiDirectoryPicker } from '@/components/admin/WikiDirectoryPicker';
 import { SectionTitle } from '@/components/Shared';
 import { getWikiConfig, listWikiFiles } from '@/lib/wiki';
 
@@ -14,7 +14,6 @@ export function WikiManager() {
   const config = getWikiConfig();
   const files = listWikiFiles();
   const uploadDirectories = getUploadDirectories(files);
-  const vaultPathOptions = getVaultPathOptions(config.vaultPath);
   const excludeOptions = getExcludeOptions(config.excludeDirs.join(','));
 
   return (
@@ -27,16 +26,11 @@ export function WikiManager() {
 
       <section className="content-card wiki-admin-card">
         <SectionTitle eyebrow="Wiki Settings" title="知识库配置" />
-        <p className="admin-hint">这里的配置会优先生效；如果没有保存配置，则使用 .env / docker-compose 中的 WIKI_* 配置。为避免路径输错，页面只提供可选项。</p>
+        <p className="admin-hint">这里的配置会优先生效；如果没有保存配置，则使用 .env / docker-compose 中的 WIKI_* 配置。知识库根目录在本模块内直接浏览服务器目录并选择。</p>
         <AdminActionForm className="admin-edit-form" action={saveWikiSettingsAction} successMessage="知识库配置保存成功">
-          <label className="form-wide">
-            知识库根目录路径
-            <select name="wikiVaultPath" defaultValue={config.vaultPath} required>
-              {vaultPathOptions.map((option) => (
-                <option value={option.value} key={option.value}>{option.label}</option>
-              ))}
-            </select>
-          </label>
+          <div className="form-wide">
+            <WikiDirectoryPicker initialPath={config.vaultPath} />
+          </div>
           <label className="form-wide">
             忽略目录
             <select name="wikiExcludeDirs" defaultValue={config.excludeDirs.join(',')}>
@@ -90,23 +84,6 @@ export function WikiManager() {
       </section>
     </div>
   );
-}
-
-function getVaultPathOptions(currentVaultPath: string) {
-  const candidates = [
-    { label: `当前配置：${currentVaultPath}`, value: currentVaultPath },
-    { label: 'Docker 默认挂载：/app/wiki-vault', value: '/app/wiki-vault' },
-    { label: '本地同级目录：../wiki/vault', value: path.resolve(process.cwd(), '..', 'wiki', 'vault') },
-    { label: '项目内 wiki/vault', value: path.resolve(process.cwd(), 'wiki', 'vault') },
-  ];
-
-  const envVaultPath = process.env.WIKI_VAULT_PATH?.trim();
-  if (envVaultPath) {
-    const value = path.isAbsolute(envVaultPath) ? envVaultPath : path.resolve(process.cwd(), envVaultPath);
-    candidates.splice(1, 0, { label: `.env 配置：${value}`, value });
-  }
-
-  return uniqueOptions(candidates);
 }
 
 function getExcludeOptions(currentValue: string) {

@@ -541,6 +541,6 @@ HR 定制页 `/r/:shareToken` 展示统一风格的联系方式卡片，包括�
 
 ## 19. Wiki 知识库架构
 
-Wiki 模块通过 `WIKI_HOST_VAULT_PATH` 将宿主机 Obsidian vault 挂载到容器内 `WIKI_VAULT_PATH`。服务端读取 Markdown 文件，生成文件树、双链、标签、反向链接和局部关系图谱数据；左侧文件树目录默认收起，可点击展开或收起；后台 `/admin/wiki` 可以通过下拉选项维护 vault 路径、公开状态、忽略目录，并上传 Markdown 文档到 vault；上传目标目录从已扫描到的知识库目录中选择。
+Wiki 模块通过 `WIKI_HOST_VAULT_PATH` 将宿主机 Obsidian vault 挂载到容器内 `WIKI_VAULT_PATH`。服务端读取 Markdown 文件，生成文件树、双链、标签、反向链接和局部关系图谱数据；左侧文件树目录默认收起，可点击展开或收起；后台 `/admin/wiki` 可以点击“知识库根目录路径”后用弹窗浏览服务器目录并选择 vault 路径，通过下拉选项维护公开状态、忽略目录，并上传 Markdown 文档到 vault；上传目标目录从已扫描到的知识库目录中选择。
 
 图谱前端使用浏览器端 SVG 力导向模拟实现，不依赖外部图谱服务。节点支持拖拽，节点标签支持点击跳转到对应笔记。默认 `WIKI_PUBLIC=false`，访问 `/wiki` 需要管理员登录；设置为 `true` 后可公开访问。后台保存的 Wiki 配置写入 `app_settings` 表，优先级高于环境变量；`WIKI_EXCLUDE_DIRS` 保存为空字符串表示不忽略任何目录，而不是回退到默认值。
