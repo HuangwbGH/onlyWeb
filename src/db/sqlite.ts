@@ -80,7 +80,20 @@ function ensureProjectDocumentsUniqueByKind() {
   `);
 }
 
+function ensureAppSettingsTable() {
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS app_settings (
+      key TEXT PRIMARY KEY,
+      value TEXT NOT NULL,
+      description TEXT,
+      created_at TEXT NOT NULL,
+      updated_at TEXT NOT NULL
+    );
+  `);
+}
+
 function runMigrations() {
+  ensureAppSettingsTable();
   ensureColumn('profiles', 'wechat_id', 'TEXT');
   ensureColumn('profiles', 'wechat_qr_url', 'TEXT');
   ensureColumn('projects', 'deleted_at', 'TEXT');

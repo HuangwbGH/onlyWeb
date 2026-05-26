@@ -4,6 +4,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { revalidatePath } from 'next/cache';
 import { requireAdmin } from '@/lib/auth';
+import { getWikiConfig } from '@/lib/wiki';
 import {
   deleteExperience,
   deleteProject,
@@ -21,6 +22,7 @@ import {
   saveProjectDocument,
   saveResumePage,
   saveSkill,
+  saveAppSetting,
   slugify,
   updateProfile,
 } from '@/lib/data';
@@ -78,7 +80,7 @@ async function saveProjectDocuments(
     const fullPath = path.join(uploadDir, fileName);
     const resolvedPath = path.resolve(fullPath);
     const resolvedUploadDir = path.resolve(uploadDir);
-    if (!resolvedPath.startsWith(resolvedUploadDir)) continue;
+    if (!isInsidePath(resolvedUploadDir, resolvedPath)) continue;
 
     const buffer = Buffer.from(await item.arrayBuffer());
     await fs.writeFile(resolvedPath, buffer);
@@ -108,7 +110,7 @@ async function saveWechatQr(formData: FormData) {
   const fullPath = path.join(uploadDir, fileName);
   const resolvedPath = path.resolve(fullPath);
   const resolvedUploadDir = path.resolve(uploadDir);
-  if (!resolvedPath.startsWith(resolvedUploadDir)) return optionalText(formData, 'wechatQrUrl');
+  if (!isInsidePath(resolvedUploadDir, resolvedPath)) return optionalText(formData, 'wechatQrUrl');
 
   const buffer = Buffer.from(await file.arrayBuffer());
   await fs.writeFile(resolvedPath, buffer);
@@ -124,6 +126,81 @@ function refreshAdmin() {
   revalidatePath('/admin/experiences');
   revalidatePath('/admin/custom-pages');
   revalidatePath('/admin/recycle-bin');
+}
+
+
+function wikiPublicValue(formData: FormData) {
+  return text(formData, 'wikiPublic') === 'true' ? 'true' : 'false';
+}
+
+function isInsidePath(parent: string, child: string) {
+  const normalizedParent = path.resolve(parent);
+  const normalizedChild = path.resolve(child);
+  return normalizedChild === normalizedParent || normalizedChild.startsWith(`${normalizedParent}${path.sep}`);
+}
+
+function safeRelativeDirectory(value: string) {
+  const cleaned = value.trim().replace(/\\/g, '/').replace(/^\/+/, '');
+  if (!cleaned) return '';
+
+  const normalized = path.posix.normalize(cleaned);
+  if (normalized === '.' || normalized.startsWith('../') || normalized.includes('/../')) return '';
+  return normalized;
+}
+
+function refreshWiki() {
+  revalidatePath('/wiki');
+  revalidatePath('/admin/wiki');
+}
+
+export async function saveWikiSettingsAction(formData: FormData) {
+  await requireAdmin();
+  const vaultPath = text(formData, 'wikiVaultPath');
+  const excludeDirs = formData.has('wikiExcludeDirs') ? text(formData, 'wikiExcludeDirs') : '.obsidian,_raw,.git';
+
+  saveAppSetting('WIKI_VAULT_PATH', vaultPath, '知识库根目录路径，优先级高于环境变量 WIKI_VAULT_PATH。');
+  saveAppSetting('WIKI_EXCLUDE_DIRS', excludeDirs, '知识库扫描时忽略的目录，多个目录使用英文逗号分隔。');
+  saveAppSetting('WIKI_PUBLIC', wikiPublicValue(formData), '是否允许未登录访客访问 /wiki。');
+
+  if (vaultPath) {
+    try {
+      await fs.mkdir(path.isAbsolute(vaultPath) ? vaultPath : path.resolve(process.cwd(), vaultPath), { recursive: true });
+    } catch (error) {
+      console.warn('Wiki vault directory could not be created from settings page.', error);
+    }
+  }
+  refreshWiki();
+}
+
+export async function uploadWikiDocumentsAction(formData: FormData) {
+  await requireAdmin();
+  const config = getWikiConfig();
+  await fs.mkdir(config.vaultPath, { recursive: true });
+
+  const relativeDirectory = safeRelativeDirectory(text(formData, 'wikiUploadDirectory'));
+  const uploadDir = path.join(config.vaultPath, relativeDirectory);
+  const resolvedVaultPath = path.resolve(config.vaultPath);
+  const resolvedUploadDir = path.resolve(uploadDir);
+  if (!isInsidePath(resolvedVaultPath, resolvedUploadDir)) return;
+
+  await fs.mkdir(resolvedUploadDir, { recursive: true });
+  const files = formData.getAll('wikiDocumentFiles');
+
+  for (const item of files) {
+    if (!(item instanceof File) || item.size === 0) continue;
+
+    const fileName = originalFileName(item.name);
+    if (!fileName || !/\.(md|markdown)$/i.test(fileName)) continue;
+
+    const fullPath = path.join(resolvedUploadDir, fileName);
+    const resolvedPath = path.resolve(fullPath);
+    if (!isInsidePath(resolvedUploadDir, resolvedPath)) continue;
+
+    const buffer = Buffer.from(await item.arrayBuffer());
+    await fs.writeFile(resolvedPath, buffer);
+  }
+
+  refreshWiki();
 }
 
 export async function updateProfileAction(formData: FormData) {

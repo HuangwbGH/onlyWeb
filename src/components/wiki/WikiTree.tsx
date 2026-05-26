@@ -20,7 +20,7 @@ function WikiTreeItem({ node, currentSlug }: { node: WikiTreeNode; currentSlug?:
   }
 
   return (
-    <details className="wiki-tree-folder" open>
+    <details className="wiki-tree-folder">
       <summary><span>📁</span><span>{node.name}</span></summary>
       <div className="wiki-tree-children">
         {node.children?.map((child) => <WikiTreeItem currentSlug={currentSlug} key={`${child.type}-${child.path}`} node={child} />)}

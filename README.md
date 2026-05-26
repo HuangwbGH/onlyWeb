@@ -63,6 +63,7 @@ onlyWeb 不是一个简单的静态个人主页，而是一个小型内容管理
 - 工作经历管理
 - 技能管理
 - 定制简历页管理
+- 知识库管理：在后台维护 vault 路径、公开状态、忽略目录，并上传 Markdown 文档
 - 发布 / 隐藏内容
 
 ### 定制简历页
@@ -413,7 +414,7 @@ WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
 - `DATABASE_PATH`：Docker 部署建议保持默认值。
 - `SESSION_SECRET`：生产环境必须替换，不要使用默认值。
 - `ADMIN_EMAIL` / `ADMIN_PASSWORD`：初始化管理员账号。
-- `WIKI_HOST_VAULT_PATH`：服务器宿主机上的 Obsidian vault 路径，Docker 会只读挂载。
+- `WIKI_HOST_VAULT_PATH`：服务器宿主机上的 Obsidian vault 路径，Docker 会挂载。
 - `WIKI_VAULT_PATH`：容器内读取 Wiki 的路径，通常保持默认 `/app/wiki-vault`。
 - `WIKI_PUBLIC`：是否公开 Wiki；默认 `false`，需要管理员登录。
 - `WIKI_EXCLUDE_DIRS`：Wiki 扫描时忽略的目录。
@@ -618,7 +619,7 @@ docker run --rm \
 
 #### 10. 更新程序
 
-如果代码来自 Git 仓库：
+如果代码来自 Git 仓库，并且服务器支持 Docker Compose v2：
 
 ```bash
 cd workspace/onlyWeb
@@ -626,11 +627,28 @@ git pull
 docker compose up -d --build
 ```
 
+如果 LinuxOS 服务器使用的是 docker-compose V1，建议先删除旧容器，再重新构建：
+
+```bash
+cd workspace/onlyWeb
+git pull
+docker-compose down
+docker-compose up -d --build
+```
+
 如果代码是手动上传，上传新代码后执行：
 
 ```bash
 cd workspace/onlyWeb
 docker compose up -d --build
+```
+
+如果是 docker-compose V1：
+
+```bash
+cd workspace/onlyWeb
+docker-compose down
+docker-compose up -d --build
 ```
 
 #### 11. 常见排查命令
@@ -680,6 +698,7 @@ sudo lsof -i :18473
 /admin/projects                        新版作品管理，需要登录
 /admin/experiences                     新版经历管理，需要登录
 /admin/custom-pages                   新版定制页管理，需要登录
+/admin/wiki                           知识库管理，需要登录
 /admin/recycle-bin                    回收站，需要登录
 /for/bytedance/frontend-engineer        管理员预览地址，需要登录
 /r/hr-bytedance-frontend-2026           HR 专属定制页示例
@@ -694,7 +713,7 @@ password
 
 当前登录已使用服务端 HTTP-only Cookie 会话；账号密码来自环境变量 `ADMIN_EMAIL` / `ADMIN_PASSWORD`。如果修改 `ADMIN_EMAIL` / `ADMIN_PASSWORD`，应用启动时会同步内置管理员账号。
 
-后台表单提交说明：保存或删除后会停留在后台当前页面，刷新页面数据，并在操作成功后显示成功提示。新版作品管理和新版经历管理均采用“左侧列表 + 右侧分区编辑”的独立页面；作品管理页工具栏和顶部卡片展示独立作品集入口，便于打开和复制；作品管理页在桌面端支持左侧作品列表与右侧作品详情独立滚动，点击作品时保持当前位置不跳回页面顶部；技能管理采用列表行内编辑，便于快速维护。
+后台表单提交说明：保存或删除后会停留在后台当前页面，刷新页面数据，并在操作成功后显示成功提示。新版作品管理和新版经历管理均采用“左侧列表 + 右侧分区编辑”的独立页面；作品管理页工具栏和顶部卡片展示独立作品集入口，便于打开和复制；作品管理页在桌面端支持左侧作品名称列表与右侧作品详情独立滚动，点击作品时保持当前位置不跳回页面顶部；技能管理采用列表行内编辑，便于快速维护。
 
 删除说明：作品、经历和定制简历页使用软删除。删除后内容会进入 `/admin/recycle-bin` 回收站，前台和管理列表中不再展示，但可以在回收站恢复。
 
@@ -715,7 +734,7 @@ password
 - 通过独立页面新增 / 编辑 / 软删除经历
 - 新增 / 编辑 / 删除技能，技能管理采用列表行编辑模式，便于快速维护
 - 通过独立页面新增 / 编辑 / 软删除定制简历页
-- Wiki 知识库支持通过 Docker 只读挂载 Obsidian vault，默认仅管理员登录后可访问 `/wiki`
+- Wiki 知识库支持通过 Docker 挂载 Obsidian vault，默认仅管理员登录后可访问 `/wiki`，并可在后台管理路径和上传 Markdown 文档
 - 在新版定制页管理中按“投递信息 / 页面文案 / 展示内容”分区编辑
 - 为定制简历页关联作品、经历和技能
 - 定制简历页中的项目卡片可以打开对应作品详情
@@ -884,7 +903,7 @@ WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
 
 程序可以把 Obsidian vault 以 Web 方式展示出来，入口为 `/wiki`。默认只有管理员登录后可以访问；如果确认内容可以公开，再把 `WIKI_PUBLIC` 改为 `true`。
 
-Docker 部署时推荐使用只读挂载：
+Docker 部署时会把 vault 挂载到容器内，后台可直接上传 Markdown 文档到该目录：
 
 ```env
 WIKI_HOST_VAULT_PATH=../wiki/vault
@@ -895,8 +914,12 @@ WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
 
 页面能力：
 
-- 左侧展示 vault 文件树。
+- 左侧展示 vault 文件树，目录默认收起，可点击展开或收起。
 - 中间展示 Markdown 内容。
 - 支持 Obsidian 双链 `[[note]]` 和 `[[note|显示名称]]`。
 - 右侧展示当前笔记的可拖拽动态局部关系图谱、反向链接和出链。
 - 忽略 `.obsidian`、`_raw` 等配置或原始材料目录。
+- 后台 `/admin/wiki` 可通过下拉选择维护 vault 路径、公开状态、忽略目录，并上传 Markdown 文档；上传目录从当前知识库已有目录中选择，避免手动输入路径。
+- 本项目 `.gitignore` / `.dockerignore` 默认忽略项目内 `wiki/` 目录，避免误把完整知识库上传到代码仓库或打进镜像。
+- 知识库管理页面不要求手动输入路径：配置项使用预设选项，上传目录使用已有目录选项。
+- 选择“不忽略任何目录”会保存为空配置，并覆盖 `.env` 中的默认忽略目录。

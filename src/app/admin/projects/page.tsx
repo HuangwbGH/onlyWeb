@@ -2,7 +2,7 @@ import { headers } from 'next/headers';
 import { ProjectsManager } from '@/components/admin/ProjectsManager';
 import { PageShell } from '@/components/Shared';
 import { requireAdmin } from '@/lib/auth';
-import { getConfiguredAppUrl, getDefaultHost } from '@/lib/siteUrl';
+import { getConfiguredAppUrl, getDefaultHost, normalizeAppOrigin } from '@/lib/siteUrl';
 
 export const dynamic = 'force-dynamic';
 
@@ -12,7 +12,7 @@ async function getOrigin() {
   if (configuredUrl) return configuredUrl;
   const host = headerStore.get('host') ?? getDefaultHost();
   const proto = headerStore.get('x-forwarded-proto') ?? 'http';
-  return `${proto}://${host}`;
+  return normalizeAppOrigin(`${proto}://${host}`);
 }
 
 export default async function ProjectsAdminPage({

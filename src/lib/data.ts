@@ -206,6 +206,47 @@ export function updateProfile(input: Omit<Profile, 'id'>) {
   `).run({ ...input, id: current.id, updatedAt: now() });
 }
 
+
+export type AppSetting = {
+  key: string;
+  value: string;
+  description?: string;
+};
+
+function mapAppSetting(row: Row): AppSetting {
+  return {
+    key: String(row.key),
+    value: String(row.value),
+    description: nullable(row.description),
+  };
+}
+
+export function getAppSetting(key: string) {
+  const row = db.prepare('SELECT * FROM app_settings WHERE key = ?').get(key) as Row | undefined;
+  return row ? mapAppSetting(row) : undefined;
+}
+
+export function getAppSettingValue(key: string) {
+  return getAppSetting(key)?.value;
+}
+
+export function listAppSettings() {
+  const rows = db.prepare('SELECT * FROM app_settings ORDER BY key ASC').all() as Row[];
+  return rows.map(mapAppSetting);
+}
+
+export function saveAppSetting(key: string, value: string, description?: string) {
+  const current = getAppSetting(key);
+  const updatedAt = now();
+  if (current) {
+    db.prepare('UPDATE app_settings SET value = ?, description = ?, updated_at = ? WHERE key = ?')
+      .run(value, description ?? null, updatedAt, key);
+    return;
+  }
+  db.prepare('INSERT INTO app_settings (key, value, description, created_at, updated_at) VALUES (?, ?, ?, ?, ?)')
+    .run(key, value, description ?? null, updatedAt, updatedAt);
+}
+
 export function listProjects({ publishedOnly = false } = {}) {
   const rows = db.prepare(`
     SELECT * FROM projects

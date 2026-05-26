@@ -19,7 +19,7 @@ services:
     volumes:
       - sqlite_data:/app/data
       - uploads_data:/app/public/uploads
-      - ${WIKI_HOST_VAULT_PATH:-../wiki/vault}:${WIKI_VAULT_PATH:-/app/wiki-vault}:ro
+      - ${WIKI_HOST_VAULT_PATH:-../wiki/vault}:${WIKI_VAULT_PATH:-/app/wiki-vault}
 
 volumes:
   sqlite_data:

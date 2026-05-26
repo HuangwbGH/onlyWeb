@@ -1132,8 +1132,8 @@ td button {
 
 .custom-page-list-item {
   display: grid;
-  gap: 6px;
-  padding: 14px;
+  gap: 4px;
+  padding: 12px 14px;
   background: #f8f9fd;
   border: 1px solid rgba(24, 32, 51, 0.08);
   border-radius: 18px;
@@ -1147,7 +1147,10 @@ td button {
 }
 
 .custom-page-list-item strong {
+  overflow: hidden;
   color: #101729;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .custom-page-list-item span,
@@ -1964,6 +1967,18 @@ td button {
   list-style: none;
 }
 
+.wiki-tree-folder summary::after {
+  content: '›';
+  margin-left: auto;
+  color: #7a8499;
+  font-size: 16px;
+  transition: transform 0.18s ease;
+}
+
+.wiki-tree-folder[open] > summary::after {
+  transform: rotate(90deg);
+}
+
 .wiki-tree-folder summary::-webkit-details-marker {
   display: none;
 }
@@ -2078,5 +2093,54 @@ td button {
   .wiki-sidebar {
     position: static;
     max-height: none;
+  }
+}
+
+.wiki-admin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.wiki-admin-card {
+  padding: 24px;
+}
+
+.wiki-admin-file-list {
+  display: grid;
+  gap: 10px;
+}
+
+.wiki-admin-file-list a {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  background: #f8f9fd;
+  border: 1px solid rgba(24, 32, 51, 0.08);
+  border-radius: 16px;
+}
+
+.wiki-admin-file-list a:hover {
+  background: #ffffff;
+  border-color: rgba(66, 99, 255, 0.3);
+  box-shadow: 0 12px 30px rgba(24, 32, 51, 0.08);
+}
+
+.wiki-admin-file-list strong {
+  color: #101729;
+}
+
+.wiki-admin-file-list span {
+  overflow: hidden;
+  color: #7a8499;
+  font-size: 13px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 920px) {
+  .wiki-admin-grid {
+    grid-template-columns: 1fr;
   }
 }

@@ -11,7 +11,8 @@
 - [5. 域名和 HTTPS 代理](#5-域名和-https-代理)
 - [6. Wiki vault 挂载](#6-wiki-vault-挂载)
 - [7. 备份和恢复](#7-备份和恢复)
-- [8. 常见问题](#8-常见问题)
+- [8. 更新程序](#8-更新程序)
+- [9. 常见问题](#9-常见问题)
 
 ## 1. 部署方式总览
 
@@ -59,7 +60,7 @@ WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
 | `SESSION_SECRET` | 随机长字符串 | 随机长字符串 | 登录 Cookie 签名密钥，不能使用默认值 |
 | `ADMIN_EMAIL` | 管理员邮箱 | 管理员邮箱 | 初始化管理员账号 |
 | `ADMIN_PASSWORD` | 强密码 | 强密码 | 初始化管理员密码 |
-| `WIKI_HOST_VAULT_PATH` | `../wiki/vault` | 服务器上的 vault 路径 | 宿主机 Obsidian vault 路径，只读挂载进容器 |
+| `WIKI_HOST_VAULT_PATH` | `../wiki/vault` | 服务器上的 vault 路径 | 宿主机 Obsidian vault 路径，挂载进容器；后台上传会写入该目录 |
 | `WIKI_VAULT_PATH` | `/app/wiki-vault` | `/app/wiki-vault` | 容器内读取 Wiki 的路径，通常不改 |
 | `WIKI_PUBLIC` | `false` | `false` | `false` 表示仅管理员可访问 `/wiki` |
 | `WIKI_EXCLUDE_DIRS` | `.obsidian,_raw,.git` | `.obsidian,_raw,.git` | Wiki 扫描忽略目录 |
@@ -422,7 +423,7 @@ docker compose up -d
 `docker-compose.yml` 已经包含：
 
 ```yaml
-- ${WIKI_HOST_VAULT_PATH:-../wiki/vault}:${WIKI_VAULT_PATH:-/app/wiki-vault}:ro
+- ${WIKI_HOST_VAULT_PATH:-../wiki/vault}:${WIKI_VAULT_PATH:-/app/wiki-vault}
 ```
 
 ### 6.1 macOS 示例
@@ -461,15 +462,19 @@ WIKI_HOST_VAULT_PATH=../wiki/vault
 WIKI_VAULT_PATH=/app/wiki-vault
 ```
 
-如果 vault 放在其他位置，使用服务器实际路径即可。
+如果 vault 放在其他位置，使用服务器实际路径即可。后台知识库管理入口为 `/admin/wiki`，可在页面中通过选项维护容器内 vault 路径、公开状态、忽略目录，并上传 Markdown 文档；上传目录从当前知识库已有目录中选择。忽略目录选择“不忽略任何目录”时会覆盖 `.env` 默认值。
 
 ### 6.3 权限设置
 
-Wiki 使用只读挂载，不会修改 vault 文件。需要确保 Docker 运行用户可以读取 vault：
+Wiki 使用读写挂载，后台上传 Markdown 文档会写入 vault。需要确保 Docker 运行用户可以读写 vault：
 
 ```bash
-chmod -R a+r ../wiki/vault
-find ../wiki/vault -type d -exec chmod a+rx {} \;
+# 推荐：让容器内 nextjs 用户 UID 1001 拥有写入权限
+sudo chown -R 1001:1001 ../wiki/vault
+chmod -R u+rwX ../wiki/vault
+
+# 如果不方便修改属主，可临时放宽目录权限
+# chmod -R a+rwX ../wiki/vault
 ```
 
 ## 7. 备份和恢复
@@ -503,18 +508,44 @@ docker run --rm \
 
 > 如果项目目录名不是 `onlyweb`，Compose 生成的 volume 名称可能不同，请先用 `docker volume ls` 确认。
 
-Wiki vault 是宿主机目录，只读挂载；请按自己的 Obsidian vault 备份方式单独备份。
+Wiki vault 是宿主机目录；后台上传的 Markdown 文档也会写入该目录，请按自己的 Obsidian vault 备份方式单独备份。
 
-## 8. 常见问题
 
-### 8.1 登录后保存资料被跳回登录页
+## 8. 更新程序
+
+### 8.1 Docker Compose v2
+
+如果服务器支持 `docker compose` 命令：
+
+```bash
+cd workspace/onlyWeb
+git pull
+docker compose up -d --build
+```
+
+### 8.2 docker-compose V1
+
+如果 LinuxOS 服务器使用的是 `docker-compose` V1，建议更新代码后先删除旧容器，再重新构建：
+
+```bash
+cd workspace/onlyWeb
+git pull
+docker-compose down
+docker-compose up -d --build
+```
+
+说明：`docker-compose down` 会删除旧容器和默认网络，但不会删除 `sqlite_data`、`uploads_data` 这类命名 volume，所以数据库和上传文件仍会保留。不要在更新时执行 `docker-compose down -v`，否则会删除数据 volume。
+
+## 9. 常见问题
+
+### 9.1 登录后保存资料被跳回登录页
 
 检查 `APP_URL` 是否与实际访问协议一致：
 
 - HTTP 局域网访问：`APP_URL=http://服务器IP:端口`
 - HTTPS 域名访问：`APP_URL=https://你的域名`
 
-### 8.2 域名访问生成的 HR 链接不对
+### 9.2 域名访问生成的 HR 链接不对
 
 检查 `.env`：
 
@@ -528,7 +559,7 @@ APP_URL=https://hkkwebonly.xyz
 docker compose up -d
 ```
 
-### 8.3 上传文件过大失败
+### 9.3 上传文件过大失败
 
 如果使用 Nginx，确认配置中包含：
 
@@ -536,7 +567,7 @@ docker compose up -d
 client_max_body_size 50m;
 ```
 
-### 8.4 Word 文档无法在线预览
+### 9.4 Word 文档无法在线预览
 
 Word `.doc/.docx` 在线预览依赖 Docker 镜像内置的 LibreOffice Writer。
 
@@ -552,7 +583,7 @@ docker compose exec app soffice --version
 docker compose up -d --build
 ```
 
-### 8.5 `/wiki` 打不开或看不到内容
+### 9.5 `/wiki` 打不开或看不到内容
 
 检查：
 

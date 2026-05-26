@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { getAppSetting, getAppSettingValue } from '@/lib/data';
 
 export type WikiFile = {
   slug: string;
@@ -40,18 +41,23 @@ export type WikiGraph = {
 const DEFAULT_EXCLUDE_DIRS = ['.obsidian', '_raw', '.git'];
 
 function getVaultPath() {
-  const configuredPath = process.env.WIKI_VAULT_PATH?.trim();
-  if (configuredPath) return configuredPath;
+  const savedPath = getAppSettingValue('WIKI_VAULT_PATH')?.trim();
+  const configuredPath = savedPath || process.env.WIKI_VAULT_PATH?.trim();
+  if (configuredPath) return path.isAbsolute(configuredPath) ? configuredPath : path.resolve(process.cwd(), configuredPath);
   return path.resolve(process.cwd(), '..', 'wiki', 'vault');
 }
 
 function getExcludeDirs() {
-  const configured = process.env.WIKI_EXCLUDE_DIRS?.trim();
-  if (!configured) return DEFAULT_EXCLUDE_DIRS;
+  const savedSetting = getAppSetting('WIKI_EXCLUDE_DIRS');
+  const configured = savedSetting ? savedSetting.value.trim() : process.env.WIKI_EXCLUDE_DIRS?.trim();
+  if (configured == null) return DEFAULT_EXCLUDE_DIRS;
+  if (!configured) return [];
   return configured.split(',').map((item) => item.trim()).filter(Boolean);
 }
 
 export function isWikiPublic() {
+  const savedValue = getAppSettingValue('WIKI_PUBLIC')?.trim();
+  if (savedValue) return savedValue === 'true';
   return process.env.WIKI_PUBLIC === 'true';
 }
 
@@ -70,7 +76,7 @@ function toPosixPath(value: string) {
 }
 
 function stripMarkdownExtension(value: string) {
-  return value.replace(/\.md$/i, '');
+  return value.replace(/\.(md|markdown)$/i, '');
 }
 
 function slugFromRelativePath(relativePath: string) {
@@ -126,7 +132,7 @@ function walkMarkdownFiles(root: string, excludeDirs: string[]) {
         if (!shouldSkipDirectory(entry.name, excludeDirs)) walk(path.join(current, entry.name));
         continue;
       }
-      if (entry.isFile() && entry.name.toLowerCase().endsWith('.md')) {
+      if (entry.isFile() && /\.(md|markdown)$/i.test(entry.name)) {
         files.push(path.relative(root, path.join(current, entry.name)));
       }
     }

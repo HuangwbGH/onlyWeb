@@ -33,6 +33,7 @@ export function AdminDashboard({ origin }: { origin: string }) {
         <a href="/admin/experiences">新版经历管理</a>
         <a href="/admin/custom-pages">新版定制页管理</a>
         <a href="/admin/recycle-bin">回收站</a>
+        <a href="/admin/wiki">知识库管理</a>
       </aside>
       <div className="admin-main">
         <AdminStats projects={projects} experiences={experiences} skills={skills} resumePages={resumePages} />

@@ -4,6 +4,7 @@
 
 - [概述](#概述)
 - [admin_users](#admin_users)
+- [app_settings](#app_settings)
 - [profiles](#profiles)
 - [projects](#projects)
 - [experiences](#experiences)
@@ -48,6 +49,21 @@ src/db/sqlite.ts
 | password_hash | 密码哈希 | 登录校验，禁止明文存储 |
 | created_at | 创建时间 | 审计展示 |
 | updated_at | 更新时间 | 审计展示 |
+
+
+## app_settings
+
+应用运行配置表。用于保存可以在后台页面维护的配置项，优先级高于对应环境变量。
+
+| 字段 | 含义 | 影响范围 |
+| --- | --- | --- |
+| key | 配置键，主键 | 配置读取和覆盖规则 |
+| value | 配置值 | 具体功能的运行参数 |
+| description | 配置说明 | 后台维护和排查 |
+| created_at | 创建时间 | 审计展示 |
+| updated_at | 更新时间 | 配置变更排查 |
+
+当前用于保存 Wiki 配置：`WIKI_VAULT_PATH`、`WIKI_PUBLIC`、`WIKI_EXCLUDE_DIRS`。后台 `/admin/wiki` 修改后会写入该表，并优先生效。
 
 ## profiles
 

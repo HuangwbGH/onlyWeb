@@ -25,6 +25,7 @@ export default async function AdminPage() {
         <a className="button ghost" href="/admin/experiences">新版经历管理</a>
         <a className="button primary" href="/admin/custom-pages">新版定制页管理</a>
         <a className="button ghost" href="/admin/recycle-bin">回收站</a>
+        <a className="button ghost" href="/admin/wiki">知识库管理</a>
         <a className="button ghost" href="/admin/logout">退出登录</a>
       </div>
       <AdminDashboard origin={origin} />

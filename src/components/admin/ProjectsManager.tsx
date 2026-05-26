@@ -49,10 +49,7 @@ export function ProjectsManager({ origin, selectedId }: { origin: string; select
               key={project.id}
               scroll={false}
             >
-              <span className="status-pill">{project.isPublished ? '已发布' : '草稿'}</span>
               <strong>{project.title}</strong>
-              <span>{project.description}</span>
-              <small>{project.isFeatured ? '精选作品 · ' : ''}{project.slug}</small>
             </Link>
           ))}
           {projects.length === 0 && <p className="admin-hint">还没有作品，点击“新建”开始创建。</p>}
