@@ -111,6 +111,19 @@ function mapProject(row: Row): Project {
     effectDemoTitle: nullable(row.effect_demo_title),
     effectDemoDescription: nullable(row.effect_demo_description),
     effectDemoUrl: nullable(row.effect_demo_url),
+    businessTitle: nullable(row.business_title),
+    businessTagline: nullable(row.business_tagline),
+    businessScenario: nullable(row.business_scenario),
+    businessCoreValue: nullable(row.business_core_value),
+    businessDeliveryForm: nullable(row.business_delivery_form),
+    businessPainPoints: parseJsonArray(row.business_pain_points),
+    businessSolutionSteps: parseJsonArray(row.business_solution_steps),
+    businessResult: nullable(row.business_result),
+    businessValues: parseJsonArray(row.business_values),
+    businessContributions: parseJsonArray(row.business_contributions),
+    businessAudienceFocus: parseJsonArray(row.business_audience_focus),
+    businessResourceLabels: parseJsonArray(row.business_resource_labels),
+    businessTechNotes: parseJsonArray(row.business_tech_notes),
     githubUrl: nullable(row.github_url),
     docsUrl: nullable(row.docs_url),
     showDescription: row.show_description == null ? true : bool(row.show_description),
@@ -285,6 +298,19 @@ export function saveProject(input: Project) {
     effectDemoTitle: input.effectDemoTitle ?? null,
     effectDemoDescription: input.effectDemoDescription ?? null,
     effectDemoUrl: input.effectDemoUrl ?? null,
+    businessTitle: input.businessTitle ?? null,
+    businessTagline: input.businessTagline ?? null,
+    businessScenario: input.businessScenario ?? null,
+    businessCoreValue: input.businessCoreValue ?? null,
+    businessDeliveryForm: input.businessDeliveryForm ?? null,
+    businessPainPoints: JSON.stringify(input.businessPainPoints ?? []),
+    businessSolutionSteps: JSON.stringify(input.businessSolutionSteps ?? []),
+    businessResult: input.businessResult ?? null,
+    businessValues: JSON.stringify(input.businessValues ?? []),
+    businessContributions: JSON.stringify(input.businessContributions ?? []),
+    businessAudienceFocus: JSON.stringify(input.businessAudienceFocus ?? []),
+    businessResourceLabels: JSON.stringify(input.businessResourceLabels ?? []),
+    businessTechNotes: JSON.stringify(input.businessTechNotes ?? []),
     githubUrl: input.githubUrl ?? null,
     docsUrl: input.docsUrl ?? null,
     showDescription: input.showDescription ? 1 : 0,
@@ -302,7 +328,11 @@ export function saveProject(input: Project) {
       UPDATE projects SET title=@title, slug=@slug, summary=@summary, description=@description, tech_stack=@techStack,
       role=@role, highlights=@highlights, demo_url=@demoUrl, effect_demo_type=@effectDemoType,
       effect_demo_title=@effectDemoTitle, effect_demo_description=@effectDemoDescription, effect_demo_url=@effectDemoUrl,
-      github_url=@githubUrl, docs_url=@docsUrl,
+      business_title=@businessTitle, business_tagline=@businessTagline, business_scenario=@businessScenario, business_core_value=@businessCoreValue,
+      business_delivery_form=@businessDeliveryForm, business_pain_points=@businessPainPoints,
+      business_solution_steps=@businessSolutionSteps, business_result=@businessResult, business_values=@businessValues,
+      business_contributions=@businessContributions, business_audience_focus=@businessAudienceFocus, business_resource_labels=@businessResourceLabels,
+      business_tech_notes=@businessTechNotes, github_url=@githubUrl, docs_url=@docsUrl,
       show_description=@showDescription, show_role=@showRole, show_effect_demo=@showEffectDemo,
       show_highlights=@showHighlights, show_tech_stack=@showTechStack, show_links=@showLinks,
       is_featured=@isFeatured, is_published=@isPublished, deleted_at=NULL, updated_at=@updatedAt WHERE id=@id
@@ -310,9 +340,55 @@ export function saveProject(input: Project) {
     return;
   }
   db.prepare(`
-    INSERT INTO projects (id,title,slug,summary,description,cover_image_url,tech_stack,role,highlights,demo_url,effect_demo_type,effect_demo_title,effect_demo_description,effect_demo_url,github_url,docs_url,show_description,show_role,show_effect_demo,show_highlights,show_tech_stack,show_links,is_featured,is_published,deleted_at,created_at,updated_at)
-    VALUES (@id,@title,@slug,@summary,@description,NULL,@techStack,@role,@highlights,@demoUrl,@effectDemoType,@effectDemoTitle,@effectDemoDescription,@effectDemoUrl,@githubUrl,@docsUrl,@showDescription,@showRole,@showEffectDemo,@showHighlights,@showTechStack,@showLinks,@isFeatured,@isPublished,NULL,@createdAt,@updatedAt)
+    INSERT INTO projects (id,title,slug,summary,description,cover_image_url,tech_stack,role,highlights,demo_url,effect_demo_type,effect_demo_title,effect_demo_description,effect_demo_url,business_title,business_tagline,business_scenario,business_core_value,business_delivery_form,business_pain_points,business_solution_steps,business_result,business_values,business_contributions,business_audience_focus,business_resource_labels,business_tech_notes,github_url,docs_url,show_description,show_role,show_effect_demo,show_highlights,show_tech_stack,show_links,is_featured,is_published,deleted_at,created_at,updated_at)
+    VALUES (@id,@title,@slug,@summary,@description,NULL,@techStack,@role,@highlights,@demoUrl,@effectDemoType,@effectDemoTitle,@effectDemoDescription,@effectDemoUrl,@businessTitle,@businessTagline,@businessScenario,@businessCoreValue,@businessDeliveryForm,@businessPainPoints,@businessSolutionSteps,@businessResult,@businessValues,@businessContributions,@businessAudienceFocus,@businessResourceLabels,@businessTechNotes,@githubUrl,@docsUrl,@showDescription,@showRole,@showEffectDemo,@showHighlights,@showTechStack,@showLinks,@isFeatured,@isPublished,NULL,@createdAt,@updatedAt)
   `).run({ ...payload, createdAt: now() });
+}
+
+
+export type ProjectBusinessInput = {
+  id: string;
+  businessTitle?: string;
+  businessTagline?: string;
+  businessScenario?: string;
+  businessCoreValue?: string;
+  businessDeliveryForm?: string;
+  businessPainPoints: string[];
+  businessSolutionSteps: string[];
+  businessResult?: string;
+  businessValues: string[];
+  businessContributions: string[];
+  businessAudienceFocus: string[];
+  businessResourceLabels: string[];
+  businessTechNotes: string[];
+};
+
+export function updateProjectBusiness(input: ProjectBusinessInput) {
+  db.prepare(`
+    UPDATE projects SET
+      business_title=@businessTitle, business_tagline=@businessTagline, business_scenario=@businessScenario, business_core_value=@businessCoreValue,
+      business_delivery_form=@businessDeliveryForm, business_pain_points=@businessPainPoints,
+      business_solution_steps=@businessSolutionSteps, business_result=@businessResult, business_values=@businessValues,
+      business_contributions=@businessContributions, business_audience_focus=@businessAudienceFocus, business_resource_labels=@businessResourceLabels,
+      business_tech_notes=@businessTechNotes, updated_at=@updatedAt
+    WHERE id=@id AND deleted_at IS NULL
+  `).run({
+    id: input.id,
+    businessTitle: input.businessTitle ?? null,
+    businessTagline: input.businessTagline ?? null,
+    businessScenario: input.businessScenario ?? null,
+    businessCoreValue: input.businessCoreValue ?? null,
+    businessDeliveryForm: input.businessDeliveryForm ?? null,
+    businessPainPoints: JSON.stringify(input.businessPainPoints),
+    businessSolutionSteps: JSON.stringify(input.businessSolutionSteps),
+    businessResult: input.businessResult ?? null,
+    businessValues: JSON.stringify(input.businessValues),
+    businessContributions: JSON.stringify(input.businessContributions),
+    businessAudienceFocus: JSON.stringify(input.businessAudienceFocus),
+    businessResourceLabels: JSON.stringify(input.businessResourceLabels),
+    businessTechNotes: JSON.stringify(input.businessTechNotes),
+    updatedAt: now(),
+  });
 }
 
 export function deleteProject(id: string) {

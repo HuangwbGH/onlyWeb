@@ -39,6 +39,7 @@ export type WikiGraph = {
 };
 
 const DEFAULT_EXCLUDE_DIRS = ['.obsidian', '_raw', '.git'];
+const SYSTEM_ROOTS = ['/proc', '/sys', '/dev', '/run', '/boot', '/tmp'];
 
 function getVaultPath() {
   const savedPath = getAppSettingValue('WIKI_VAULT_PATH')?.trim();
@@ -122,23 +123,48 @@ function shouldSkipDirectory(name: string, excludeDirs: string[]) {
   return excludeDirs.includes(name) || name.startsWith('.');
 }
 
+function isSystemPath(target: string) {
+  const resolved = path.resolve(target);
+  return SYSTEM_ROOTS.some((systemRoot) => resolved === systemRoot || resolved.startsWith(`${systemRoot}${path.sep}`));
+}
+
 function walkMarkdownFiles(root: string, excludeDirs: string[]) {
   const files: string[] = [];
 
+  if (!root || root === '/' || isSystemPath(root)) {
+    console.warn(`[wiki] Refused to scan unsafe wiki path: ${root}`);
+    return files;
+  }
+
   function walk(current: string) {
-    const entries = fs.readdirSync(current, { withFileTypes: true });
+    if (isSystemPath(current)) return;
+
+    let entries: fs.Dirent[];
+    try {
+      entries = fs.readdirSync(current, { withFileTypes: true });
+    } catch {
+      return;
+    }
+
     for (const entry of entries) {
+      const childPath = path.join(current, entry.name);
+      if (entry.isSymbolicLink()) continue;
+
       if (entry.isDirectory()) {
-        if (!shouldSkipDirectory(entry.name, excludeDirs)) walk(path.join(current, entry.name));
+        if (!shouldSkipDirectory(entry.name, excludeDirs)) walk(childPath);
         continue;
       }
       if (entry.isFile() && /\.(md|markdown)$/i.test(entry.name)) {
-        files.push(path.relative(root, path.join(current, entry.name)));
+        files.push(path.relative(root, childPath));
       }
     }
   }
 
-  if (fs.existsSync(root)) walk(root);
+  try {
+    if (fs.existsSync(root)) walk(root);
+  } catch {
+    return [];
+  }
   return files.sort((a, b) => a.localeCompare(b));
 }
 
@@ -160,22 +186,26 @@ export function listWikiFiles() {
   const config = getWikiConfig();
   if (!config.exists) return [];
 
-  const rawFiles = walkMarkdownFiles(config.vaultPath, config.excludeDirs).map((relativePath) => {
-    const fullPath = path.join(config.vaultPath, relativePath);
-    const content = fs.readFileSync(fullPath, 'utf8');
-    const stats = fs.statSync(fullPath);
-    const slug = slugFromRelativePath(relativePath);
-    return {
-      slug,
-      relativePath: toPosixPath(relativePath),
-      title: titleFromContent(content, relativePath),
-      content,
-      directory: toPosixPath(path.dirname(relativePath)).replace(/^\.$/, ''),
-      tags: extractTags(content),
-      rawLinks: extractRawWikiLinks(content),
-      backlinks: [] as string[],
-      updatedAt: stats.mtime.toISOString(),
-    };
+  const rawFiles = walkMarkdownFiles(config.vaultPath, config.excludeDirs).flatMap((relativePath) => {
+    try {
+      const fullPath = path.join(config.vaultPath, relativePath);
+      const content = fs.readFileSync(fullPath, 'utf8');
+      const stats = fs.statSync(fullPath);
+      const slug = slugFromRelativePath(relativePath);
+      return [{
+        slug,
+        relativePath: toPosixPath(relativePath),
+        title: titleFromContent(content, relativePath),
+        content,
+        directory: toPosixPath(path.dirname(relativePath)).replace(/^\.$/, ''),
+        tags: extractTags(content),
+        rawLinks: extractRawWikiLinks(content),
+        backlinks: [] as string[],
+        updatedAt: stats.mtime.toISOString(),
+      }];
+    } catch {
+      return [];
+    }
   });
 
   const files = rawFiles.map((file) => ({

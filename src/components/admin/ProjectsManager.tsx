@@ -159,6 +159,31 @@ function ProjectForm({
         <div className="form-panel-title">
           <span>3</span>
           <div>
+            <h3>业务成果展示</h3>
+            <p>用于面向 HR、人资总监、总经理等非技术读者展示，每个作品可单独配置。</p>
+          </div>
+        </div>
+        <div className="admin-edit-form no-margin">
+          <label>展示标题<input name="businessTitle" defaultValue={project?.businessTitle} placeholder="例如：共享文件搜索机器人" /></label>
+          <label>首屏说明<input name="businessTagline" defaultValue={project?.businessTagline} placeholder="例如：通过钉钉机器人按文件名检索共享服务器文件" /></label>
+          <label>使用场景<input name="businessScenario" defaultValue={project?.businessScenario} placeholder="例如：共享文件快速检索" /></label>
+          <label>核心价值<input name="businessCoreValue" defaultValue={project?.businessCoreValue} placeholder="例如：减少人工查找" /></label>
+          <label>交付形式<input name="businessDeliveryForm" defaultValue={project?.businessDeliveryForm} placeholder="例如：钉钉机器人" /></label>
+          <label className="form-wide">业务痛点<textarea name="businessPainPoints" defaultValue={project?.businessPainPoints?.join('\n')} placeholder="每行一个痛点" /></label>
+          <label className="form-wide">解决步骤<textarea name="businessSolutionSteps" defaultValue={project?.businessSolutionSteps?.join('\n')} placeholder="每行一个步骤" /></label>
+          <label className="form-wide">使用效果<textarea name="businessResult" defaultValue={project?.businessResult} placeholder="一句话说明最终效果" /></label>
+          <label className="form-wide">项目价值<textarea name="businessValues" defaultValue={project?.businessValues?.join('\n')} placeholder="每行一个价值点" /></label>
+          <label className="form-wide">我负责什么<textarea name="businessContributions" defaultValue={project?.businessContributions?.join('\n')} placeholder="每行一个职责点" /></label>
+          <label className="form-wide">管理者关注点<textarea name="businessAudienceFocus" defaultValue={project?.businessAudienceFocus?.join('\n')} placeholder="每行一个关注点" /></label>
+          <label className="form-wide">资料入口标签<textarea name="businessResourceLabels" defaultValue={project?.businessResourceLabels?.join('\n')} placeholder="每行一个资料入口标签，按页面显示顺序对应" /></label>
+          <label className="form-wide">技术实现标签<textarea name="businessTechNotes" defaultValue={project?.businessTechNotes?.join('\n')} placeholder="每行一个技术实现标签" /></label>
+        </div>
+      </div>
+
+      <div className="form-panel">
+        <div className="form-panel-title">
+          <span>4</span>
+          <div>
             <h3>效果演示</h3>
             <p>用于作品详情页展示交付效果，可以填写视频链接，也可以关联文档说明。</p>
           </div>
@@ -195,7 +220,7 @@ function ProjectForm({
 
       <div className="form-panel">
         <div className="form-panel-title">
-          <span>4</span>
+          <span>5</span>
           <div>
             <h3>链接和技术栈</h3>
             <p>用于作品页侧栏展示，也会帮助 HR 快速判断技术匹配度。</p>
@@ -227,7 +252,7 @@ function ProjectForm({
 
       <div className="form-panel project-visibility-panel">
         <div className="form-panel-title">
-          <span>5</span>
+          <span>6</span>
           <div>
             <h3>模块展示</h3>
             <p>控制这个作品详情页中各个模块是否对访客展示。</p>

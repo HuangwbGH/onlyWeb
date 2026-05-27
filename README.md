@@ -48,6 +48,7 @@ onlyWeb 不是一个简单的静态个人主页，而是一个小型内容管理
 - 作品集列表
 - 独立作品集展示页 `/portfolio`，无导航，可点击进入作品详情
 - 作品详情页
+- 作品详情页采用面向 HR、人资总监、总经理等非技术读者的业务成果展示布局，优先说明业务痛点、解决方案、使用效果、项目价值和个人贡献；技术栈与资料入口弱化到侧边栏；如果配置了 Markdown 效果演示文档，会自动提炼为短摘要和流程卡片，并保留完整文档入口
 - 作品详情页模块展示开关：项目介绍、职责、效果演示、亮点、技术栈、链接/文档
 - 作品文档在线预览：Markdown、PDF、Word `.doc/.docx`
 - 针对公司和岗位的定制简历页
@@ -59,7 +60,8 @@ onlyWeb 不是一个简单的静态个人主页，而是一个小型内容管理
 - 管理员登录
 - 个人资料管理
 - 作品管理
-- 作品效果演示管理：支持视频链接、单独上传演示文档
+- 作品效果演示管理：支持视频链接、单独上传演示文档；Markdown 效果演示文档会在作品详情页生成效果速览，访客也可打开完整文档
+- 作品业务成果展示配置：每个作品可单独维护展示标题、首屏说明、使用场景、核心价值、交付形式、业务痛点、解决步骤、使用效果、项目价值、个人贡献、管理者关注点和技术实现标签；管理员登录后可点击“编辑页面”进入原位编辑模式，在作品详情页对应展示位置直接编辑文字、增加职责/技术标签，并可在资料入口模块直接上传普通文档和效果演示文档
 - 工作经历管理
 - 技能管理
 - 定制简历页管理
@@ -765,6 +767,8 @@ docker compose down           # 停止 Docker 服务
 - [系统架构文档](./docs/architecture.md)
 - [开发路线图](./docs/roadmap.md)
 - [服务器部署与域名代理指南](./docs/deployment.md)
+- [数据库结构说明](./docs/DatabaseSchema.md)
+- [GitHub 仓库整理为 onlyWeb 作品的 AI 提示词模板](./docs/ProjectCurationPromptTemplate.md)
 
 
 ## 前端原型
@@ -906,6 +910,60 @@ WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
 - 可迁移：使用 Docker 和 SQLite，数据库文件便于备份与迁移。
 - 可长期维护：功能模块清晰，避免过度设计。
 
+
+
+
+### LinuxOS 路径大小写和旧数据库配置注意事项
+
+Linux 文件系统大小写敏感，例如 `/root/onlyWeb` 和 `/root/onlyweb` 是两个不同目录。配置 Wiki 路径时必须使用真实目录大小写。
+
+如果后台曾保存过错误的 Wiki 配置，数据库 `app_settings` 会优先于 `.env` 生效。可用下面命令清理错误 Wiki 配置，让系统重新使用 `.env`：
+
+```bash
+docker-compose exec app node -e "const Database=require('better-sqlite3'); const db=new Database(process.env.DATABASE_PATH||'/app/data/onlyweb.db'); db.prepare("delete from app_settings where key like 'WIKI_%'").run(); console.log('wiki settings reset')"
+docker-compose restart app
+```
+
+程序已拒绝扫描 `/`、`/proc`、`/sys`、`/dev`、`/run`、`/boot`、`/tmp` 等系统目录，并跳过符号链接，避免错误配置导致递归扫描整个 Linux 根目录。
+
+### LinuxOS 上 `/admin/wiki` 打不开的排查
+
+如果访问 `http://60.205.125.84:18473/admin/wiki` 打不开，优先检查容器日志：
+
+```bash
+docker-compose logs --tail=120 app
+```
+
+常见原因和处理：
+
+1. `.env` 修改后没有重建容器，新的挂载没有生效。
+
+```bash
+docker-compose down
+docker-compose up -d --build
+```
+
+2. 知识库目录或 `.env` 权限不足。
+
+```bash
+sudo chown 1001:1001 .env
+sudo chown -R 1001:1001 /root/onlyweb/wiki/vault
+```
+
+3. LinuxOS 需要同时配置宿主机浏览根目录和容器内浏览挂载点：
+
+```env
+WIKI_HOST_VAULT_PATH=/root/onlyweb/wiki/vault
+WIKI_HOST_BROWSE_ROOT=/root/onlyweb
+WIKI_CONTAINER_BROWSE_ROOT=/host-browse
+WIKI_VAULT_PATH=/app/wiki-vault
+```
+
+4. 确认容器内能看到目录：
+
+```bash
+docker-compose exec app sh -lc 'ls -la /app/wiki-vault && ls -la /host-browse/wiki/vault'
+```
 
 ## Wiki 知识库展示
 

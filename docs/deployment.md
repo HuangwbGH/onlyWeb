@@ -488,6 +488,20 @@ chmod -R u+rwX ../wiki/vault
 # chmod -R a+rwX ../wiki/vault
 ```
 
+
+### 6.4 LinuxOS 路径大小写和错误配置恢复
+
+Linux 文件系统大小写敏感，`/root/onlyWeb` 和 `/root/onlyweb` 不是同一个目录。`WIKI_HOST_VAULT_PATH`、`WIKI_HOST_BROWSE_ROOT` 必须使用服务器真实目录大小写。
+
+如果数据库中保存过错误的 Wiki 配置，例如 `WIKI_VAULT_PATH=/`，数据库配置会覆盖 `.env`。可执行：
+
+```bash
+docker-compose exec app node -e "const Database=require('better-sqlite3'); const db=new Database(process.env.DATABASE_PATH||'/app/data/onlyweb.db'); db.prepare("delete from app_settings where key like 'WIKI_%'").run(); console.log('wiki settings reset')"
+docker-compose restart app
+```
+
+程序会拒绝扫描 `/`、`/proc`、`/sys`、`/dev`、`/run`、`/boot`、`/tmp` 等系统目录，并跳过符号链接，避免错误配置导致页面 500。
+
 ## 7. 备份和恢复
 
 SQLite 数据和上传文件都在 Docker volume 中：

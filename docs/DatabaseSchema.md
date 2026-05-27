@@ -107,6 +107,19 @@ src/db/sqlite.ts
 | effect_demo_title | 效果演示标题 | 作品详情页效果演示模块 |
 | effect_demo_description | 效果演示说明 | 作品详情页效果演示模块 |
 | effect_demo_url | 效果演示链接 | 作品详情页效果演示模块 |
+| business_title | 面向非技术读者的业务成果展示标题 | 作品详情页首屏标题；为空时回退到作品标题或自动推断 |
+| business_tagline | 首屏说明 | 作品详情页首屏标题下方说明；为空时回退到效果文档或作品详情 |
+| business_scenario | 使用场景 | 作品详情页首屏指标卡 |
+| business_core_value | 核心价值 | 作品详情页首屏指标卡 |
+| business_delivery_form | 交付形式 | 作品详情页首屏指标卡 |
+| business_pain_points | JSON 数组字符串，业务痛点 | 作品详情页“为什么要做”模块 |
+| business_solution_steps | JSON 数组字符串，解决步骤 | 作品详情页“怎么解决”流程模块 |
+| business_result | 使用效果，一句话结果 | 作品详情页首屏说明和“使用效果”模块 |
+| business_values | JSON 数组字符串，项目价值 | 作品详情页“项目价值”模块 |
+| business_contributions | JSON 数组字符串，个人贡献 | 作品详情页“我负责什么”模块 |
+| business_audience_focus | JSON 数组字符串，管理者关注点 | 作品详情页侧栏“看这个项目重点看什么”模块 |
+| business_resource_labels | JSON 数组字符串，资料入口标签 | 预留字段；作品详情页资料入口主要由 `project_documents` 和上传文档生成 |
+| business_tech_notes | JSON 数组字符串，技术实现标签 | 作品详情页侧栏“技术实现”模块 |
 | github_url | 代码链接 | 作品详情页 |
 | docs_url | 外部文档链接 | 作品详情页 |
 | show_description | 是否展示项目介绍，0/1 | 作品详情页模块展示配置 |

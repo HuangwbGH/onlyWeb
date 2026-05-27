@@ -26,6 +26,7 @@ import {
   saveAppSetting,
   slugify,
   updateProfile,
+  updateProjectBusiness,
 } from '@/lib/data';
 import type { Experience, Project, ResumePage, Skill } from '@/lib/mockData';
 
@@ -44,6 +45,10 @@ function checkbox(formData: FormData, name: string) {
 
 function selected(formData: FormData, name: string) {
   return formData.getAll(name).map(String);
+}
+
+function listText(formData: FormData, name: string) {
+  return formData.getAll(name).map(String).join('\n');
 }
 
 function effectDemoType(formData: FormData) {
@@ -259,6 +264,19 @@ export async function saveProjectAction(formData: FormData) {
     effectDemoTitle: optionalText(formData, 'effectDemoTitle'),
     effectDemoDescription: optionalText(formData, 'effectDemoDescription'),
     effectDemoUrl: optionalText(formData, 'effectDemoUrl'),
+    businessTitle: optionalText(formData, 'businessTitle'),
+    businessTagline: optionalText(formData, 'businessTagline'),
+    businessScenario: optionalText(formData, 'businessScenario'),
+    businessCoreValue: optionalText(formData, 'businessCoreValue'),
+    businessDeliveryForm: optionalText(formData, 'businessDeliveryForm'),
+    businessPainPoints: normalizeList(listText(formData, 'businessPainPoints')),
+    businessSolutionSteps: normalizeList(listText(formData, 'businessSolutionSteps')),
+    businessResult: optionalText(formData, 'businessResult'),
+    businessValues: normalizeList(listText(formData, 'businessValues')),
+    businessContributions: normalizeList(listText(formData, 'businessContributions')),
+    businessAudienceFocus: normalizeList(listText(formData, 'businessAudienceFocus')),
+    businessResourceLabels: normalizeList(listText(formData, 'businessResourceLabels')),
+    businessTechNotes: normalizeList(listText(formData, 'businessTechNotes')),
     githubUrl: optionalText(formData, 'githubUrl'),
     docsUrl: optionalText(formData, 'docsUrl'),
     showDescription: checkbox(formData, 'showDescription'),
@@ -273,6 +291,33 @@ export async function saveProjectAction(formData: FormData) {
   saveProject(project);
   await saveProjectDocuments(formData, projectId);
   await saveProjectDocuments(formData, projectId, 'effectDemoFiles', 'effect_demo');
+  refreshAdmin();
+}
+
+
+export async function saveProjectBusinessAction(formData: FormData) {
+  await requireAdmin();
+  const id = text(formData, 'id');
+  updateProjectBusiness({
+    id,
+    businessTitle: optionalText(formData, 'businessTitle'),
+    businessTagline: optionalText(formData, 'businessTagline'),
+    businessScenario: optionalText(formData, 'businessScenario'),
+    businessCoreValue: optionalText(formData, 'businessCoreValue'),
+    businessDeliveryForm: optionalText(formData, 'businessDeliveryForm'),
+    businessPainPoints: normalizeList(listText(formData, 'businessPainPoints')),
+    businessSolutionSteps: normalizeList(listText(formData, 'businessSolutionSteps')),
+    businessResult: optionalText(formData, 'businessResult'),
+    businessValues: normalizeList(listText(formData, 'businessValues')),
+    businessContributions: normalizeList(listText(formData, 'businessContributions')),
+    businessAudienceFocus: normalizeList(listText(formData, 'businessAudienceFocus')),
+    businessResourceLabels: normalizeList(listText(formData, 'businessResourceLabels')),
+    businessTechNotes: normalizeList(listText(formData, 'businessTechNotes')),
+  });
+  await saveProjectDocuments(formData, id);
+  await saveProjectDocuments(formData, id, 'effectDemoFiles', 'effect_demo');
+  revalidatePath('/projects');
+  revalidatePath('/portfolio');
   refreshAdmin();
 }
 
