@@ -334,7 +334,6 @@ function ContactPage() {
         <p>邮箱：{profile.email}</p>
         <p>手机：{profile.phone}</p>
         <p>GitHub：{profile.githubUrl}</p>
-        <p>LinkedIn：{profile.linkedinUrl}</p>
       </div>
     </PageShell>
   );

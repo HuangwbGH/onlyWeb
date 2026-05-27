@@ -27,7 +27,6 @@ CREATE TABLE IF NOT EXISTS profiles (
   wechat_qr_url TEXT,
   location TEXT,
   github_url TEXT,
-  linkedin_url TEXT,
   website_url TEXT,
   avatar_url TEXT,
   created_at TEXT NOT NULL,

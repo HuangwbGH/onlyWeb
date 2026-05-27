@@ -13,7 +13,6 @@ export type Profile = {
   wechatQrUrl?: string;
   location?: string;
   githubUrl?: string;
-  linkedinUrl?: string;
   websiteUrl?: string;
   avatarUrl?: string;
 };
@@ -90,7 +89,6 @@ function mapProfile(row: Row): Profile {
     wechatQrUrl: nullable(row.wechat_qr_url),
     location: nullable(row.location),
     githubUrl: nullable(row.github_url),
-    linkedinUrl: nullable(row.linkedin_url),
     websiteUrl: nullable(row.website_url),
     avatarUrl: nullable(row.avatar_url),
   };
@@ -213,7 +211,7 @@ export function updateProfile(input: Omit<Profile, 'id'>) {
     UPDATE profiles SET
       name = @name, title = @title, bio = @bio, email = @email, phone = @phone, wechat_id = @wechatId,
       wechat_qr_url = @wechatQrUrl, location = @location, github_url = @githubUrl,
-      linkedin_url = @linkedinUrl, website_url = @websiteUrl, avatar_url = @avatarUrl,
+      website_url = @websiteUrl, avatar_url = @avatarUrl,
       updated_at = @updatedAt
     WHERE id = @id
   `).run({ ...input, id: current.id, updatedAt: now() });

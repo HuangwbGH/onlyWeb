@@ -57,7 +57,6 @@ export const profile = {
   email: 'hello@example.com',
   phone: '+86 138 0000 0000',
   githubUrl: 'https://github.com/example',
-  linkedinUrl: 'https://linkedin.com/in/example',
   websiteUrl: 'https://onlyweb.example.com',
 };
 

@@ -235,7 +235,6 @@ onlyWeb/
   phone?: string
   location?: string
   githubUrl?: string
-  linkedinUrl?: string
   websiteUrl?: string
   avatarUrl?: string
   createdAt: Date

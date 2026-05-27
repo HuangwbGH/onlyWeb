@@ -238,7 +238,6 @@ export async function updateProfileAction(formData: FormData) {
     wechatQrUrl: await saveWechatQr(formData),
     location: optionalText(formData, 'location'),
     githubUrl: optionalText(formData, 'githubUrl'),
-    linkedinUrl: optionalText(formData, 'linkedinUrl'),
     websiteUrl: optionalText(formData, 'websiteUrl'),
     avatarUrl: optionalText(formData, 'avatarUrl'),
   });

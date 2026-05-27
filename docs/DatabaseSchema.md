@@ -81,7 +81,6 @@ src/db/sqlite.ts
 | wechat_qr_url | 微信二维码图片地址 | HR 联系方式，可选 |
 | location | 所在地 | 简历页、联系页、HR 联系方式 |
 | github_url | GitHub 链接 | 联系页、作品页 |
-| linkedin_url | LinkedIn 链接 | 联系页 |
 | website_url | 个人网站链接 | 联系页 |
 | avatar_url | 头像地址 | 首页或关于页，后续使用 |
 | created_at | 创建时间 | 审计展示 |

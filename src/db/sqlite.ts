@@ -92,10 +92,46 @@ function ensureAppSettingsTable() {
   `);
 }
 
+function dropProfileLinkedInColumn() {
+  const columns = db.prepare('PRAGMA table_info(profiles)').all() as Array<{ name: string }>;
+  if (!columns.some((column) => column.name === 'linkedin_url')) return;
+
+  db.exec(`
+    ALTER TABLE profiles RENAME TO profiles_old;
+
+    CREATE TABLE profiles (
+      id TEXT PRIMARY KEY,
+      name TEXT NOT NULL,
+      title TEXT NOT NULL,
+      bio TEXT NOT NULL,
+      email TEXT NOT NULL,
+      phone TEXT,
+      wechat_id TEXT,
+      wechat_qr_url TEXT,
+      location TEXT,
+      github_url TEXT,
+      website_url TEXT,
+      avatar_url TEXT,
+      created_at TEXT NOT NULL,
+      updated_at TEXT NOT NULL
+    );
+
+    INSERT INTO profiles (
+      id, name, title, bio, email, phone, wechat_id, wechat_qr_url, location, github_url, website_url, avatar_url, created_at, updated_at
+    )
+    SELECT
+      id, name, title, bio, email, phone, wechat_id, wechat_qr_url, location, github_url, website_url, avatar_url, created_at, updated_at
+    FROM profiles_old;
+
+    DROP TABLE profiles_old;
+  `);
+}
+
 function runMigrations() {
   ensureAppSettingsTable();
   ensureColumn('profiles', 'wechat_id', 'TEXT');
   ensureColumn('profiles', 'wechat_qr_url', 'TEXT');
+  dropProfileLinkedInColumn();
   ensureColumn('projects', 'deleted_at', 'TEXT');
   ensureColumn('projects', 'effect_demo_type', 'TEXT');
   ensureColumn('projects', 'effect_demo_title', 'TEXT');
@@ -178,9 +214,9 @@ function seedProfile() {
   const createdAt = now();
   db.prepare(`
     INSERT INTO profiles (
-      id, name, title, bio, email, phone, wechat_id, wechat_qr_url, location, github_url, linkedin_url, website_url, avatar_url, created_at, updated_at
+      id, name, title, bio, email, phone, wechat_id, wechat_qr_url, location, github_url, website_url, avatar_url, created_at, updated_at
     ) VALUES (
-      @id, @name, @title, @bio, @email, @phone, @wechatId, @wechatQrUrl, @location, @githubUrl, @linkedinUrl, @websiteUrl, @avatarUrl, @createdAt, @updatedAt
+      @id, @name, @title, @bio, @email, @phone, @wechatId, @wechatQrUrl, @location, @githubUrl, @websiteUrl, @avatarUrl, @createdAt, @updatedAt
     )
   `).run({ ...profile, id: id(), wechatId: null, wechatQrUrl: null, avatarUrl: null, createdAt, updatedAt: createdAt });
 }

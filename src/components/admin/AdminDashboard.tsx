@@ -81,7 +81,6 @@ function ProfileSection({ profile }: { profile: ReturnType<typeof getProfile> })
         <label>微信二维码链接<input name="wechatQrUrl" defaultValue={profile.wechatQrUrl} /></label>
         <label>所在地<input name="location" defaultValue={profile.location} /></label>
         <label>GitHub<input name="githubUrl" defaultValue={profile.githubUrl} /></label>
-        <label>LinkedIn<input name="linkedinUrl" defaultValue={profile.linkedinUrl} /></label>
         <label>网站<input name="websiteUrl" defaultValue={profile.websiteUrl} /></label>
         <label className="form-wide">微信二维码图片<input name="wechatQrFile" type="file" accept="image/*" /></label>
         {profile.wechatQrUrl && <p className="form-wide upload-hint">当前微信二维码：{profile.wechatQrUrl}</p>}
