@@ -14,7 +14,6 @@ webMock/.next
 
 # 本地运行数据目录，不提交到 GitHub
 data/
-public/uploads/
 
 # 数据库文件兜底忽略
 *.db
