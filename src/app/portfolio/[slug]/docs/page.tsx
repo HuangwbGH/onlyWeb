@@ -31,7 +31,7 @@ export default async function StandalonePortfolioProjectDocsPage({
 
   const title = selectedDocument?.fileName ? `${project.title} · ${selectedDocument.fileName}` : `${project.title} · 项目文档`;
   const downloadHref = selectedDocument ? `/portfolio/${project.slug}/docs/download?doc=${selectedDocument.id}` : fileUrl;
-  const previewHref = selectedDocument ? `/portfolio/${project.slug}/docs/preview?doc=${selectedDocument.id}` : undefined;
+  const previewHref = selectedDocument && canPdfPreview ? `/portfolio/${project.slug}/docs/preview?doc=${selectedDocument.id}` : undefined;
   const description = isMarkdown ? '在线查看上传的 Markdown 项目文档。' : '在线预览上传的 PDF / Word 项目文档。';
 
   return (

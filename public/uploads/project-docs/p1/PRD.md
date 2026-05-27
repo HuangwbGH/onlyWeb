@@ -541,10 +541,9 @@ MVP 成功标准：
 - 上传 Markdown、PDF、Word `.doc/.docx` 后，作品详情页提供在线查看入口。
 - 在线查看页面使用 `/projects/:slug/docs?doc=<documentId>`。
 - Word `.doc/.docx` 文档通过 LibreOffice 转 PDF 后预览，保留原始文档下载。
-- Markdown 文档在线查看页面只渲染 Markdown 正文，不再额外嵌入 `/docs/preview` iframe，避免底部出现不支持预览提示。
 - 原始文档下载使用 `/projects/:slug/docs/download?doc=<documentId>`，响应头需要包含 `Content-Disposition: attachment` 以触发浏览器下载。
 - 已上传文件可以在作品管理页删除；删除后不在作品详情页和后台文档列表展示。
-- 已上传文件保存在项目目录 `public/uploads/` 中，并通过 Docker 绑定挂载持久化。
+- 已上传文件保存在 Docker 持久化上传目录中。
 
 
 ## 14. Markdown 阅读体验优化

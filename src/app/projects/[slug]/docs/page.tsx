@@ -31,7 +31,7 @@ export default async function ProjectDocsPage({
 
   const title = selectedDocument?.fileName ? `${project.title} · ${selectedDocument.fileName}` : `${project.title} · 项目文档`;
   const downloadHref = selectedDocument ? `/projects/${project.slug}/docs/download?doc=${selectedDocument.id}` : fileUrl;
-  const previewHref = selectedDocument ? `/projects/${project.slug}/docs/preview?doc=${selectedDocument.id}` : undefined;
+  const previewHref = selectedDocument && canPdfPreview ? `/projects/${project.slug}/docs/preview?doc=${selectedDocument.id}` : undefined;
   const description = isMarkdown ? '在线查看上传的 Markdown 项目文档。' : '在线预览上传的 PDF / Word 项目文档。';
 
   return (

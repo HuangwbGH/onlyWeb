@@ -27,7 +27,7 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <span>© 2026 onlyWeb</span>
-      <span>Docker 化个人作品与定制简历系统</span>
+      <span>hwbing</span>
     </footer>
   );
 }

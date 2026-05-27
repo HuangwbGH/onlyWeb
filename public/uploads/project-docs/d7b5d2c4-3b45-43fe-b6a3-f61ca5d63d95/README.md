@@ -55,7 +55,7 @@ plugin-manager/
 ## 环境要求
 
 - **Docker** 20+ 与 **Docker Compose** v2+
-- 可访问目标 SQL Server 的网络（默认 `192.168.1.135:1433`）
+- 可访问目标 SQL Server 的网络（默认 `192.168.**.***:***`）
 
 无需在宿主机安装 Python、FreeTDS 等任何依赖，全部封装在容器内。
 
@@ -79,7 +79,7 @@ cp config.env.example config.env
 
 | 字段 | 说明 |
 |---|---|
-| `DB_HOST` | SQL Server 地址，默认 `192.168.1.135` |
+| `DB_HOST` | SQL Server 地址，默认 `192.168.*.***` |
 | `DB_NAME` | 数据库名，默认 `APP_JXD` |
 | `DB_USER` / `DB_PASSWORD` | 只读账号，用于查询 |
 | `DB_WRITE_USER` / `DB_WRITE_PASSWORD` | 读写账号，用于审批 / 用户增删改 |

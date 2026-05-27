@@ -508,7 +508,7 @@ src/
 
 作品外部文档链接继续复用 `projects.docs_url` 字段；上传的多个作品文档保存到 `project_documents` 表，并通过 `document_kind` 区分普通项目文档和效果演示文档。上传文件由项目目录 `public/uploads/` 持久化。
 
-上传文件保存时保留原始文件名；同一作品下 `project_id + file_name + document_kind` 唯一，普通文档和效果演示文档互不覆盖。Markdown 文档通过 `/projects/:slug/docs?doc=<documentId>` 在线渲染；PDF 直接通过 `/projects/:slug/docs/preview?doc=<documentId>` 嵌入预览；Word `.doc/.docx` 由 LibreOffice 转换为 PDF 后预览。 Markdown 文档页只渲染正文，不再请求 `/docs/preview`。原始文档下载通过 `/projects/:slug/docs/download?doc=<documentId>` 返回 `Content-Disposition: attachment` 强制下载。已上传文档删除时设置 `deleted_at`，不物理删除文件。
+上传文件保存时保留原始文件名；同一作品下 `project_id + file_name + document_kind` 唯一，普通文档和效果演示文档互不覆盖。Markdown 文档通过 `/projects/:slug/docs?doc=<documentId>` 在线渲染；PDF 直接通过 `/projects/:slug/docs/preview?doc=<documentId>` 嵌入预览；Word `.doc/.docx` 由 LibreOffice 转换为 PDF 后预览。原始文档下载通过 `/projects/:slug/docs/download?doc=<documentId>` 返回 `Content-Disposition: attachment` 强制下载。已上传文档删除时设置 `deleted_at`，不物理删除文件。
 
 
 ## 17. HR 联系方式与个人资料图片

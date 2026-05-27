@@ -83,7 +83,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       <main>{children}</main>
       <footer className="site-footer">
         <span>© 2026 onlyWeb</span>
-        <span>Docker 化个人作品与定制简历系统</span>
+        <span>hwbing</span>
       </footer>
     </>
   );
