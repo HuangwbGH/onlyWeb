@@ -6,9 +6,24 @@ dist
 .DS_Store
 coverage
 *.tsbuildinfo
+npm-debug.log*
+
 webMock/node_modules
 webMock/dist
-data/*.db
-data/*.db-shm
-data/*.db-wal
+webMock/.next
 
+# 本地运行数据目录，不提交到 GitHub
+data/
+public/uploads/
+
+# 数据库文件兜底忽略
+*.db
+*.db-shm
+*.db-wal
+
+# 私有备份目录默认忽略明文临时文件
+backup/
+private-backups/*
+
+# 只允许提交加密后的 onlyWeb 私有数据备份包
+!private-backups/onlyweb-private-data.tar.gz.enc

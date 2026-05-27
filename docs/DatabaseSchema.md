@@ -24,7 +24,7 @@ Docker 部署时数据库文件位于容器内：
 /app/data/onlyweb.db
 ```
 
-并通过 Docker volume `sqlite_data` 持久化。
+并通过 `./data:/app/data` 绑定挂载持久化到项目目录 `data/`。
 
 正式 schema 定义在：
 

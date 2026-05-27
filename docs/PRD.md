@@ -334,7 +334,7 @@ HR 打开专属链接后，只能看到对应岗位的个人展示页，不能�
 
 ### 5.2.7 文件上传
 
-MVP 阶段支持上传文件到本地 Docker volume。
+MVP 阶段支持上传文件到项目目录 `public/uploads/`，Docker 中通过绑定挂载持久化。
 
 可用于：
 
@@ -358,9 +358,9 @@ MVP 至少包含：
 
 ### 6.2 数据持久化
 
-SQLite 数据库文件必须使用 volume 持久化。
+SQLite 数据库文件必须持久化到项目目录 `data/`。
 
-上传文件后续如使用本地存储，也必须使用 volume 持久化。
+上传文件后续如使用本地存储，也必须持久化到项目目录 `public/uploads/`。
 
 ### 6.3 响应式
 
@@ -411,7 +411,7 @@ MVP 核心实体：
 
 ### 8.1 包含
 
-- Docker Compose 启动 app，SQLite 文件通过 volume 持久化
+- Docker Compose 启动 app，SQLite 文件通过 `./data:/app/data` 绑定挂载持久化
 - 管理员登录
 - Profile 管理
 - Project 管理
@@ -499,7 +499,7 @@ MVP 成功标准：
 - `/r/:shareToken` HR 专属访问。
 - SQLite schema 和初始化逻辑。
 - Dockerfile。
-- `docker-compose.yml`，包含 app 和 SQLite 数据 volume。
+- `docker-compose.yml`，包含 app、SQLite 数据目录和上传文件目录绑定挂载。
 - `.env.example`。
 - 后台 Profile / Project / Experience / Skill / ResumePage CRUD。
 - 项目普通文档与效果演示文档分开上传、分开管理、分开展示。
@@ -636,7 +636,7 @@ Markdown 在线查看需要具备较好的阅读体验，至少支持：
 
 ### 技术与实现约束
 
-对应 Docker Compose、SQLite、环境变量、HTTP-only Cookie、LibreOffice 文档转换和本地 volume 文件存储约束。
+对应 Docker Compose、SQLite、环境变量、HTTP-only Cookie、LibreOffice 文档转换和项目目录绑定挂载文件存储约束。
 
 ## 18. Wiki 知识库展示
 

@@ -10,3 +10,7 @@ webMock/dist
 webMock/.next
 npm-debug.log*
 /wiki/
+backup/
+private-backups/
+data/
+public/uploads/

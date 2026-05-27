@@ -504,37 +504,54 @@ docker-compose restart app
 
 ## 7. 备份和恢复
 
-SQLite 数据和上传文件都在 Docker volume 中：
+SQLite 数据和上传文件都保存在项目目录中：
 
-- `sqlite_data`：数据库
-- `uploads_data`：上传文件，包括普通项目文档、效果演示文档、Word 预览缓存和微信二维码
+- `data/`：SQLite 数据库目录，对应容器内 `/app/data`
+- `public/uploads/`：上传文件目录，对应容器内 `/app/public/uploads`，包括普通项目文档、效果演示文档、Word 预览缓存和微信二维码
 
-查看实际 volume 名称：
+这两个目录已在 `.gitignore` 中忽略，不会上传 GitHub。
 
-```bash
-docker volume ls | grep onlyweb
-```
-
-备份：
+LinuxOS 上建议确认目录权限，保证容器内 `nextjs` 用户可以写入：
 
 ```bash
-mkdir -p ~/onlyweb-backup
-
-docker run --rm \
-  -v onlyweb_sqlite_data:/data \
-  -v ~/onlyweb-backup:/backup \
-  alpine tar czf /backup/sqlite_data.tgz -C /data .
-
-docker run --rm \
-  -v onlyweb_uploads_data:/uploads \
-  -v ~/onlyweb-backup:/backup \
-  alpine tar czf /backup/uploads_data.tgz -C /uploads .
+mkdir -p data public/uploads
+chown -R 1001:1001 data public/uploads
 ```
 
-> 如果项目目录名不是 `onlyweb`，Compose 生成的 volume 名称可能不同，请先用 `docker volume ls` 确认。
+推荐使用加密备份脚本：
+
+```bash
+./scripts/export-private-backup.sh
+```
+
+脚本会把 `data/`、`public/uploads/` 和 `.env` 打包为：
+
+```txt
+private-backups/onlyweb-private-data.tar.gz.enc
+```
+
+恢复时先解密解压：
+
+```bash
+./scripts/decrypt-private-backup.sh
+```
+
+再把解出的文件恢复到项目目录：
+
+```bash
+mkdir -p data public/uploads
+rm -rf data/* public/uploads/*
+tar xzf private-backups/restore/sqlite_data.tar.gz -C data
+tar xzf private-backups/restore/uploads_data.tar.gz -C public/uploads
+```
+
+如果解出的目录里有 `.env.backup`，可以按需恢复：
+
+```bash
+cp private-backups/restore/.env.backup .env
+```
 
 Wiki vault 是宿主机目录；后台上传的 Markdown 文档也会写入该目录，请按自己的 Obsidian vault 备份方式单独备份。
-
 
 ## 8. 更新程序
 
@@ -559,7 +576,7 @@ docker-compose down
 docker-compose up -d --build
 ```
 
-说明：`docker-compose down` 会删除旧容器和默认网络，但不会删除 `sqlite_data`、`uploads_data` 这类命名 volume，所以数据库和上传文件仍会保留。不要在更新时执行 `docker-compose down -v`，否则会删除数据 volume。
+说明：`docker-compose down` 会删除旧容器和默认网络，但不会删除项目目录中的 `data/` 和 `public/uploads/`，所以数据库和上传文件仍会保留。
 
 ## 9. 常见问题
 

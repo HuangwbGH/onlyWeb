@@ -388,12 +388,8 @@ services:
       DATABASE_PATH: ${DATABASE_PATH:-/app/data/onlyweb.db}
       APP_URL: ${APP_URL:-http://localhost:${APP_PORT:-18473}}
     volumes:
-      - sqlite_data:/app/data
-      - uploads_data:/app/public/uploads
-
-volumes:
-  sqlite_data:
-  uploads_data:
+      - ./data:/app/data
+      - ./public/uploads:/app/public/uploads
 ```
 
 实际配置见 `docker-compose.yml`；端口通过 `APP_PORT` 配置，对外域名通过 `APP_URL` 配置。运行镜像内置 LibreOffice Writer 和中文字体，用于 `.doc/.docx` 转 PDF 在线预览。
@@ -413,10 +409,10 @@ MVP 使用单管理员账号。
 
 ## 11. 文件上传设计
 
-当前使用本地 Docker volume。
+当前使用项目目录绑定挂载。
 
 ```txt
-uploads_data -> /app/public/uploads
+./public/uploads -> /app/public/uploads
 ```
 
 上传文件分为：
@@ -510,7 +506,7 @@ src/
 
 ## 16. 项目文档上传与在线预览
 
-作品外部文档链接继续复用 `projects.docs_url` 字段；上传的多个作品文档保存到 `project_documents` 表，并通过 `document_kind` 区分普通项目文档和效果演示文档。上传文件由 `uploads_data` volume 持久化。
+作品外部文档链接继续复用 `projects.docs_url` 字段；上传的多个作品文档保存到 `project_documents` 表，并通过 `document_kind` 区分普通项目文档和效果演示文档。上传文件由项目目录 `public/uploads/` 持久化。
 
 上传文件保存时保留原始文件名；同一作品下 `project_id + file_name + document_kind` 唯一，普通文档和效果演示文档互不覆盖。Markdown 文档通过 `/projects/:slug/docs?doc=<documentId>` 在线渲染；PDF 直接通过 `/projects/:slug/docs/preview?doc=<documentId>` 嵌入预览；Word `.doc/.docx` 由 LibreOffice 转换为 PDF 后预览。原始文档下载通过 `/projects/:slug/docs/download?doc=<documentId>` 返回 `Content-Disposition: attachment` 强制下载。已上传文档删除时设置 `deleted_at`，不物理删除文件。
 
@@ -519,7 +515,7 @@ src/
 
 `profiles` 表通过 `wechat_id` 和 `wechat_qr_url` 保存微信联系方式。后台个人资料页支持填写微信号、填写二维码链接或上传二维码图片。
 
-微信二维码图片保存到 `public/uploads/profile/`，Docker 中通过 `uploads_data` volume 持久化。为了兼容中文文件名和运行时上传文件，图片访问走 `/uploads/profile/:fileName` 动态路由读取文件并返回正确图片类型。
+微信二维码图片保存到 `public/uploads/profile/`，Docker 中通过 `./public/uploads:/app/public/uploads` 绑定挂载持久化。为了兼容中文文件名和运行时上传文件，图片访问走 `/uploads/profile/:fileName` 动态路由读取文件并返回正确图片类型。
 
 HR 定制页 `/r/:shareToken` 展示统一风格的联系方式卡片，包括邮箱、手机号、微信号、所在地和微信二维码；底部旧联系方式模块在 HR 定制页中隐藏，避免重复。
 

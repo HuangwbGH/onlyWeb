@@ -21,12 +21,8 @@ services:
       WIKI_CONTAINER_BROWSE_ROOT: ${WIKI_CONTAINER_BROWSE_ROOT:-/host-browse}
       ENV_FILE_PATH: ${ENV_FILE_PATH:-/app-config/.env}
     volumes:
-      - sqlite_data:/app/data
-      - uploads_data:/app/public/uploads
+      - ./data:/app/data
+      - ./public/uploads:/app/public/uploads
       - .:/app-config
       - ${WIKI_HOST_VAULT_PATH:-../wiki/vault}:${WIKI_VAULT_PATH:-/app/wiki-vault}
       - ${WIKI_HOST_BROWSE_ROOT:-../wiki}:${WIKI_CONTAINER_BROWSE_ROOT:-/host-browse}
-
-volumes:
-  sqlite_data:
-  uploads_data:

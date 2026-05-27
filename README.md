@@ -118,7 +118,7 @@ HR 实际访问地址示例：
 - 数据访问：better-sqlite3
 - 样式：Tailwind CSS
 - 认证：自定义管理员登录或 Auth.js
-- 文件存储：Docker volume 本地存储，后续可迁移到 S3 / MinIO
+- 文件存储：项目目录绑定挂载，本地存放在 `public/uploads/`，后续可迁移到 S3 / MinIO
 - 部署：Docker Compose
 - 反向代理：Caddy 或 Nginx，后续加入
 
@@ -217,7 +217,7 @@ docker compose up -d --build
 docker compose down
 ```
 
-SQLite 数据通过 Docker volume `sqlite_data` 持久化。
+SQLite 数据通过项目目录 `data/` 持久化。
 
 
 ### macOS 本机 Docker 部署流程
@@ -308,7 +308,7 @@ docker compose up -d
 docker compose up -d --build
 ```
 
-macOS 上 SQLite 数据和上传文件也保存在 Docker volume 中，不会因为普通重启丢失。
+macOS 上 SQLite 数据和上传文件保存在项目目录的 `data/` 和 `public/uploads/` 中，不会因为普通重启丢失。
 
 ### LinuxOS / Linux 服务器完整部署流程
 
@@ -417,7 +417,7 @@ WIKI_EXCLUDE_DIRS=.obsidian,_raw,.git
 
 - `APP_PORT`：应用容器监听端口，默认 `18473`。
 - `APP_URL`：最终对外访问地址。使用域名和 HTTPS 时必须配置为 `https://你的域名`。
-- `DATABASE_PATH`：Docker 部署建议保持默认值。
+- `DATABASE_PATH`：Docker 部署建议保持默认值；数据库文件会通过 `./data:/app/data` 映射到项目目录。
 - `SESSION_SECRET`：生产环境必须替换，不要使用默认值。
 - `ADMIN_EMAIL` / `ADMIN_PASSWORD`：初始化管理员账号。
 - `WIKI_HOST_VAULT_PATH`：服务器宿主机上的 Obsidian vault 路径，Docker 会挂载。
@@ -592,38 +592,39 @@ sudo certbot --nginx -d hkkwebonly.xyz -d www.hkkwebonly.xyz
 
 #### 9. 数据持久化和备份
 
-当前 Docker Compose 使用两个 volume：
+当前 Docker Compose 使用项目目录绑定挂载保存数据：
 
 ```txt
-sqlite_data   SQLite 数据库
-uploads_data  上传的项目文档、微信二维码等文件
+data/           SQLite 数据库目录，对应容器内 /app/data
+public/uploads/ 上传文件目录，对应容器内 /app/public/uploads
 ```
 
-查看 volume：
+这两个目录不会上传 GitHub。LinuxOS 上如果容器需要写入这些目录，建议确认目录权限：
 
 ```bash
-docker volume ls | grep onlyweb
+mkdir -p data public/uploads
+chown -R 1001:1001 data public/uploads
 ```
 
-备份数据库和上传文件：
+迁移或备份时推荐生成加密包：
 
 ```bash
-mkdir -p ~/onlyweb-backup
-
-docker run --rm \
-  -v onlyweb_sqlite_data:/data \
-  -v ~/onlyweb-backup:/backup \
-  alpine \
-  sh -c "cp -a /data /backup/sqlite_data_$(date +%Y%m%d_%H%M%S)"
-
-docker run --rm \
-  -v onlyweb_uploads_data:/uploads \
-  -v ~/onlyweb-backup:/backup \
-  alpine \
-  sh -c "cp -a /uploads /backup/uploads_data_$(date +%Y%m%d_%H%M%S)"
+./scripts/export-private-backup.sh
 ```
 
-注意：如果项目目录名不是 `onlyweb`，Docker Compose 生成的 volume 名称可能不同。可以先通过 `docker volume ls` 确认实际名称。
+生成文件：
+
+```txt
+private-backups/onlyweb-private-data.tar.gz.enc
+```
+
+恢复时先解密解压：
+
+```bash
+./scripts/decrypt-private-backup.sh
+```
+
+再按 `docs/PrivateDataBackupAndMigration.md` 的恢复步骤把 `sqlite_data.tar.gz` 解压回 `data/`，把 `uploads_data.tar.gz` 解压回 `public/uploads/`。
 
 #### 10. 更新程序
 
@@ -678,7 +679,7 @@ sudo lsof -i :18473
 - 域名打不开：检查 DNS 是否指向服务器公网 IP。
 - HTTPS 证书申请失败：检查 `80` 和 `443` 是否放行。
 - 后台登录后跳出：检查 `.env` 中的 `APP_URL` 是否与实际访问协议一致，例如 HTTPS 访问时应配置为 `https://hkkwebonly.xyz`。
-- 上传文件丢失：检查 `uploads_data` volume 是否存在，重建容器时不要删除 volume。
+- 上传文件丢失：检查项目目录下的 `public/uploads/` 是否存在，以及 `docker-compose.yml` 是否挂载了 `./public/uploads:/app/public/uploads`。
 
 ## 操作方式
 
@@ -751,6 +752,31 @@ password
 
 ## 常用命令
 
+### 导出加密私有数据备份
+
+用于把项目目录中的 SQLite 数据库和上传文件导出为可提交到 GitHub Private 的加密包：
+
+```bash
+./scripts/export-private-backup.sh
+```
+
+生成文件：
+
+```txt
+private-backups/onlyweb-private-data.tar.gz.enc
+```
+
+### 解密并解压私有数据备份
+
+用于在新 Mac 或 LinuxOS 上把加密包解密解压到 `private-backups/restore/`：
+
+```bash
+./scripts/decrypt-private-backup.sh
+```
+
+详细迁移和恢复步骤见 `docs/PrivateDataBackupAndMigration.md`。
+
+
 ```bash
 npm install          # 安装依赖
 npm run dev          # 启动开发服务
@@ -769,6 +795,7 @@ docker compose down           # 停止 Docker 服务
 - [服务器部署与域名代理指南](./docs/deployment.md)
 - [数据库结构说明](./docs/DatabaseSchema.md)
 - [GitHub 仓库整理为 onlyWeb 作品的 AI 提示词模板](./docs/ProjectCurationPromptTemplate.md)
+- [私有数据备份、上传 GitHub Private 与迁移恢复流程](./docs/PrivateDataBackupAndMigration.md)
 
 
 ## 前端原型
@@ -841,7 +868,7 @@ HR 只能通过收到的专属 token 链接访问对应页面，不能看到其�
 
 验收标准：
 
-- `docker compose up -d` 可以启动应用，SQLite 数据通过 volume 持久化。
+- `docker compose up -d` 可以启动应用，SQLite 数据通过项目目录 `data/` 持久化。
 - 应用首页可访问。
 - 数据库连接正常。
 
